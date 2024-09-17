@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  padding: 12px;
+  font-size: 26px;
+  font-weight: 350;
+}
+
+.highlighted {
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+}
+
+.highlighted::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 0;
+  width: 102%;
+  height: 0.3em;
+  background-color: #ffce08;
+  /* border-radius: 0% 100% 9% 91% / 100% 0% 100%; */
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 1.5;
+  margin: 20px 0;
+  padding: 12px;
+  text-align: justify;
+}
+
+.bolded {
+  font-weight: 600;
+}

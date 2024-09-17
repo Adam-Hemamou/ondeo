@@ -1,28 +1,30 @@
 import { Component } from '@angular/core';
+import { NavComponent } from '../nav/nav.component';
+import { VideoPresComponent } from '../video-pres/video-pres.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [NavComponent, VideoPresComponent],
   template: `
-    <h2>Analog</h2>
+    <header>
+      <app-nav></app-nav>
+    </header>
 
-    <h3>The fullstack meta-framework for Angular!</h3>
+    <main>
+      <h1>
+        Des <span class="highlighted">vidéos</span> ultracaptivantes pour
+        séduire votre <span class="highlighted">audience.</span>
+      </h1>
+      <p class="desc">
+        Podcasts, <span class="bolded">vidéos promotionnelles</span> ou motion
+        design, nous sommes à vos côtés à chaque étape de votre projet, jusqu'à
+        ce que vous soyez
+        <span class="bolded">100% satisfait.</span>
+      </p>
 
-    <p>
-      <a href="https://analogjs.org" target="_blank">Docs</a> |
-      <a href="https://github.com/analogjs/analog" target="_blank">GitHub</a> |
-      <a href="https://github.com/sponsors/brandonroberts" target="_blank"
-        >Sponsor</a
-      >
-    </p>
-  `,
-  styles: `
-    :host {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      <app-video-pres></app-video-pres>
+    </main>
   `,
 })
 export default class HomeComponent {}

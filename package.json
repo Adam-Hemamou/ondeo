@@ -1,5 +1,5 @@
 {
-  "name": "rob-app",
+  "name": "ondeo",
   "version": "0.0.0",
   "type": "module",
   "engines": {
@@ -43,6 +43,7 @@
     "@analogjs/vitest-angular": "^1.7.3-beta.1",
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
+    "sass": "^1.78.0",
     "typescript": "~5.4.2",
     "vite": "^5.0.0"
   }
