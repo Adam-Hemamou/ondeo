@@ -1,13 +1,18 @@
+<p *ngIf="!isMobile" class="finger">
+  Découvrez notre agence en video <span>👇</span>
+</p>
 <div class="video-container">
-  <iframe
-    allow="autoplay"
-    src="https://player.vimeo.com/video/1006127429?muted=1&autoplay=1&title=0&byline=0&wmode=transparent&api=1&autopause=0&controls=0&texttrack=fr&loop=1&player_id=video-hero"
-    frameborder="0"
-    width="640"
-    height="360"
-    webkitallowfullscreen
-    mozallowfullscreen
-    allowfullscreen
-  >
-  </iframe>
+  <div class="embed embed--16-9">
+    <iframe
+      src="https://player.vimeo.com/video/1006127429?muted=1&autoplay=1&title=0&byline=0&wmode=transparent&api=1&autopause=0&controls=0&texttrack=fr&loop=1&player_id=video-hero"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+    ></iframe>
+    <div class="yellow-trait"></div>
+  </div>
 </div>
+<p *ngIf="isMobile" class="finger">
+  Découvrez notre agence en video <span>☝️</span>
+</p>

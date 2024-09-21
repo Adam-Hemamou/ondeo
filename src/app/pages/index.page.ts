@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { VideoPresComponent } from '../video-pres/video-pres.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavComponent, VideoPresComponent],
+  imports: [NavComponent, VideoPresComponent, NgIf],
   template: `
     <header>
       <app-nav></app-nav>
@@ -23,8 +24,15 @@ import { VideoPresComponent } from '../video-pres/video-pres.component';
         <span class="bolded">100% satisfait.</span>
       </p>
 
-      <app-video-pres></app-video-pres>
+      <app-video-pres [isMobile]="isMobile"></app-video-pres>
     </main>
   `,
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  isMobile: boolean = window.innerWidth < 750;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = window.innerWidth < 750;
+  }
+}
