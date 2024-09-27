@@ -2,11 +2,12 @@ import { Component, HostListener } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { VideoPresComponent } from '../video-pres/video-pres.component';
 import { NgIf } from '@angular/common';
+import { KeyFigureComponent } from '../key-figure/key-figure.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavComponent, VideoPresComponent, NgIf],
+  imports: [NavComponent, VideoPresComponent, NgIf, KeyFigureComponent],
   template: `
     <header>
       <app-nav></app-nav>
@@ -25,6 +26,7 @@ import { NgIf } from '@angular/common';
       </p>
 
       <app-video-pres [isMobile]="isMobile"></app-video-pres>
+      <app-key-figure [isMobile]="isMobile"></app-key-figure>
     </main>
   `,
 })

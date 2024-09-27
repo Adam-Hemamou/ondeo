@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent {
-  logel() {
-    console.log('yooo');
-  }
-}
+export class NavComponent {}
