@@ -1,27 +1,40 @@
 .video-container {
-  position: relative;
-  margin-top: 20px;
   max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
 
-  iframe {
-    display: block;
-    width: 100%;
-    height: auto;
+  .embed {
     position: relative;
-    z-index: 1;
-    .player {
-      width: 100px;
+    height: 0;
+    padding-top: calc(100% / (16 / 9));
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    iframe {
+      border: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
     }
   }
 
-  &::after {
-    content: "";
+  .yellow-trait {
     position: absolute;
-    bottom: 1;
+    bottom: -10px;
     left: 0;
-    width: 100%;
+    width: calc(100% + 40px);
     height: 20px;
     background-color: #ffce08;
-    z-index: -1;
+    border-radius: 15px;
+    z-index: 1;
   }
+}
+
+.finger {
+  text-align: center;
+  font-weight: 13px;
+  padding-bottom: 20px;
 }

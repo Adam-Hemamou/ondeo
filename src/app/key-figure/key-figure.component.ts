@@ -2,12 +2,12 @@ import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-video-pres',
+  selector: 'app-key-figure',
   standalone: true,
   imports: [NgIf],
-  templateUrl: './video-pres.component.html',
-  styleUrls: ['./video-pres.component.scss'],
+  templateUrl: './key-figure.component.html',
+  styleUrls: ['./key-figure.component.scss'],
 })
-export class VideoPresComponent {
+export class KeyFigureComponent {
   @Input() isMobile!: boolean;
 }
