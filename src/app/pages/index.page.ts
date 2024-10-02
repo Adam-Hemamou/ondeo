@@ -4,6 +4,9 @@ import { VideoPresComponent } from '../video-pres/video-pres.component';
 import { NgIf } from '@angular/common';
 import { KeyFigureComponent } from '../key-figure/key-figure.component';
 import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.component';
+import { StepCardsComponent } from '../step-cards/step-cards.component';
+import { PodcastSectionComponent } from '../podcast-section/podcast-section.component';
+import { MotionSectionComponent } from '../motion-section/motion-section.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +17,9 @@ import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.comp
     NgIf,
     KeyFigureComponent,
     VideoCarrouselComponent,
+    StepCardsComponent,
+    PodcastSectionComponent,
+    MotionSectionComponent,
   ],
   template: `
     <header>
@@ -35,6 +41,9 @@ import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.comp
       <app-video-pres [isMobile]="isMobile"></app-video-pres>
       <app-key-figure [isMobile]="isMobile"></app-key-figure>
       <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
+      <app-step-cards></app-step-cards>
+      <app-podcast-section></app-podcast-section>
+      <app-motion-section></app-motion-section>
     </main>
   `,
 })

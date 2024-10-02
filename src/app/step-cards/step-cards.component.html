@@ -1,0 +1,21 @@
+<div class="card-section">
+  <h2 class="section-title">
+    Le plan d’action pour obtenir des <span class="highlighted">résultats</span>
+  </h2>
+  <div class="card-container" *ngFor="let card of cards">
+    <div class="card">
+      <div class="semi-circle-left"></div>
+      <div class="semi-circle-right"></div>
+      <div class="card-content">
+        <div class="card-blur"></div>
+        <div class="card-header">
+          <h3>
+            <span>{{ card.number }}</span> {{ card.title }}
+          </h3>
+          <img [src]="card.svg" alt="{{ card.title }}" />
+        </div>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div
+  *ngFor="let offer of paginatedOffers"
+  class="offer-card"
+  [ngClass]="{ popular: offer.popular }"
+>
+  <div
+    class="blur-effect"
+    [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
+  ></div>
+
+  <!-- Élément de flou -->
+  <div
+    class="circle-left"
+    [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
+  ></div>
+  <div
+    class="circle-right"
+    [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
+  ></div>
+  <div
+    class="circle-bottom"
+    [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
+  ></div>
+
+  <div class="content">
+    <!-- Nouvelle div pour le contenu -->
+
+    <div class="header-offer">
+      <img [src]="offer.icon" alt="{{ offer.title }} icon" />
+
+      <div>
+        <h2>{{ offer.title }}</h2>
+
+        <p *ngIf="offer.oldPrice" class="old-price">
+          <del>{{ offer.oldPrice }}</del>
+          <span class="price">
+            {{ offer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p *ngIf="!offer.oldPrice">
+          <span class="price">
+            {{ offer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p>{{ offer.videos }}</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <ul class="offer-features">
+      <li *ngFor="let feature of offer.features">
+        <img
+          [src]="offer.popular ? '/svg/valid-white.svg' : '/svg/valid.svg'"
+          alt=""
+        />
+        {{ feature }}
+      </li>
+    </ul>
+
+    <div class="offer-btn">
+      <button>Commander ma vidéo</button>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <span (click)="goToPage(0)" [class.active]="currentPage === 0"></span>
+  <span (click)="goToPage(1)" [class.active]="currentPage === 1"></span>
+</div>
