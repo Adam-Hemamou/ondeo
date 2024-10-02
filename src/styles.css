@@ -16,7 +16,7 @@ h1 {
 
 .section-title {
   padding: 12px;
-  font-style: 26px;
+  font-size: 26px;
   font-weight: 350;
   text-align: center;
   margin-top: 10px;
@@ -52,4 +52,45 @@ h1 {
 
 .bolded {
   font-weight: 600;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement (si nécessaire) */
+}
+
+.pack-title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 12px;
+  display: inline-block;
+  position: relative;
+}
+
+.pack-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 0;
+  width: 102%;
+  height: 0.3em;
+  background-color: #ffce08;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.offer-video {
+  width: 350px;
+  height: 130px;
+  background-color: gray;
+  display: flex;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.offer-desc {
+  text-align: center;
+  font-size: 16px;
+  padding: 6px 10px;
 }
