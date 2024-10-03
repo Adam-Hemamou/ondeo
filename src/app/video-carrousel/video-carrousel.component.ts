@@ -78,7 +78,6 @@ export class VideoCarrouselComponent {
   get paginatedVideos() {
     const start = this.currentPage * 4;
     const videosToShow = this.videos.slice(start, start + 4);
-    console.log('Videos à afficher:', videosToShow); // Debug
     return videosToShow;
   }
 

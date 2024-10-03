@@ -7,6 +7,8 @@ import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.comp
 import { StepCardsComponent } from '../step-cards/step-cards.component';
 import { PodcastSectionComponent } from '../podcast-section/podcast-section.component';
 import { MotionSectionComponent } from '../motion-section/motion-section.component';
+import { FormCallComponent } from '../form-call/form-call.component';
+import { TestimonialComponent } from '../testimonial/testimonial.component';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +22,8 @@ import { MotionSectionComponent } from '../motion-section/motion-section.compone
     StepCardsComponent,
     PodcastSectionComponent,
     MotionSectionComponent,
+    FormCallComponent,
+    TestimonialComponent,
   ],
   template: `
     <header>
@@ -44,6 +48,8 @@ import { MotionSectionComponent } from '../motion-section/motion-section.compone
       <app-step-cards></app-step-cards>
       <app-podcast-section></app-podcast-section>
       <app-motion-section></app-motion-section>
+      <app-form-call></app-form-call>
+      <app-testimonial></app-testimonial>
     </main>
   `,
 })

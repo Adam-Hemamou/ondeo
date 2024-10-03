@@ -1,0 +1,83 @@
+.contact-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 15px auto;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  height: auto;
+
+  .contact-btn {
+    width: 290px;
+    background-color: #ffc973;
+    color: #333;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .contact-form {
+    height: auto;
+    // overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    &.visible {
+      min-height: 250px; // Ajustez la hauteur en fonction du contenu
+      padding-top: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: none;
+        border-bottom: 1px solid #333;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        background-color: transparent;
+        color: #333;
+
+        &::placeholder {
+          color: #888;
+        }
+      }
+
+      .submit-btn {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #444;
+        }
+
+        &.disabled-btn {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-self: start;
+}
