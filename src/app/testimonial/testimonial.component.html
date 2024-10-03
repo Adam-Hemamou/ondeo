@@ -1,0 +1,29 @@
+<section class="testimonial-section">
+  <h2 class="section-title mb-20">
+    Ils nous ont <br />
+    fait <span class="highlighted">confiance</span>
+  </h2>
+  <div class="yellow-background"></div>
+  <!-- Assurez-vous que le nom correspond -->
+  <div class="testimonials-container">
+    <div
+      class="testimonial-card"
+      *ngFor="let testimonial of paginatedTestimonials"
+    >
+      <img
+        [src]="testimonial.photo"
+        alt="{{ testimonial.name }}"
+        class="testimonial-photo"
+      />
+      <div class="testimonial-content">
+        <h3>{{ testimonial.name }}</h3>
+        <p>{{ testimonial.title }}</p>
+        <p>{{ testimonial.feedback }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagination">
+    <span (click)="goToPage(0)" [class.active]="currentPage === 0"></span>
+    <span (click)="goToPage(1)" [class.active]="currentPage === 1"></span>
+  </div>
+</section>

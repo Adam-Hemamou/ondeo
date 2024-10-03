@@ -1,0 +1,78 @@
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+
+  .yellow-background {
+    position: absolute; /* Changez en absolute pour couvrir correctement */
+    background-color: rgba(250, 177, 50, 0.84); /* couleur jaune */
+    border-radius: 0 0 50px 50px; /* arrondir uniquement le bas */
+    height: 600px; /* ajuster selon les besoins */
+    width: 150%; /* Ajoutez une largeur pour couvrir toute la section */
+    border-radius: 20% 80% 100% 0% / 9% 22% 78% 91%;
+
+    z-index: 0; /* placer en arrière-plan */
+  }
+
+  .testimonials-container {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative; /* Ajoutez une position relative pour le contenu */
+    z-index: 1; /* Assurez-vous que le contenu est au-dessus du fond */
+  }
+
+  .testimonial-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  .testimonial-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .testimonial-position {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .pagination {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.active {
+        background-color: black;
+      }
+    }
+  }
+}
+
+/* Vector 82 */

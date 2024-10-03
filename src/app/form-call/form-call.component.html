@@ -1,1 +1,64 @@
-<p>form-call works!</p>
+<div class="contact-container" #formContainer>
+  <!-- Bouton pour afficher/masquer le formulaire -->
+  <button
+    (click)="toggleForm()"
+    class="contact-btn"
+    [ngClass]="{ active: formVisible }"
+  >
+    {{ formVisible ? "On vous rappel !" : "Appel gratuit" }}
+  </button>
+
+  <!-- Formulaire Angular -->
+  <div class="contact-form" [ngClass]="{ visible: formVisible }">
+    <form (ngSubmit)="onSubmit()" *ngIf="formVisible">
+      <input
+        type="text"
+        [(ngModel)]="contactForm.phone"
+        name="phone"
+        placeholder="Votre numéro"
+        required
+        pattern="[0-9]*"
+      />
+      <div *ngIf="contactForm.phone && !isPhoneValid()" class="error-message">
+        Veuillez zntrer un nemero valide.
+      </div>
+
+      <input
+        type="email"
+        [(ngModel)]="contactForm.email"
+        name="email"
+        placeholder="Votre adresse e-mail"
+        required
+      />
+      <div *ngIf="contactForm.email && !isEmailValid()" class="error-message">
+        Veuillez entrer une adresse e-mail valide.
+      </div>
+
+      <input
+        type="text"
+        [(ngModel)]="contactForm.firstName"
+        name="firstName"
+        placeholder="Votre prénom"
+        required
+        minlength="2"
+      />
+      <div
+        *ngIf="contactForm.firstName && !isFirstNameValid()"
+        class="error-message"
+      >
+        Le prénom doit contenir au moins 2 lettres.
+      </div>
+
+      <button
+        type="submit"
+        class="submit-btn"
+        [disabled]="!isFormValid()"
+        [ngClass]="{ 'disabled-btn': !isFormValid() }"
+      >
+        Envoyer
+      </button>
+    </form>
+  </div>
+
+  <app-toast #toast></app-toast>
+</div>
