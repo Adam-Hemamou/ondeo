@@ -1,0 +1,13 @@
+<section>
+  <h2 class="section-title">
+    Les <span class="highlighted">réponses</span> <br />
+    à vos questions
+  </h2>
+
+  <div class="faq-container">
+    <div class="faq-bloc" *ngFor="let faq of FAQList">
+      <h3>{{ faq.question }}</h3>
+      <img src="/svg/faq-arrow.svg" alt="" />
+    </div>
+  </div>
+</section>

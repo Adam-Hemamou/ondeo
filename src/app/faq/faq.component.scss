@@ -1,0 +1,20 @@
+.faq-container {
+  padding: 20px;
+  .faq-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 5px;
+    // margin-bottom: 15px;
+    height: 70px;
+    border-top: 1px solid #c6c2c2;
+
+    h3 {
+      width: 80%;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #c6c2c2;
+    }
+  }
+}

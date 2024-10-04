@@ -1,0 +1,103 @@
+.discussion-section {
+  position: relative;
+  padding: 20px 20px;
+  color: white;
+  text-align: center;
+  height: 1020px;
+  overflow: hidden;
+
+  .blue-background {
+    position: absolute;
+    background-color: #192a8a; /* Blue background */
+    height: 100%;
+    width: 150%;
+    z-index: 0;
+    border-radius: 69% 0% 0% 91% / 12% 25% 25% 6%;
+    top: 0;
+    left: -50px; /* Moves background slightly left to adjust appearance */
+  }
+
+  .section-title {
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 1; /* Ensures text is above background */
+    position: relative;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    padding: 12px;
+    text-align: start;
+    z-index: 1;
+    position: relative;
+  }
+
+  .steps {
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+
+      font-size: 18px;
+      display: flex;
+      text-align: left;
+      width: 100%;
+      max-width: 280px;
+      padding-left: 15px;
+
+      .icon-check {
+        background: url("/svg/valid-step.svg") no-repeat center;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .calendar-placeholder {
+    background-color: white;
+    height: 400px;
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .footer {
+    position: relative;
+    z-index: 1;
+    // bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      display: block;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
