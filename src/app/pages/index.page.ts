@@ -9,6 +9,9 @@ import { PodcastSectionComponent } from '../podcast-section/podcast-section.comp
 import { MotionSectionComponent } from '../motion-section/motion-section.component';
 import { FormCallComponent } from '../form-call/form-call.component';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
+import { FaqComponent } from '../faq/faq.component';
+import { CalandlyComponent } from '../calandly/calandly.component';
+import { LogosComponent } from '../logos/logos.component';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +27,9 @@ import { TestimonialComponent } from '../testimonial/testimonial.component';
     MotionSectionComponent,
     FormCallComponent,
     TestimonialComponent,
+    FaqComponent,
+    CalandlyComponent,
+    LogosComponent,
   ],
   template: `
     <header>
@@ -45,11 +51,15 @@ import { TestimonialComponent } from '../testimonial/testimonial.component';
       <app-video-pres [isMobile]="isMobile"></app-video-pres>
       <app-key-figure [isMobile]="isMobile"></app-key-figure>
       <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
+      <app-logos></app-logos>
       <app-step-cards></app-step-cards>
       <app-podcast-section></app-podcast-section>
       <app-motion-section></app-motion-section>
       <app-form-call></app-form-call>
       <app-testimonial></app-testimonial>
+      <app-faq></app-faq>
+      <app-calandly></app-calandly>
+      <app-logos></app-logos>
     </main>
   `,
 })

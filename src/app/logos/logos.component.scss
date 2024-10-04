@@ -1,0 +1,42 @@
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 0;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.logo-track img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50.5%);
+  }
+}
+
+// Media query pour téléphones et petits écrans
+@media (max-width: 600px) {
+  .logo-track {
+    gap: 15px;
+    animation: scroll 8s linear infinite;
+  }
+
+  .logo-track img {
+    width: 60px;
+  }
+}
