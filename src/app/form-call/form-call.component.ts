@@ -21,18 +21,40 @@ export class FormCallComponent {
     firstName: '',
   };
 
+  isButtonDisabled = false;
   toggleForm() {
+    this.isButtonDisabled = true; // Désactiver le bouton
     this.formVisible = !this.formVisible;
+
+    const formElement =
+      this.formContainer.nativeElement.querySelector('.contact-form');
+
     if (this.formVisible) {
-      setTimeout(() => {
+      formElement.style.display = 'block'; // Assurez-vous que le formulaire est visible
+      requestAnimationFrame(() => {
+        formElement.classList.add('open'); // Ajouter une classe pour l'animation d'ouverture
         this.formContainer.nativeElement.scrollIntoView({ behavior: 'smooth' });
-      }, 0);
+      });
+    } else {
+      formElement.classList.remove('open'); // Enlever la classe pour l'animation de fermeture
+    }
+  }
+
+  onTransitionEnd() {
+    // Réactiver le bouton après la transition
+    this.isButtonDisabled = false;
+
+    const formElement =
+      this.formContainer.nativeElement.querySelector('.contact-form');
+
+    if (!this.formVisible) {
+      formElement.style.display = 'none'; // Masquer le formulaire après la fermeture
     }
   }
 
   onSubmit() {
     if (this.isFormValid()) {
-      this.toast.message = 'Formulaire soumis avec succès !';
+      this.toast.message = 'vos information nous ont été transimises';
       this.toast.type = 'success';
       this.toast.showToast();
     } else {

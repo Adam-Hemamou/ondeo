@@ -4,12 +4,17 @@
     (click)="toggleForm()"
     class="contact-btn"
     [ngClass]="{ active: formVisible }"
+    [disabled]="isButtonDisabled"
   >
     {{ formVisible ? "On vous rappel !" : "Appel gratuit" }}
   </button>
 
   <!-- Formulaire Angular -->
-  <div class="contact-form" [ngClass]="{ visible: formVisible }">
+  <div
+    class="contact-form"
+    [ngClass]="{ open: formVisible, close: !formVisible }"
+    (transitionend)="onTransitionEnd()"
+  >
     <form (ngSubmit)="onSubmit()" *ngIf="formVisible">
       <input
         type="text"
@@ -20,7 +25,7 @@
         pattern="[0-9]*"
       />
       <div *ngIf="contactForm.phone && !isPhoneValid()" class="error-message">
-        Veuillez zntrer un nemero valide.
+        Numero invalide.
       </div>
 
       <input
@@ -31,7 +36,7 @@
         required
       />
       <div *ngIf="contactForm.email && !isEmailValid()" class="error-message">
-        Veuillez entrer une adresse e-mail valide.
+        E-mail invalide.
       </div>
 
       <input

@@ -21,15 +21,23 @@
   }
 
   .contact-form {
-    height: auto;
-    // overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 
-    &.visible {
-      min-height: 250px; // Ajustez la hauteur en fonction du contenu
-      padding-top: 15px;
+    &.open {
+      max-height: 500px;
+      opacity: 1;
+      visibility: visible;
     }
 
+    &.close {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
     form {
       display: flex;
       flex-direction: column;

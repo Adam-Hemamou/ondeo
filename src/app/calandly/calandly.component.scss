@@ -14,22 +14,22 @@
     z-index: 0;
     border-radius: 69% 0% 0% 91% / 12% 25% 25% 6%;
     top: 0;
-    left: -50px; /* Moves background slightly left to adjust appearance */
+    left: -50px;
   }
 
   .section-title {
-    font-size: 2em;
-    font-weight: bold;
-    z-index: 1; /* Ensures text is above background */
+    z-index: 1;
     position: relative;
+    font-size: 32px;
+    font-weight: 500;
   }
 
   .description {
     font-size: 16px;
     font-weight: 350;
     line-height: 1.5;
-    margin: 0 0 10px 0;
-    padding: 12px;
+    margin-bottom: 10px;
+    padding: 0px 5px 10px;
     text-align: start;
     z-index: 1;
     position: relative;
