@@ -5,9 +5,22 @@
   </h2>
 
   <div class="faq-container">
-    <div class="faq-bloc" *ngFor="let faq of FAQList">
-      <h3>{{ faq.question }}</h3>
-      <img src="/svg/faq-arrow.svg" alt="" />
+    <div class="faq-bloc" *ngFor="let faq of FAQList; let i = index">
+      <div class="question-faq" (click)="toggleAnswer(i)">
+        <h3>{{ faq.question }}</h3>
+        <img
+          src="/svg/faq-arrow.svg"
+          alt="arrow"
+          [ngClass]="{ rotate: isOpen[i] }"
+        />
+      </div>
+      <div
+        [@sharedAnimation]="isOpen[i] ? 'open' : 'closed'"
+        class="answer"
+        [ngClass]="{ open: isOpen[i] }"
+      >
+        <p>{{ faq.answer }}</p>
+      </div>
     </div>
   </div>
 </section>

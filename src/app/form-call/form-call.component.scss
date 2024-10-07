@@ -6,7 +6,6 @@
   border: 1px solid #eaeaea;
   padding: 20px;
   border-radius: 10px;
-  height: auto;
 
   .contact-btn {
     width: 290px;
@@ -21,24 +20,10 @@
   }
 
   .contact-form {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
+    overflow: hidden; // Assurez-vous que le formulaire ne déborde pas
+    transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 
-    &.open {
-      max-height: 500px;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &.close {
-      max-height: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
-    form {
+    .input-container {
       display: flex;
       flex-direction: column;
 
@@ -78,14 +63,10 @@
       }
     }
   }
-}
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-self: start;
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
 }
