@@ -4,7 +4,18 @@
       <h2>ONDEO</h2>
       <p>Agence créative</p>
     </div>
-    <img src="/svg/menu.png" alt="menu" />
-    <button>Prendre RDV</button>
+
+    <img src="/svg/menu.png" alt="menu" (click)="toggleMenu()" />
+
+    <button class="notification-button">Prendre RDV</button>
+  </div>
+
+  <div [@sharedAnimation]="isMenuOpen ? 'open' : 'closed'" class="burger-menu">
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </div>
 </div>

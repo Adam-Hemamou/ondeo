@@ -1,10 +1,9 @@
-<div class="contact-container" #formContainer>
+<div class="contact-container">
   <!-- Bouton pour afficher/masquer le formulaire -->
   <button
     (click)="toggleForm()"
     class="contact-btn"
     [ngClass]="{ active: formVisible }"
-    [disabled]="isButtonDisabled"
   >
     {{ formVisible ? "On vous rappel !" : "Appel gratuit" }}
   </button>
@@ -12,56 +11,58 @@
   <!-- Formulaire Angular -->
   <div
     class="contact-form"
-    [ngClass]="{ open: formVisible, close: !formVisible }"
-    (transitionend)="onTransitionEnd()"
+    [@sharedAnimation]="formVisible ? 'open' : 'closed'"
+    [ngClass]="{ hidden: !formVisible }"
   >
-    <form (ngSubmit)="onSubmit()" *ngIf="formVisible">
-      <input
-        type="text"
-        [(ngModel)]="contactForm.phone"
-        name="phone"
-        placeholder="Votre numéro"
-        required
-        pattern="[0-9]*"
-      />
-      <div *ngIf="contactForm.phone && !isPhoneValid()" class="error-message">
-        Numero invalide.
-      </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <input
+          type="text"
+          [(ngModel)]="contactForm.phone"
+          name="phone"
+          placeholder="Votre numéro"
+          required
+          pattern="[0-9]*"
+        />
+        <div *ngIf="contactForm.phone && !isPhoneValid()" class="error-message">
+          Numero invalide.
+        </div>
 
-      <input
-        type="email"
-        [(ngModel)]="contactForm.email"
-        name="email"
-        placeholder="Votre adresse e-mail"
-        required
-      />
-      <div *ngIf="contactForm.email && !isEmailValid()" class="error-message">
-        E-mail invalide.
-      </div>
+        <input
+          type="email"
+          [(ngModel)]="contactForm.email"
+          name="email"
+          placeholder="Votre adresse e-mail"
+          required
+        />
+        <div *ngIf="contactForm.email && !isEmailValid()" class="error-message">
+          E-mail invalide.
+        </div>
 
-      <input
-        type="text"
-        [(ngModel)]="contactForm.firstName"
-        name="firstName"
-        placeholder="Votre prénom"
-        required
-        minlength="2"
-      />
-      <div
-        *ngIf="contactForm.firstName && !isFirstNameValid()"
-        class="error-message"
-      >
-        Le prénom doit contenir au moins 2 lettres.
-      </div>
+        <input
+          type="text"
+          [(ngModel)]="contactForm.firstName"
+          name="firstName"
+          placeholder="Votre prénom"
+          required
+          minlength="2"
+        />
+        <div
+          *ngIf="contactForm.firstName && !isFirstNameValid()"
+          class="error-message"
+        >
+          Le prénom doit contenir au moins 2 lettres.
+        </div>
 
-      <button
-        type="submit"
-        class="submit-btn"
-        [disabled]="!isFormValid()"
-        [ngClass]="{ 'disabled-btn': !isFormValid() }"
-      >
-        Envoyer
-      </button>
+        <button
+          type="submit"
+          class="submit-btn"
+          [disabled]="!isFormValid()"
+          [ngClass]="{ 'disabled-btn': !isFormValid() }"
+        >
+          Envoyer
+        </button>
+      </div>
     </form>
   </div>
 

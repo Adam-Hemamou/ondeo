@@ -8,6 +8,10 @@
   font-family: "Rubik", sans-serif;
 }
 
+main {
+  margin-top: 80px;
+}
+
 h1 {
   padding: 12px;
   font-size: 26px;
