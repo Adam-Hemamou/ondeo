@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToastComponent } from '../dump-components/toast/toast.component';
 
@@ -15,6 +15,7 @@ import { sharedAnimation } from '../core/animations/animation';
 })
 export class FormCallComponent {
   @ViewChild('toast') toast!: ToastComponent;
+  @ViewChild('formButton') formButton!: ElementRef;
 
   formVisible = false;
   contactForm = {
@@ -25,6 +26,22 @@ export class FormCallComponent {
 
   toggleForm() {
     this.formVisible = !this.formVisible;
+    if (this.formVisible) {
+      this.scrollToButton();
+    }
+  }
+
+  scrollToButton() {
+    if (this.formButton) {
+      const buttonPosition =
+        this.formButton.nativeElement.getBoundingClientRect().top +
+        window.scrollY;
+      const offset = 80; // Décalage de 80px au-dessus du bouton
+      window.scrollTo({
+        top: buttonPosition - offset,
+        behavior: 'smooth',
+      });
+    }
   }
 
   onSubmit() {

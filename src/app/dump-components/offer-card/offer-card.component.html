@@ -3,6 +3,15 @@
   class="offer-card"
   [ngClass]="{ popular: offer.popular }"
 >
+  <!-- <div class="red-banner">
+    <span>200K vues min</span>
+  </div> -->
+
+  <!-- Rectangle orange en haut à droite avec le texte "Populaire" -->
+  <div class="orange-rectangle" *ngIf="offer.popular">
+    <span>Populaire</span>
+  </div>
+
   <div
     class="blur-effect"
     [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
@@ -32,7 +41,7 @@
         <h2>{{ offer.title }}</h2>
 
         <p *ngIf="offer.oldPrice" class="old-price">
-          <del>{{ offer.oldPrice }}</del>
+          <span class="strikethrough">{{ offer.oldPrice }}</span>
           <span class="price">
             {{ offer.price }} <span class="ttc">TTC</span></span
           >

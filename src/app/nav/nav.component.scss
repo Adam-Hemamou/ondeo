@@ -57,13 +57,13 @@
       border-color: black;
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease,
-        transform 0.3s ease; // Ajoutez la transition pour le grossissement
+        transform 0.3s ease;
       font-weight: 600;
-      transform: translateZ(0); // Ajoute cette ligne
 
-      // Animation de survol
+      // Animation de survol - bouton devient noir avec texte blanc
       &:hover {
-        background-color: rgba(255, 206, 8, 0.54);
+        background-color: black;
+        color: white; // Le texte devient blanc
         transform: scale(1.05); // Agrandissement lors du survol
       }
 
@@ -84,7 +84,50 @@
         font-size: 11px; // Taille du texte
         font-weight: bold; // Épaisseur du texte
         border: solid black 1px;
+        transition: transform 0.1s ease-in-out;
       }
+
+      // Animation de rotation au survol du bouton
+      &:hover::after {
+        animation: shake-rotate 1s ease-in-out 1; // Animation pendant 3 secondes et ne boucle pas
+      }
+    }
+  }
+
+  // Animation de vibration par légère rotation
+  @keyframes shake-rotate {
+    0% {
+      transform: rotate(0deg); // Point de départ
+    }
+    10% {
+      transform: rotate(-10deg); // Légère rotation à gauche
+    }
+    20% {
+      transform: rotate(10deg); // Légère rotation à droite
+    }
+    30% {
+      transform: rotate(-10deg); // Retour à gauche
+    }
+    40% {
+      transform: rotate(10deg); // Retour à droite
+    }
+    100% {
+      transform: rotate(-10deg); // Reviens à gauche
+    }
+    60% {
+      transform: rotate(10deg); // Retour à droite
+    }
+    70% {
+      transform: rotate(-10deg); // Retour à gauche
+    }
+    80% {
+      transform: rotate(10deg); // Retour à droite
+    }
+    90% {
+      transform: rotate(-10deg); // Retour à gauche
+    }
+    100% {
+      transform: rotate(0deg); // Reviens à la position normale
     }
   }
 

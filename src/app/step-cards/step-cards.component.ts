@@ -1,10 +1,10 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-step-cards',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './step-cards.component.html',
   styleUrls: ['./step-cards.component.scss'],
 })

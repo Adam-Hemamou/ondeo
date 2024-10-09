@@ -44,9 +44,17 @@
   width: 292px;
   height: 50px;
   border-radius: 26px;
-  background-color: #212121;
-  color: white;
+  background-color: #212121; // Couleur de fond initiale
+  color: white; // Couleur du texte initiale
   font-size: 16px;
   cursor: pointer;
   margin: 15px 0;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; // Ajoute la transition pour scale
+
+  // Styles au survol
+  &:hover {
+    background-color: white; // Couleur de fond au survol
+    color: black; // Couleur du texte au survol
+    transform: scale(1.02); // Agrandissement lors du survol
+  }
 }
