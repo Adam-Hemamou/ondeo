@@ -1,6 +1,7 @@
 <div class="contact-container">
   <!-- Bouton pour afficher/masquer le formulaire -->
   <button
+    #formButton
     (click)="toggleForm()"
     class="contact-btn"
     [ngClass]="{ active: formVisible }"

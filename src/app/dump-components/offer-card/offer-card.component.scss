@@ -9,6 +9,7 @@
   z-index: 1;
   height: 500px;
   width: 330px;
+  border: 3px solid #d1cdcd;
 
   h2 {
     color: #303030;
@@ -17,10 +18,51 @@
   &.popular {
     background-color: black;
     color: white;
+    border: 3px solid #ffb648;
 
-    .offer-features li img {
-      stroke: white;
-      fill: white;
+    // .red-banner {
+    //   position: absolute;
+    //   top: 3px;
+    //   left: 0;
+    //   color: white;
+    //   padding: 10px 5px;
+    //   font-size: 11px;
+    //   font-weight: bold;
+    //   overflow: hidden;
+    //   z-index: 1;
+    //   height: 66px;
+    //   width: 40px;
+    //   background-color: #ff4040;
+    //   margin-left: 14px;
+    //   text-align: center;
+
+    // Triangle uniquement en bas
+    //   &:before {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+
+    //     width: 0;
+    //     height: 0;
+    //     border-left: 25px solid transparent;
+    //     border-right: 25px solid transparent;
+    //     border-bottom: 20px solid #383838;
+    //   }
+    // }
+
+    .orange-rectangle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ffb648;
+      color: #3b3b3b;
+      padding: 5px 10px;
+      font-size: 14px;
+      // font-weight: bold;
+      border-radius: 5px;
+      z-index: 1;
     }
 
     .header-offer {
@@ -29,14 +71,24 @@
       }
 
       img {
+        margin-left: 10px;
         width: 50px !important;
         height: 50px !important;
       }
     }
 
-    .offer-btn button {
-      background-color: white;
-      color: black;
+    .offer-btn {
+      button {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: #303030; // Couleur de fond au survol
+          color: white; // Couleur du texte au survol
+          border: solid 1px white;
+        }
+      }
     }
   }
 
@@ -51,13 +103,13 @@
   }
 
   .circle-left {
-    top: -30px;
-    left: -30px;
+    top: 50px;
+    left: 20px;
   }
 
   .circle-right {
-    top: -30px;
-    right: -30px;
+    top: 90px;
+    right: 30px;
   }
 
   .circle-bottom {
@@ -82,16 +134,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    // width: 100%;
+    // height: 100%;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     border-radius: 15px;
     z-index: 0;
+    overflow: hidden;
 
     &.black-blur {
       background: rgba(52, 52, 52, 0.7);
-      border: 3px solid #ffb648;
     }
 
     &.white-blur {
@@ -116,9 +170,22 @@
         align-items: center;
         gap: 10px;
 
-        del {
+        .strikethrough {
           font-size: 20px;
           color: #6b6464;
+          position: relative;
+          // Gardez la couleur du texte par défaut
+
+          &::after {
+            content: ""; // Crée un élément de contenu vide
+            position: absolute;
+            left: 0; // Alignez à gauche
+            right: 0; // Alignez à droite
+            top: 50%; // Centre verticalement
+            height: 2px; // Épaisseur de la ligne
+            background-color: #ba1e20; // Couleur de la ligne
+            transform: translateY(-50%); // Centre la ligne par rapport au texte
+          }
         }
       }
 
@@ -174,6 +241,13 @@
       border-radius: 5px;
       font-size: 20px;
       cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: white; // Couleur de fond au survol
+        color: #303030; // Couleur du texte au survol
+        border: solid 1px #303030;
+      }
     }
   }
 }

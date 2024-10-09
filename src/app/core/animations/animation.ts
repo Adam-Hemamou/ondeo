@@ -9,7 +9,20 @@ import {
 
 // Animation partagée pour le formulaire et la FAQ
 export const sharedAnimation = trigger('sharedAnimation', [
-  state('open', style({ height: '*', opacity: 1 })),
-  state('closed', style({ height: '0', opacity: 0 })),
+  state(
+    'open',
+    style({
+      height: '*',
+      opacity: 1,
+    })
+  ),
+  state(
+    'closed',
+    style({
+      height: '0',
+      opacity: 0,
+      overflow: 'hidden',
+    })
+  ),
   transition('closed <=> open', [animate('0.5s ease-in-out')]),
 ]);
