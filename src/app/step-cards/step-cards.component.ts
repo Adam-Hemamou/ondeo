@@ -1,10 +1,11 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { SimpleVideoComponent } from '../dump-components/simple-video/simple-video.component';
 
 @Component({
   selector: 'app-step-cards',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, SimpleVideoComponent],
   templateUrl: './step-cards.component.html',
   styleUrls: ['./step-cards.component.scss'],
 })

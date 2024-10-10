@@ -1,0 +1,24 @@
+.video-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+
+  .embed {
+    position: relative;
+    height: 0;
+    padding-top: calc(100% / (16 / 9)); // Ratio 16:9
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+
+    iframe {
+      border: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+    }
+  }
+}

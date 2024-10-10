@@ -2,18 +2,16 @@
   Votre partenaire vidéo le plus <span class="highlighted">innovant</span> pour
   2024
 </h2>
-<div class="video-container">
-  <div *ngFor="let video of paginatedVideos" class="embed embed--16-9">
-    <iframe
-      [src]="video.src"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen
-    ></iframe>
-    <div class="chip" [ngClass]="video.categoryColor">{{ video.category }}</div>
-    <!-- <div class="play-button" (click)="openVideo(video.src)"></div> -->
-  </div>
+
+<div class="carrousel-container">
+  <app-videos-structured
+    *ngIf="currentPage === 0"
+    [videoList]="videoList1"
+  ></app-videos-structured>
+  <app-videos-structured
+    *ngIf="currentPage === 1"
+    [videoList]="videoList2"
+  ></app-videos-structured>
 </div>
 
 <div class="pagination">
