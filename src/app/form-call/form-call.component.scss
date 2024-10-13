@@ -1,14 +1,16 @@
 .contact-container {
-  width: 90%;
-  max-width: 400px;
+  max-width: 84%;
   margin: 15px auto;
-  text-align: center;
   border: 1px solid #eaeaea;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .contact-btn {
-    width: 290px;
+    width: 80%;
     background-color: #ffc973;
     color: #333;
     border: none;
@@ -20,6 +22,7 @@
   }
 
   .contact-form {
+    width: 100%;
     overflow: hidden; // Assurez-vous que le formulaire ne déborde pas
     transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 

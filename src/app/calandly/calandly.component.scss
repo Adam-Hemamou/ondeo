@@ -42,22 +42,22 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    width: 280px;
+    margin: 0 auto;
+    gap: 10px;
 
     li {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-
-      font-size: 18px;
       display: flex;
-      text-align: left;
-      width: 100%;
-      max-width: 280px;
-      padding-left: 15px;
+      align-items: center;
+      p {
+        font-size: 18px;
+        width: 100%;
+        padding-left: 15px;
+      }
 
-      .icon-check {
-        background: url("/svg/valid-step.svg") no-repeat center;
+      img {
         width: 24px;
         height: 24px;
         margin-right: 10px;

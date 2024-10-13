@@ -59,6 +59,7 @@ import { LogosComponent } from '../logos/logos.component';
       <app-testimonial></app-testimonial>
       <app-faq></app-faq>
       <app-calandly></app-calandly>
+      <p class="follow-us">Rejoignez - nous</p>
       <app-logos></app-logos>
     </main>
   `,

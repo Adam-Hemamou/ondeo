@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { OfferCardComponent } from '../dump-components/offer-card/offer-card.component';
 import { Offer } from '../core/types/offer';
+import { SimpleVideoComponent } from '../dump-components/simple-video/simple-video.component';
 
 @Component({
   selector: 'app-motion-section',
   standalone: true,
-  imports: [OfferCardComponent],
+  imports: [OfferCardComponent, SimpleVideoComponent],
   templateUrl: './motion-section.component.html',
   styleUrls: ['./motion-section.component.scss'],
 })
 export class MotionSectionComponent {
+  videoUrl: string =
+    'https://player.vimeo.com/video/246185769?title=0&byline=0&portrait=0&dnt=1';
   offerList: Offer[] = [
     {
       title: 'Starter',
