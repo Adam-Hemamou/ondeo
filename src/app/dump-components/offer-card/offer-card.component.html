@@ -1,8 +1,4 @@
-<div
-  *ngFor="let offer of paginatedOffers"
-  class="offer-card"
-  [ngClass]="{ popular: offer.popular }"
->
+<div class="offer-card" [ngClass]="{ popular: offer.popular }">
   <!-- <div class="red-banner">
     <span>200K vues min</span>
   </div> -->
@@ -71,9 +67,4 @@
       <button>Commander ma vidéo</button>
     </div>
   </div>
-</div>
-
-<div class="pagination">
-  <span (click)="goToPage(0)" [class.active]="currentPage === 0"></span>
-  <span (click)="goToPage(1)" [class.active]="currentPage === 1"></span>
 </div>

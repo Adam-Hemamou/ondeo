@@ -6,24 +6,13 @@
   <div class="yellow-background"></div>
   <!-- Assurez-vous que le nom correspond -->
   <div class="testimonials-container">
-    <div
-      class="testimonial-card"
-      *ngFor="let testimonial of paginatedTestimonials"
-    >
-      <img
-        [src]="testimonial.photo"
-        alt="{{ testimonial.name }}"
-        class="testimonial-photo"
-      />
-      <div class="testimonial-content">
-        <h3>{{ testimonial.name }}</h3>
-        <p>{{ testimonial.title }}</p>
-        <p>{{ testimonial.feedback }}</p>
-      </div>
-    </div>
-  </div>
-  <div class="pagination">
-    <span (click)="goToPage(0)" [class.active]="currentPage === 0"></span>
-    <span (click)="goToPage(1)" [class.active]="currentPage === 1"></span>
+    <swiper [config]="config">
+      <ng-template swiperSlide>
+        <app-avis-card [avisList]="testimonials1"></app-avis-card>
+      </ng-template>
+      <ng-template swiperSlide>
+        <app-avis-card [avisList]="testimonials2"></app-avis-card>
+      </ng-template>
+    </swiper>
   </div>
 </section>
