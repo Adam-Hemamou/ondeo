@@ -46,12 +46,12 @@ export class FormCallComponent {
 
   onSubmit() {
     if (this.isFormValid()) {
-      this.toast.message = 'vos information nous ont été transimises';
+      this.toast.message = 'Vos informations nous ont été transimises';
       this.toast.type = 'success';
       this.toast.showToast();
     } else {
       this.toast.message =
-        'Erreur : veuillez corriger les champs du formulaire.';
+        'Erreur : Veuillez corriger les champs du formulaire.';
       this.toast.type = 'error';
       this.toast.showToast();
     }

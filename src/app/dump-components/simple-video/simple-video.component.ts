@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-// import { SafeUrlPipe } from 'src/app/core/pipes/safe-url.pipe';
+import { SafeUrlPipe } from '../../core/pipes/safe-url.pipe';
 
 @Component({
   selector: 'app-simple-video',
   standalone: true,
-  imports: [],
+  imports: [SafeUrlPipe],
   templateUrl: './simple-video.component.html',
   styleUrls: ['./simple-video.component.scss'],
 })

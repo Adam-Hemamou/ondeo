@@ -1,7 +1,7 @@
 <div class="video-container">
   <div class="embed embed--16-9">
     <iframe
-      src="https://player.vimeo.com/video/368733793"
+      [src]="videoUrl | safeUrl"
       frameborder="0"
       webkitallowfullscreen
       mozallowfullscreen
