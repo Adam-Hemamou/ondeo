@@ -1,19 +1,30 @@
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideosStructuredComponent } from '../dump-components/videos-structured/videos-structured.component';
+import { SwiperComponent, SwiperModule } from 'swiper/angular';
+import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
+
+SwiperCore.use([Pagination]);
 
 @Component({
   selector: 'app-video-carrousel',
   standalone: true,
-  imports: [NgFor, NgClass, NgIf, NgStyle, VideosStructuredComponent],
+  imports: [
+    NgFor,
+    NgClass,
+    NgIf,
+    NgStyle,
+    VideosStructuredComponent,
+    SwiperModule,
+  ],
   templateUrl: './video-carrousel.component.html',
   styleUrls: ['./video-carrousel.component.scss'],
 })
 export class VideoCarrouselComponent {
   @Input() isMobile!: boolean;
-
-  currentPage = 0;
+  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  @ViewChild('swiper') swiper?: SwiperComponent;
 
   videoList1 = [
     {
@@ -49,6 +60,7 @@ export class VideoCarrouselComponent {
       ratio: '16-9',
     },
   ];
+
   videoList2 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
@@ -84,9 +96,16 @@ export class VideoCarrouselComponent {
     },
   ];
 
-  constructor(private sanitizer: DomSanitizer) {}
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    loop: true, // Pour un défilement en boucle
+    autoplay: {
+      delay: 5000, // Délai de 5 secondes entre chaque slide
+      disableOnInteraction: false, // L'autoplay continue même après interaction
+    },
+    pagination: { clickable: true },
+  };
 
-  goToPage(pageIndex: number) {
-    this.currentPage = pageIndex;
-  }
+  constructor(private sanitizer: DomSanitizer) {}
 }

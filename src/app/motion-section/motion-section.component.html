@@ -5,4 +5,19 @@
   Idéal pour une vidéo de présentation d’entreprise ou d’une nouvelle offre
 </p>
 <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
-<app-offer-card [offers]="offerList"></app-offer-card>
+
+<div *ngIf="isMobile; else desktopLayout">
+  <swiper [config]="config">
+    <ng-template *ngFor="let offer of offerCards" swiperSlide>
+      <app-offer-card [offer]="offer"></app-offer-card>
+    </ng-template>
+  </swiper>
+</div>
+<ng-template #desktopLayout>
+  <div class="offer-cards">
+    <app-offer-card
+      *ngFor="let offer of offerCards"
+      [offer]="offer"
+    ></app-offer-card>
+  </div>
+</ng-template>

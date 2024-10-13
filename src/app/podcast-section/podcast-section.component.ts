@@ -1,20 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { OfferCardComponent } from '../dump-components/offer-card/offer-card.component';
 import { Offer } from '../core/types/offer';
 import { SimpleVideoComponent } from '../dump-components/simple-video/simple-video.component';
+import { SwiperModule } from 'swiper/angular';
+import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
+import { NgFor, NgIf } from '@angular/common';
+
+SwiperCore.use([Pagination]);
 
 @Component({
   selector: 'app-podcast-section',
   standalone: true,
-  imports: [OfferCardComponent, SimpleVideoComponent],
+  imports: [
+    OfferCardComponent,
+    SimpleVideoComponent,
+    SwiperModule,
+    NgFor,
+    NgIf,
+  ],
   templateUrl: './podcast-section.component.html',
   styleUrls: ['./podcast-section.component.scss'],
 })
 export class PodcastSectionComponent {
+  @Input() isMobile!: boolean;
+
   videoUrl: string =
     'https://player.vimeo.com/video/68414507?title=0&byline=0&portrait=0&dnt=1';
   // 'https://player.vimeo.com/video/368733793'
-  offerList: Offer[] = [
+
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: { clickable: true },
+  };
+
+  offerCards: Offer[] = [
     {
       title: 'Starter',
       price: '980 €',

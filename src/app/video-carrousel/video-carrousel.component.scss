@@ -1,21 +1,22 @@
 .carrousel-container {
-}
+  padding: 10px 0px;
 
-.pagination {
-  text-align: center;
-  margin-bottom: 15px;
+  .video-lists {
+    display: flex;
+    padding: 100px;
+    width: 100%;
+    height: auto;
 
-  span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: grey;
-    margin: 0 5px;
-    cursor: pointer;
-
-    &.active {
-      background: #ffce08;
+    .video-list {
+      flex: 1; // Chaque liste prendra la même largeur
     }
   }
+}
+
+::ng-deep .swiper-pagination-bullet-active {
+  background-color: #ffce08; // Couleur du point actif (jaune dans ce cas)
+}
+
+::ng-deep .swiper {
+  padding-bottom: 50px;
 }

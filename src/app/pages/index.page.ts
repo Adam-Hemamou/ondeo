@@ -53,8 +53,8 @@ import { LogosComponent } from '../logos/logos.component';
       <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
       <app-logos></app-logos>
       <app-step-cards></app-step-cards>
-      <app-podcast-section></app-podcast-section>
-      <app-motion-section></app-motion-section>
+      <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
+      <app-motion-section [isMobile]="isMobile"></app-motion-section>
       <app-form-call></app-form-call>
       <app-testimonial></app-testimonial>
       <app-faq></app-faq>

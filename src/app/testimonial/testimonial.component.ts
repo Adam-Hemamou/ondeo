@@ -1,16 +1,32 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { SwiperModule } from 'swiper/angular';
+import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
+import { Avis } from '../core/types/avis';
+import { AvisCardComponent } from '../dump-components/avis-card/avis-card.component';
+
+SwiperCore.use([Pagination]);
 
 @Component({
   selector: 'app-testimonial',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, SwiperModule, AvisCardComponent],
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss'],
 })
 export class TestimonialComponent {
-  currentPage = 0;
-  testimonials = [
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: { clickable: true },
+  };
+
+  testimonials1: Avis[] = [
     {
       name: 'Nathanaël Chouraki',
       title: "Founder That's Y Media",
@@ -32,6 +48,8 @@ export class TestimonialComponent {
         '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants! ...”',
       photo: '/png/utilisateur-2.png',
     },
+  ];
+  testimonials2: Avis[] = [
     {
       name: 'Nathanaël Chouraki',
       title: "Founder That's Y Media",
@@ -54,15 +72,4 @@ export class TestimonialComponent {
       photo: '/png/prisonnier.png',
     },
   ];
-
-  get paginatedTestimonials() {
-    const start = this.currentPage * 3;
-    return this.testimonials.slice(start, start + 3);
-  }
-
-  goToPage(page: number) {
-    if (page >= 0 && page < Math.ceil(this.testimonials.length / 3)) {
-      this.currentPage = page;
-    }
-  }
 }
