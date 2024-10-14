@@ -4,7 +4,11 @@
   </h2>
   <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
   <div class="card-container" *ngFor="let card of cards; let i = index">
-    <div class="card">
+    <div
+      class="card"
+      [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+      [attr.data-aos-delay]="i * 100"
+    >
       <div class="semi-circle-left"></div>
       <div class="semi-circle-right"></div>
       <div class="card-content">

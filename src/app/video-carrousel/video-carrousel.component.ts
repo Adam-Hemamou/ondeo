@@ -26,6 +26,8 @@ export class VideoCarrouselComponent {
   // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   @ViewChild('swiper') swiper?: SwiperComponent;
 
+  direction: boolean = true;
+
   videoList1 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
@@ -102,7 +104,7 @@ export class VideoCarrouselComponent {
     loop: true, // Pour un défilement en boucle
     autoplay: {
       delay: 5000, // Délai de 5 secondes entre chaque slide
-      disableOnInteraction: false, // L'autoplay continue même après interaction
+      disableOnInteraction: true,
     },
     pagination: { clickable: true },
   };

@@ -1,11 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { SwiperModule } from 'swiper/angular';
-import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
+import SwiperCore, { Autoplay, Pagination, SwiperOptions } from 'swiper';
 import { Avis } from '../core/types/avis';
 import { AvisCardComponent } from '../dump-components/avis-card/avis-card.component';
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Autoplay]);
 
 @Component({
   selector: 'app-testimonial',
