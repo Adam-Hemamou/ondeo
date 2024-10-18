@@ -3,4 +3,5 @@ export type Avis = {
   title: string;
   feedback: string;
   photo: string;
+  expanded?: boolean;
 };

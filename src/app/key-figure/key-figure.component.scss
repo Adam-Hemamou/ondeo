@@ -10,11 +10,24 @@
   .purple {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    // gap: 30px;s
     width: 298px;
     height: 60px;
     border-radius: 10px;
-    padding-left: 30px;
+    // padding-left: 30px;
+
+    .key-img-container {
+      width: 36%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .key-desc {
+      width: 64%;
+      font-size: 16px;
+    }
   }
 
   .blue {
@@ -34,28 +47,99 @@
   }
 }
 
-.btn-rdv-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 390px) {
+  .keys-container {
+    .blue,
+    .orange,
+    .purple {
+      width: 340px;
+      height: 70px;
+
+      .key-img-container {
+        width: 36%;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      .key-desc {
+        width: 64%;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
-.rdv-btn {
-  width: 292px;
-  height: 50px;
-  border-radius: 26px;
-  background-color: #212121; // Couleur de fond initiale
-  color: white; // Couleur du texte initiale
-  font-size: 16px;
-  cursor: pointer;
-  margin: 15px 0;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; // Ajoute la transition pour scale
+@media (min-width: 410px) {
+  .keys-container {
+    gap: 20px;
+    .blue,
+    .orange,
+    .purple {
+      width: 370px;
+      height: 70px;
 
-  // Styles au survol
-  &:hover {
-    background-color: white; // Couleur de fond au survol
-    color: black; // Couleur du texte au survol
-    transform: scale(1.02); // Agrandissement lors du survol
+      .key-desc {
+        width: 64%;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .keys-container {
+    flex-direction: row;
+    padding: 0px 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .blue,
+    .orange,
+    .purple {
+      width: 300px;
+      height: 70px;
+      padding-left: 2px;
+      .key-img-container {
+        width: 30%;
+
+        img {
+          width: 50px;
+        }
+      }
+
+      .key-desc {
+        width: 70%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .keys-container {
+    gap: 50px;
+
+    .blue,
+    .orange,
+    .purple {
+      width: 320px;
+      height: 80px;
+      padding-left: 0;
+
+      .key-img-container {
+        width: 30%;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      .key-desc {
+        width: 70%;
+        font-size: 20px;
+      }
+    }
   }
 }

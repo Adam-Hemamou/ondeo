@@ -5,7 +5,7 @@
   </h2>
   <div class="yellow-background"></div>
   <!-- Assurez-vous que le nom correspond -->
-  <div class="testimonials-container">
+  <div *ngIf="isMobile; else desktoptLayout" class="testimonials-container">
     <swiper [config]="config">
       <ng-template swiperSlide>
         <app-avis-card [avisList]="testimonials1"></app-avis-card>
@@ -15,4 +15,10 @@
       </ng-template>
     </swiper>
   </div>
+  <ng-template #desktoptLayout>
+    <div class="testimonial-layout">
+      <app-avis-card [avisList]="testimonials1"></app-avis-card>
+      <app-avis-card [avisList]="testimonials2"></app-avis-card>
+    </div>
+  </ng-template>
 </section>

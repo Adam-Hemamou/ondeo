@@ -2,27 +2,32 @@
   <h2 class="section-title">
     Le plan d’action pour obtenir des <span class="highlighted">résultats</span>
   </h2>
-  <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
-  <div class="card-container" *ngFor="let card of cards; let i = index">
-    <div
-      class="card"
-      [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-      [attr.data-aos-delay]="i * 100"
-    >
-      <div class="semi-circle-left"></div>
-      <div class="semi-circle-right"></div>
-      <div class="card-content">
-        <div class="card-blur"></div>
-        <div class="card-header">
-          <div class="num-title">
-            <h3 class="number">{{ card.number }}</h3>
-            <h3>{{ card.title }}</h3>
+  <div class="k-container">
+    <div class="video-app-container">
+      <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
+    </div>
+    <div class="card-container">
+      <div
+        *ngFor="let card of cards; let i = index"
+        class="card"
+        [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+        [attr.data-aos-delay]="i * 100"
+      >
+        <div class="semi-circle-left"></div>
+        <div class="semi-circle-right"></div>
+        <div class="card-content">
+          <div class="card-blur"></div>
+          <div class="card-header">
+            <div class="num-title">
+              <h3 class="number">{{ card.number }}</h3>
+              <h3>{{ card.title }}</h3>
+            </div>
+            <div class="img-card" [ngClass]="{ rotate: i < 3 }">
+              <img [src]="card.svg" alt="{{ card.title }}" />
+            </div>
           </div>
-          <div class="img-card" [ngClass]="{ rotate: i < 3 }">
-            <img [src]="card.svg" alt="{{ card.title }}" />
-          </div>
+          <p>{{ card.description }}</p>
         </div>
-        <p>{{ card.description }}</p>
       </div>
     </div>
   </div>

@@ -7,7 +7,17 @@
 
     <img src="/svg/menu.png" alt="menu" (click)="toggleMenu()" />
 
-    <button class="notification-button">Prendre RDV</button>
+    <div class="desktop-nav">
+      <ul class="desktop-nav">
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn-container">
+      <button class="notification-button">Prendre RDV</button>
+    </div>
   </div>
 
   <div [@sharedAnimation]="isMenuOpen ? 'open' : 'closed'" class="burger-menu">

@@ -11,4 +11,8 @@ import { Avis } from 'src/app/core/types/avis';
 })
 export class AvisCardComponent {
   @Input() avisList!: Avis[];
+
+  toggleExpand(avis: Avis) {
+    avis.expanded = !avis.expanded;
+  }
 }

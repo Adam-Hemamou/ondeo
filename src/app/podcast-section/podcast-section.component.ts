@@ -34,7 +34,7 @@ export class PodcastSectionComponent {
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: { clickable: true },
   };
