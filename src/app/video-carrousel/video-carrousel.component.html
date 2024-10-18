@@ -1,29 +1,35 @@
-<h2 class="section-title">
-  Votre partenaire vidéo le plus <span class="highlighted">innovant</span> pour
-  2024
-</h2>
+<div class="bgc-carrou">
+  <h2 class="section-title">
+    Votre partenaire vidéo le plus
+    <span class="highlighted">innovant</span> pour 2024
+  </h2>
 
-<div class="carrousel-container">
-  <swiper *ngIf="isMobile; else desktopLayout" #swiper [config]="config">
-    <ng-template swiperSlide>
-      <app-videos-structured [videoList]="videoList1"></app-videos-structured
-    ></ng-template>
-    <ng-template swiperSlide>
-      <app-videos-structured [videoList]="videoList2"></app-videos-structured
-    ></ng-template>
-  </swiper>
+  <div class="carrousel-container">
+    <swiper *ngIf="isMobile; else desktopLayout" #swiper [config]="config">
+      <ng-template swiperSlide>
+        <app-videos-structured [videoList]="videoList1"></app-videos-structured
+      ></ng-template>
+      <ng-template swiperSlide>
+        <app-videos-structured [videoList]="videoList2"></app-videos-structured
+      ></ng-template>
+    </swiper>
 
-  <ng-template #desktopLayout>
-    <div class="video-lists">
-      <div class="video-list">
-        <!-- Ajoutez une classe pour styliser les listes -->
-        <app-videos-structured [videoList]="videoList1"></app-videos-structured>
+    <ng-template #desktopLayout>
+      <div class="video-lists">
+        <div class="video-list">
+          <!-- Ajoutez une classe pour styliser les listes -->
+          <app-videos-structured
+            [videoList]="videoList1"
+          ></app-videos-structured>
+        </div>
+
+        <div class="video-list">
+          <!-- Ajoutez une classe pour styliser les listes -->
+          <app-videos-structured
+            [videoList]="videoList2"
+          ></app-videos-structured>
+        </div>
       </div>
-
-      <div class="video-list">
-        <!-- Ajoutez une classe pour styliser les listes -->
-        <app-videos-structured [videoList]="videoList2"></app-videos-structured>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
+  </div>
 </div>

@@ -34,7 +34,7 @@ export class MotionSectionComponent {
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     pagination: { clickable: true },
   };
@@ -43,7 +43,7 @@ export class MotionSectionComponent {
     {
       title: 'Starter',
       price: '850 €',
-      oldPrice: null,
+      oldPrice: '920 €',
       videos: 'video 45 secondes',
       description: 'carte de nos offres',
       features: [

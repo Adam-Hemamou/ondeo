@@ -10,11 +10,11 @@
   flex-direction: column;
 
   .contact-btn {
-    width: 80%;
+    width: 90%;
     background-color: #ffc973;
     color: #333;
     border: none;
-    padding: 15px 40px;
+    padding: 15px 30px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 18px;
@@ -27,14 +27,15 @@
     transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 
     .input-container {
+      margin-top: 5px;
       display: flex;
       flex-direction: column;
+      gap: 10px;
 
       input {
         border: none;
         border-bottom: 1px solid #333;
         padding: 10px;
-        margin: 10px 0;
         font-size: 16px;
         background-color: transparent;
         color: #333;
@@ -71,5 +72,57 @@
     color: red;
     font-size: 14px;
     margin-top: 5px;
+  }
+}
+
+@media (min-width: 420px) {
+  .contact-container {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 720px) {
+  .contact-container {
+    margin-top: 70px;
+    .contact-btn {
+      font-size: 24px;
+    }
+    .contact-form {
+      padding: 10px 30px;
+      .input-container {
+        input {
+          font-size: 20px;
+        }
+
+        .submit-btn {
+          font-size: 22px;
+        }
+      }
+    }
+    .error-message {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 1220px) {
+  .contact-container {
+    margin-top: 90px;
+    .contact-btn {
+      font-size: 24px;
+    }
+    .contact-form {
+      padding: 0px 50px;
+      .input-container {
+        input {
+          font-size: 20px;
+        }
+
+        .submit-btn {
+          font-size: 22px;
+        }
+      }
+    }
+    .error-message {
+      font-size: 20px;
+    }
   }
 }

@@ -9,7 +9,9 @@
   Vous souhaitez parler à votre audience ? Venez réaliser une interview dans nos
   studios !
 </p>
-<app-simple-video [videoUrl]="videoUrl"></app-simple-video>
+<div class="videos-offers">
+  <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
+</div>
 
 <div *ngIf="isMobile; else desktopLayout">
   <swiper [config]="config">

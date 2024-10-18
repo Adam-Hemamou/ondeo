@@ -3,9 +3,9 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideosStructuredComponent } from '../dump-components/videos-structured/videos-structured.component';
 import { SwiperComponent, SwiperModule } from 'swiper/angular';
-import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
+import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'app-video-carrousel',
@@ -31,7 +31,7 @@ export class VideoCarrouselComponent {
   videoList1 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1006127429?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/625274267?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: 'Société',
       categoryColor: 'blue',
@@ -47,7 +47,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/187415697?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/188457676?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: '3.2M vues IG',
       categoryColor: 'blue',
@@ -55,7 +55,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1006127429?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/68414507?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: '70k vues YT',
       categoryColor: 'pink',
@@ -66,7 +66,7 @@ export class VideoCarrouselComponent {
   videoList2 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1006127429?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/246185769?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: 'Société',
       categoryColor: 'blue',
@@ -74,7 +74,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/187415697?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/187584337?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: 'Collaboration',
       categoryColor: 'pink',
@@ -82,7 +82,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/187415697?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/859452982?title=0&byline=0&portrait=0&dnt=1'
       ),
       category: 'Expérience',
       categoryColor: 'orange',
@@ -107,6 +107,7 @@ export class VideoCarrouselComponent {
       disableOnInteraction: true,
     },
     pagination: { clickable: true },
+    navigation: true,
   };
 
   constructor(private sanitizer: DomSanitizer) {}

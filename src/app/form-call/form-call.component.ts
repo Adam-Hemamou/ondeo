@@ -2,7 +2,7 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ToastComponent } from '../dump-components/toast/toast.component';
-
+import emailjs from 'emailjs-com';
 import { sharedAnimation } from '../core/animations/animation';
 
 @Component({
@@ -44,11 +44,25 @@ export class FormCallComponent {
     }
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.isFormValid()) {
-      this.toast.message = 'Vos informations nous ont été transimises';
-      this.toast.type = 'success';
-      this.toast.showToast();
+      try {
+        // Remplacez 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' et 'YOUR_USER_ID' par vos propres valeurs
+        const response = await emailjs.send(
+          'service_albx7zh',
+          'template_rjkvt2d',
+          this.contactForm,
+          'qD_atInEL6hAV19gW'
+        );
+        this.toast.message = 'Vos informations nous ont été transmises';
+        this.toast.type = 'success';
+        this.toast.showToast();
+      } catch (error) {
+        this.toast.message = "Erreur lors de l'envoi de l'email.";
+        this.toast.type = 'error';
+        this.toast.showToast();
+        console.error("Erreur lors de l'envoi de l'email:", error);
+      }
     } else {
       this.toast.message =
         'Erreur : Veuillez corriger les champs du formulaire.';

@@ -1,10 +1,17 @@
 <div class="avis-container" *ngFor="let avis of avisList">
   <div class="testimonial-card">
-    <img [src]="avis.photo" alt="{{ avis.name }}" class="testimonial-photo" />
-    <div class="testimonial-content">
-      <h3>{{ avis.name }}</h3>
-      <p>{{ avis.title }}</p>
-      <p>{{ avis.feedback }}</p>
+    <div class="testimonial-header">
+      <img [src]="avis.photo" alt="{{ avis.name }}" class="testimonial-photo" />
+      <div class="testimonial-content">
+        <h3>{{ avis.name }}</h3>
+        <p>{{ avis.title }}</p>
+      </div>
     </div>
+    <p class="testimonial-feedback" [class.expanded]="avis.expanded">
+      {{ avis.feedback }}
+    </p>
+    <button (click)="toggleExpand(avis)">
+      {{ avis.expanded ? "Voir moins" : "Voir plus" }}
+    </button>
   </div>
 </div>

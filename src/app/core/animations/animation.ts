@@ -21,7 +21,6 @@ export const sharedAnimation = trigger('sharedAnimation', [
     style({
       height: '0',
       opacity: 0,
-      overflow: 'hidden',
     })
   ),
   transition('closed <=> open', [animate('0.5s ease-in-out')]),

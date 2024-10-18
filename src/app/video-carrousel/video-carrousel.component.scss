@@ -1,22 +1,57 @@
-.carrousel-container {
-  padding: 10px 0px;
+.bgc-carrou {
+  // background-color: #212121;
+  .carrousel-container {
+    padding: 10px 10px;
 
-  .video-lists {
-    display: flex;
-    padding: 100px;
-    width: 100%;
-    height: auto;
+    .video-lists {
+      display: flex;
+      gap: 20px;
+      padding: 20px 25px;
+      width: 100%;
+      height: auto;
 
-    .video-list {
-      flex: 1; // Chaque liste prendra la même largeur
+      .video-list {
+        flex: 1; // Chaque liste prendra la même largeur
+      }
+
+      @media (min-width: 750px) {
+        padding-top: 0;
+        gap: 25px;
+      }
+      @media (min-width: 1020px) {
+        padding: 20px 65px;
+        gap: 30px;
+      }
+      @media (min-width: 1120px) {
+        gap: 35px;
+      }
+      @media (min-width: 1250px) {
+        gap: 40px;
+      }
+      @media (min-width: 1400px) {
+        gap: 45px;
+      }
     }
   }
 }
 
-::ng-deep .swiper-pagination-bullet-active {
-  background-color: #ffce08; // Couleur du point actif (jaune dans ce cas)
-}
-
 ::ng-deep .swiper {
   padding-bottom: 50px;
+}
+
+::ng-deep {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0 50px;
+    color: #303030;
+    --swiper-navigation-size: 30px;
+  }
+
+  .swiper-button-next {
+    right: -50px; // Ajuste cette valeur
+  }
+
+  .swiper-button-prev {
+    left: -50px; // Ajuste cette valeur
+  }
 }

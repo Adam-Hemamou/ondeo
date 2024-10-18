@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { sharedAnimation } from '../core/animations/animation';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   animations: [sharedAnimation],

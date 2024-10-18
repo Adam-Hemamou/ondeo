@@ -13,6 +13,7 @@
   z-index: 1000;
 
   .nav-bar {
+    background-color: #fff;
     margin-top: 5px;
     border: solid 1px lightgrey;
     width: 90%;
@@ -23,11 +24,11 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    z-index: 3;
+    z-index: 1001;
     overflow: hidden;
 
     .logo {
-      width: 108px;
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -42,55 +43,69 @@
         font-weight: 600;
       }
     }
+    .desktop-nav {
+      display: none;
+    }
 
     img {
       height: 20px;
+      margin-right: 10px;
       cursor: pointer;
     }
 
-    .notification-button {
-      position: relative; // Nécessaire pour positionner le rond de notification
-      height: 28px;
-      width: 108px;
-      border-radius: 26px;
-      font-size: 12px;
-      background-color: #fff;
-      border-color: black;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease,
-        transform 0.3s ease;
-      font-weight: 600;
+    .btn-container {
+      height: 100%;
+      display: flex;
+      // margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      .notification-button {
+        position: relative; // Nécessaire pour positionner le rond de notification
+        height: 30px;
+        width: 100%;
+        // width: 40%;
+        border-radius: 26px;
+        font-size: 12px;
+        background-color: #fff;
+        border-color: black;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease,
+          transform 0.3s ease;
+        font-weight: 600;
 
-      // Animation de survol - bouton devient noir avec texte blanc
-      &:hover {
-        background-color: black;
-        color: white; // Le texte devient blanc
-        transform: scale(1.05); // Agrandissement lors du survol
-      }
+        // Animation de survol - bouton devient noir avec texte blanc
+        &:hover {
+          background-color: black;
+          color: white; // Le texte devient blanc
+          transform: scale(1.05); // Agrandissement lors du survol
+        }
 
-      // Rond de notification
-      &::after {
-        content: "1"; // Changez ce nombre dynamiquement si nécessaire
-        position: absolute;
-        top: -7px; // Positionnez-le vers le haut
-        right: -6px; // Positionnez-le à droite
-        width: 16px; // Largeur du rond
-        height: 16px; // Hauteur du rond
-        border-radius: 50%; // Pour un rond
-        background-color: red; // Couleur du rond
-        color: white; // Couleur du texte
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 11px; // Taille du texte
-        font-weight: bold; // Épaisseur du texte
-        border: solid black 1px;
-        transition: transform 0.1s ease-in-out;
-      }
+        // Rond de notification
+        &::after {
+          content: "1"; // Changez ce nombre dynamiquement si nécessaire
+          position: absolute;
+          top: -7px; // Positionnez-le vers le haut
+          right: -6px; // Positionnez-le à droite
+          width: 16px; // Largeur du rond
+          height: 16px; // Hauteur du rond
+          border-radius: 50%; // Pour un rond
+          background-color: red; // Couleur du rond
+          color: white; // Couleur du texte
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 1px;
+          font-size: 11px; // Taille du texte
+          font-weight: bold; // Épaisseur du texte
+          border: solid black 1px;
+          transition: transform 0.1s ease-in-out;
+        }
 
-      // Animation de rotation au survol du bouton
-      &:hover::after {
-        animation: shake-rotate 1s ease-in-out 1; // Animation pendant 3 secondes et ne boucle pas
+        // Animation de rotation au survol du bouton
+        &:hover::after {
+          animation: shake-rotate 1s ease-in-out 1; // Animation pendant 3 secondes et ne boucle pas
+        }
       }
     }
   }
@@ -133,15 +148,17 @@
   }
 
   .burger-menu {
+    overflow: hidden;
     position: absolute; // Reste le même
     width: 80%;
+    height: auto;
     top: 70%; // Positionnez-le sous la nav-bar
     left: 50%; // Ou ajustez left: 0; selon votre besoin
     transform: translateX(-50%);
     background-color: #fff; // Couleur de fond du menu
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); // Ombre pour le menu
-    margin-top: 10px; // Supprimez l'écart pour qu'il s'affiche juste en dessous
-    z-index: 2; // Assurez-vous qu'il est au-dessus des autres éléments
+    padding-top: 15px; // Supprimez l'écart pour qu'il s'affiche juste en dessous
+    z-index: 999; // Assurez-vous qu'il est au-dessus des autres éléments
 
     ul {
       list-style: none; // Supprime les puces
@@ -160,6 +177,167 @@
         &:hover {
           background-color: rgba(255, 206, 8, 0.2);
           // Survol des éléments
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 390px) {
+  .nav-back {
+    height: 90px;
+
+    .nav-bar {
+      .logo {
+        h2 {
+          font-size: 26px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      img {
+        height: 25px;
+      }
+      .btn-container {
+        .notification-button {
+          height: 36px;
+          font-size: 15px;
+
+          &::after {
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .burger-menu ul li {
+      padding: 15px 22px;
+      a {
+        font-size: 16px; // Taille ajustée pour les écrans plus larges
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-back {
+    height: 100px;
+
+    .nav-bar {
+      .logo {
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        height: 25px;
+        margin-right: 0;
+      }
+
+      .btn-container {
+        .notification-button {
+          height: 40px;
+          width: 60%;
+          font-size: 18px;
+
+          &::after {
+            top: -10px;
+            right: -9px;
+            width: 25px;
+            height: 25px;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .nav-back {
+    height: 120px;
+
+    .nav-bar {
+      .logo {
+        width: 33%;
+        h2 {
+          font-size: 34px;
+        }
+        p {
+          font-size: 22px;
+        }
+      }
+
+      img {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: flex;
+      }
+      .burger-menu {
+        display: none; // Ensures the burger menu doesn't show on large screens
+      }
+
+      ul {
+        display: flex; // Make sure the links are displayed as a flex container
+        list-style: none;
+        margin-top: 15px;
+        gap: 20px; // Space between each link
+
+        li {
+          // display: flex;
+          padding: 0 10px;
+          // flex-direction: row;
+          position: relative;
+
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            position: relative;
+            font-weight: 600;
+            display: inline-block;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0.1em;
+              left: 0;
+              width: 0;
+              height: 0.3em;
+              background-color: #ffce08;
+              clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+              transition: width 0.5s ease;
+              z-index: -1;
+            }
+
+            &:hover::before {
+              width: 103%;
+            }
+          }
+        }
+      }
+
+      .btn-container {
+        width: 33%;
+        .notification-button {
+          height: 48px;
+          width: 60%;
+          font-size: 20px;
+
+          &::after {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+          }
         }
       }
     }

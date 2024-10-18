@@ -1,7 +1,7 @@
 .testimonial-section {
   position: relative;
   overflow: hidden;
-  height: 850px;
+  min-height: 850px;
 
   .yellow-background {
     position: absolute;
@@ -16,11 +16,18 @@
 
   .testimonials-container {
     // padding: 40px 20px 10px;
-    margin-top: 40px;
+    // margin-top: 40px;
     width: 100%;
     margin: 80px auto 20px;
     // position: relative;
     z-index: 1;
+  }
+
+  .testimonial-layout {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    margin: 50px;
   }
 }
 
