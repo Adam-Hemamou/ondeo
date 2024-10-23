@@ -10,9 +10,6 @@ import { SimpleVideoComponent } from '../dump-components/simple-video/simple-vid
   styleUrls: ['./step-cards.component.scss'],
 })
 export class StepCardsComponent {
-  videoUrl: string =
-    'https://player.vimeo.com/video/625274267?title=0&byline=0&portrait=0&dnt=1';
-
   cards = [
     {
       title: 'Stratégie',

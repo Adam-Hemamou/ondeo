@@ -4,4 +4,5 @@ export type Avis = {
   feedback: string;
   photo: string;
   expanded?: boolean;
+  showToggle?: boolean;
 };

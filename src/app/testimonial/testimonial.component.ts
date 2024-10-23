@@ -33,54 +33,57 @@ export class TestimonialComponent {
       name: 'Marine Adatto',
       title: 'CEO Wagmi-Trends',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants !”',
 
       photo: '/png/profil.png',
       expanded: false,
+      showToggle: false,
     },
     {
       name: 'Yannick Nambo',
       title: 'The Bridge Media',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
 
       photo: '/png/utilisateur-1.png',
       expanded: false,
+      showToggle: false,
     },
     {
       name: 'Nathanaël Chourak',
       title: 'Founder That’s Y Media',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
 
       photo: '/png/utilisateur-2.png',
       expanded: false,
+      showToggle: false,
     },
   ];
   testimonials2: Avis[] = [
     {
-      name: 'Nathanaël Chouraki',
-      title: "Founder That's Y Media",
+      name: 'Marielle Trinquet',
+      title: 'Avocate / Paris',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l’espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
 
       photo: '/png/utilisateur.png',
       expanded: false,
     },
     {
-      name: 'YEEEEEs',
-      title: 'CEO/CMO',
+      name: 'Anthony Debrant',
+      title: 'CEO Sneakmart',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Exceptionnelles ces vidéos !! J’avais besoin de vidéos podcast pour alimenter le compte Instagram de Sneakmart... + d’1 million de vues en 6 vidéos !”',
 
       photo: '/png/policier.png',
       expanded: false,
     },
     {
-      name: 'YOOOO',
-      title: 'CEO/CMO',
+      name: 'Marine Adatto',
+      title: 'CEO La légende',
       feedback:
-        '"Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !"',
+        '“Je travaille depuis un moment avec Robin, très professionnel, pour les formats podcast, il monte le set, gère absolument tout et m’envoie les vidéos en un temps record.”',
 
       photo: '/png/prisonnier.png',
       expanded: false,

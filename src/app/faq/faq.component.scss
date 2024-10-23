@@ -1,5 +1,6 @@
 .faq-container {
   padding: 20px;
+  margin-bottom: 10px;
 
   .faq-bloc {
     display: flex;
@@ -7,6 +8,7 @@
     justify-content: space-between;
     height: auto;
     border-top: 1px solid #c6c2c2;
+    padding: 0 5px;
 
     .question-faq {
       display: flex;
@@ -17,7 +19,7 @@
 
       h3 {
         cursor: pointer; // Change le curseur lors du survol
-        width: 85%;
+        width: 86%;
       }
 
       img {
@@ -42,6 +44,74 @@
       &.open {
         opacity: 1; // Lorsque l'élément est ouvert, définir l'opacité à 1
         margin-bottom: 5px; // Ajoutez le padding ici lorsque l'élément est ouvert
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .faq-container {
+    margin-bottom: 20px;
+
+    .faq-bloc {
+      .question-faq {
+        font-size: 18px;
+
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      .answer {
+        p {
+          padding-right: 20px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .faq-container {
+    .faq-bloc {
+      .question-faq {
+        font-size: 20px;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .answer {
+        p {
+          padding-right: 40px;
+          margin-bottom: 5px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1190px) {
+  .faq-container {
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    .faq-bloc {
+      .question-faq {
+        font-size: 20px;
+
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .answer {
+        p {
+          padding-right: 60px;
+          margin-bottom: 5px;
+          font-size: 20px;
+        }
       }
     }
   }
