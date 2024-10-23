@@ -1,30 +1,32 @@
-<h2 class="section-title">
-  La <span class="highlighted">performance</span> des grandes agences, sans le
-  coût élevé
-</h2>
-<div class="title-container">
-  <h2 class="pack-title">Pack Podcast</h2>
-</div>
-<p class="offer-desc">
-  Vous souhaitez parler à votre audience ? Venez réaliser une interview dans nos
-  studios !
-</p>
-<div class="videos-offers">
-  <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
-</div>
-
-<div *ngIf="isMobile; else desktopLayout">
-  <swiper [config]="config">
-    <ng-template *ngFor="let offer of offerCards" swiperSlide>
-      <app-offer-card [offer]="offer"></app-offer-card>
-    </ng-template>
-  </swiper>
-</div>
-<ng-template #desktopLayout>
-  <div class="offer-cards">
-    <app-offer-card
-      *ngFor="let offer of offerCards"
-      [offer]="offer"
-    ></app-offer-card>
+<div class="podcast-section">
+  <h2 class="section-title">
+    La <span class="highlighted">performance</span> des grandes agences, sans le
+    coût élevé
+  </h2>
+  <div class="title-container">
+    <h2 class="pack-title">Pack Podcast</h2>
   </div>
-</ng-template>
+  <p class="offer-desc">
+    Vous souhaitez parler à votre audience ? Venez réaliser une interview dans
+    nos studios !
+  </p>
+  <div class="videos-offers">
+    <app-simple-video [videoUrl]="videoUrl"></app-simple-video>
+  </div>
+
+  <div *ngIf="isMobile; else desktopLayout">
+    <swiper [config]="config">
+      <ng-template *ngFor="let offer of offerCards" swiperSlide>
+        <app-offer-card [offer]="offer"></app-offer-card>
+      </ng-template>
+    </swiper>
+  </div>
+  <ng-template #desktopLayout>
+    <div class="offer-cards">
+      <app-offer-card
+        *ngFor="let offer of offerCards"
+        [offer]="offer"
+      ></app-offer-card>
+    </div>
+  </ng-template>
+</div>

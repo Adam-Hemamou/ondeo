@@ -49,10 +49,10 @@ export class FormCallComponent {
       try {
         // Remplacez 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' et 'YOUR_USER_ID' par vos propres valeurs
         const response = await emailjs.send(
-          'service_albx7zh',
-          'template_rjkvt2d',
+          'service_hsn8gsn',
+          'template_psxmz93',
           this.contactForm,
-          'qD_atInEL6hAV19gW'
+          '6N5X4_iC3Rs8YPoAy'
         );
         this.toast.message = 'Vos informations nous ont été transmises';
         this.toast.type = 'success';

@@ -66,7 +66,7 @@ import { LogosComponent } from '../logos/logos.component';
       <app-motion-section [isMobile]="isMobile"></app-motion-section>
       <app-form-call></app-form-call>
       <app-testimonial [isMobile]="isMobile"></app-testimonial>
-      <app-faq></app-faq>
+      <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
       <p class="follow-us">Rejoignez - nous</p>
       <app-logos></app-logos>

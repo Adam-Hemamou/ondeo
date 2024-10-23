@@ -1,12 +1,16 @@
 .video-container {
   width: 100%;
   margin: 10px auto;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 20px;
+
+  @media (min-width: 1000px) {
+    padding: 0 80px 20px;
+  }
 
   .embed {
     position: relative;
     height: 0;
-    padding-top: calc(100% / (16 / 9)); // Ratio 16:9
+    padding-top: calc(100% / (16 / 9));
     border-radius: 15px;
     overflow: hidden;
     background: white;

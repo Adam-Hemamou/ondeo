@@ -1,4 +1,4 @@
-<div class="avis-container" *ngFor="let avis of avisList">
+<div class="avis-container" *ngFor="let avis of avisList; let i = index">
   <div class="testimonial-card">
     <div class="testimonial-header">
       <img [src]="avis.photo" alt="{{ avis.name }}" class="testimonial-photo" />
@@ -7,11 +7,19 @@
         <p>{{ avis.title }}</p>
       </div>
     </div>
-    <p class="testimonial-feedback" [class.expanded]="avis.expanded">
+    <p
+      class="testimonial-feedback"
+      #feedbackElement
+      [class.expanded]="avis.expanded"
+    >
       {{ avis.feedback }}
     </p>
-    <button (click)="toggleExpand(avis)">
-      {{ avis.expanded ? "Voir moins" : "Voir plus" }}
-    </button>
+    <span
+      *ngIf="avis.showToggle && avis.feedback"
+      class="toggle-text"
+      (click)="toggleExpand(avis, i)"
+    >
+      <i>{{ avis.expanded ? "Voir moins" : "Voir plus" }}</i>
+    </span>
   </div>
 </div>

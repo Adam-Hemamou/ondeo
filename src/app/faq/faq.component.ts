@@ -1,16 +1,17 @@
-import { NgClass, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { sharedAnimation } from '../core/animations/animation';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, NgIf],
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
   animations: [sharedAnimation],
 })
 export class FaqComponent {
+  @Input() isMobile!: boolean;
   isOpen: boolean[] = [];
 
   FAQList = [

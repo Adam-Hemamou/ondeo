@@ -1,8 +1,13 @@
 <section>
-  <h2 class="section-title">
+  <h2 *ngIf="isMobile; else desktoptLayoutH" class="section-title">
     Les <span class="highlighted">réponses</span> <br />
     à vos questions
   </h2>
+  <ng-template #desktoptLayoutH>
+    <h2 class="section-title">
+      Les <span class="highlighted">réponses</span> à vos questions
+    </h2>
+  </ng-template>
 
   <div class="faq-container">
     <div class="faq-bloc" *ngFor="let faq of FAQList; let i = index">

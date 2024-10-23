@@ -1,8 +1,13 @@
 <section class="testimonial-section">
-  <h2 class="section-title mb-20">
+  <h2 *ngIf="isMobile; else desktoptLayoutH" class="section-title mb-20">
     Ils nous ont <br />
     fait <span class="highlighted">confiance</span>
   </h2>
+  <ng-template #desktoptLayoutH>
+    <h2 class="section-title mb-20">
+      Ils nous ont fait <span class="highlighted">confiance</span>
+    </h2>
+  </ng-template>
   <div class="yellow-background"></div>
   <!-- Assurez-vous que le nom correspond -->
   <div *ngIf="isMobile; else desktoptLayout" class="testimonials-container">
