@@ -42,8 +42,8 @@ export class PodcastSectionComponent {
   offerCards: Offer[] = [
     {
       title: 'Starter',
-      price: '980 €',
-      oldPrice: '1200 €',
+      price: '1100 €',
+      oldPrice: null,
       videos: '10 vidéos / mois',
       description: 'Analyse des thématiques virales pour votre secteur...',
       features: [
@@ -61,9 +61,9 @@ export class PodcastSectionComponent {
       icon: '/png/discount.png',
     },
     {
-      title: 'Professionnel',
-      price: '2000 €',
-      oldPrice: null,
+      title: 'Pro',
+      price: '1900 €',
+      oldPrice: '2200 €',
       videos: '20 vidéos / mois',
       description: 'Production complète de 20 vidéos...',
       features: [

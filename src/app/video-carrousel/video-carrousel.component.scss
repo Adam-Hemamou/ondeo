@@ -1,7 +1,7 @@
 .bgc-carrou {
   .carrousel-container {
     @media (min-width: 700px) {
-      padding: 10px 30px;
+      padding: 10px;
     }
     @media (min-width: 1200px) {
       padding: 10px 40px;
@@ -10,7 +10,7 @@
     .video-lists {
       display: flex;
       gap: 20px;
-      padding: 20px 25px;
+      padding: 0px 25px 20px;
       width: 100%;
       height: auto;
 
@@ -23,7 +23,7 @@
         gap: 25px;
       }
       @media (min-width: 1020px) {
-        padding: 20px 65px;
+        padding: 0px 65px 20px;
         gap: 30px;
       }
       @media (min-width: 1120px) {
