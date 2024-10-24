@@ -17,7 +17,7 @@ main {
 
 h1 {
   padding: 12px;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 350;
 }
 
@@ -54,7 +54,7 @@ h1 {
   font-weight: 350;
   line-height: 1.5;
   margin: 15px 0;
-  padding: 12px;
+  padding: 0px 12px 12px;
   text-align: justify;
 }
 
@@ -152,7 +152,7 @@ h1 {
   }
 
   .desc {
-    padding: 18px;
+    padding: 0px 18px 20px;
     font-size: 18px;
   }
 
@@ -178,6 +178,10 @@ h1 {
 }
 
 @media (min-width: 410px) {
+  h1 {
+    font-size: 30px;
+  }
+
   .rdv-btn {
     width: 370px;
     height: 70px;
@@ -187,6 +191,12 @@ h1 {
   .offer-desc {
     font-size: 20px;
     padding: 8px 20px;
+  }
+}
+
+@media (min-width: 420px) {
+  h1 {
+    font-size: 32px;
   }
 }
 
@@ -203,7 +213,7 @@ h1 {
 
   h1 {
     padding: 20px 25px;
-    font-size: 42px;
+    font-size: 44px;
   }
 
   .section-title {
@@ -261,32 +271,34 @@ h1 {
 
 @media (min-width: 1020px) {
   main {
-    margin-top: 140px;
+    margin-top: 100px;
   }
 
   .reverse {
     flex-direction: row;
     padding: 0px 40px;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    /* margin-bottom: 40px; */
   }
 
   .web-title {
-    width: 50%;
+    width: 45%;
+    padding: 20px 0px;
   }
 
   .web-video {
-    width: 50%;
-    /* padding-top: 50px; */
+    width: 55%;
   }
 
   h1 {
-    padding: 10px 20px;
-    font-size: 32px;
+    padding: 0px;
+    font-size: 34px;
   }
 
   .desc {
-    padding: 10px 20px;
+    padding: 10px 0px;
     font-size: 22px;
   }
 
@@ -302,12 +314,45 @@ h1 {
 }
 
 @media (min-width: 1050px) {
+  main {
+    margin-top: 120px;
+  }
   .videos-offers {
     padding: 20px 40px 10px;
   }
 }
+@media (min-width: 1190px) {
+  main {
+    margin-top: 140px;
+  }
+}
 
-@media (min-width: 1250px) {
+@media (min-width: 1180px) {
+  main {
+    margin-top: 120px;
+  }
+
+  .reverse {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    margin-top: 140px;
+  }
+
+  .desc {
+    padding: 25px 0px 20px;
+  }
+
+  .reverse {
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
   .videos-offers {
     padding: 10px 60px 0px;
   }
