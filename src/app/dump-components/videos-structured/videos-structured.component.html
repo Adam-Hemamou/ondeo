@@ -1,12 +1,14 @@
 <div class="video-container">
   <!-- Vidéo en haut -->
   <div class="embed embed--16-9">
+    <div *ngIf="isLoading[0]" class="skeleton-loader"></div>
     <iframe
       [src]="videoList[0].src"
       frameborder="0"
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
+      (load)="onVideoLoad(0)"
     ></iframe>
     <div class="chip" [ngClass]="videoList[0].categoryColor">
       {{ videoList[0].category }}
@@ -16,24 +18,30 @@
   <div class="mid">
     <!-- Deux vidéos au milieu -->
     <div class="embed embed--4-3">
+      <div *ngIf="isLoading[1]" class="skeleton-loader"></div>
+
       <iframe
         [src]="videoList[1].src"
         frameborder="0"
         webkitallowfullscreen
         mozallowfullscreen
         allowfullscreen
+        (load)="onVideoLoad(1)"
       ></iframe>
       <div class="chip" [ngClass]="videoList[1].categoryColor">
         {{ videoList[1].category }}
       </div>
     </div>
     <div class="embed embed--4-3">
+      <div *ngIf="isLoading[2]" class="skeleton-loader"></div>
+
       <iframe
         [src]="videoList[2].src"
         frameborder="0"
         webkitallowfullscreen
         mozallowfullscreen
         allowfullscreen
+        (load)="onVideoLoad(2)"
       ></iframe>
       <div class="chip" [ngClass]="videoList[2].categoryColor">
         {{ videoList[2].category }}
@@ -43,12 +51,15 @@
 
   <!-- Vidéo en bas -->
   <div class="embed embed--16-9">
+    <div *ngIf="isLoading[3]" class="skeleton-loader"></div>
+
     <iframe
       [src]="videoList[3].src"
       frameborder="0"
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
+      (load)="onVideoLoad(3)"
     ></iframe>
     <div class="chip" [ngClass]="videoList[3].categoryColor">
       {{ videoList[3].category }}

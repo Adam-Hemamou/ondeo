@@ -31,7 +31,7 @@ export class VideoCarrouselComponent {
   videoList1 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/625274267?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023686694?background=1&title=0&byline=0&portrait=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Société',
       categoryColor: 'blue',
@@ -39,7 +39,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/187415697?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023687640?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Réalisations',
       categoryColor: 'orange',
@@ -47,7 +47,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/188457676?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023694926?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: '3.2M vues IG',
       categoryColor: 'blue',
@@ -55,7 +55,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/68414507?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023694912?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: '70k vues YT',
       categoryColor: 'pink',
@@ -66,7 +66,7 @@ export class VideoCarrouselComponent {
   videoList2 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/246185769?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023694931?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Société',
       categoryColor: 'blue',
@@ -74,7 +74,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/187584337?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023725255?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Collaboration',
       categoryColor: 'pink',
@@ -82,7 +82,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/859452982?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023725597?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Expérience',
       categoryColor: 'orange',
@@ -90,7 +90,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1006127429?title=0&byline=0&portrait=0&dnt=1'
+        'https://player.vimeo.com/video/1023694936?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Expérience',
       categoryColor: 'orange',

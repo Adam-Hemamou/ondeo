@@ -47,6 +47,7 @@
         width: 100%;
         height: 100%;
         border-radius: 15px;
+        background-color: #eaeaea;
       }
     }
 
@@ -63,6 +64,7 @@
         width: 100%;
         height: 100%;
         border-radius: 15px;
+        background-color: #eaeaea;
       }
     }
 
@@ -77,7 +79,7 @@
       white-space: nowrap;
       width: auto;
       font-size: 14px;
-      z-index: 1;
+      z-index: 2;
       // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
       @media (min-width: 350px) {

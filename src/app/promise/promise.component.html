@@ -1,0 +1,42 @@
+<div class="keys-container">
+  <!-- Card 1: Blue -->
+  <div
+    class="key-card blue"
+    [attr.data-aos]="isMobile ? 'fade-right' : 'fade-left'"
+  >
+    <label class="checkbox">
+      <div class="checkbox__inner">
+        <div class="green__ball"></div>
+      </div>
+    </label>
+    <div class="key-desc">Sans engagement</div>
+  </div>
+
+  <!-- Card 2: Orange -->
+  <div
+    class="key-card orange"
+    data-aos="fade-left"
+    [attr.data-aos-delay]="isMobile ? '100' : '200'"
+  >
+    <label class="checkbox">
+      <div class="checkbox__inner">
+        <div class="green__ball"></div>
+      </div>
+    </label>
+    <div class="key-desc">Modifications illimitées</div>
+  </div>
+
+  <!-- Card 3: Purple -->
+  <div
+    class="key-card purple"
+    [attr.data-aos]="isMobile ? 'fade-up' : 'fade-left'"
+    [attr.data-aos-delay]="isMobile ? '200' : '400'"
+  >
+    <label class="checkbox">
+      <div class="checkbox__inner">
+        <div class="green__ball"></div>
+      </div>
+    </label>
+    <div class="key-desc">On s’occupe de tout</div>
+  </div>
+</div>
