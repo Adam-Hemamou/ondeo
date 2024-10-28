@@ -4,7 +4,6 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  // padding-bottom: 10px;
   overflow: hidden;
 
   .key-card {
@@ -48,28 +47,26 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.5); // Couleur de départ en gris
+        transition: background-color 0.5s ease, box-shadow 0.5s ease;
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12),
           inset -4px -5px 12px rgba(0, 0, 0, 0.12),
-          2px 1px 8px rgba(255, 206, 8, 0.5),
+          2px 1px 8px rgba(255, 255, 255, 0.45),
           3px 2px 12px rgba(152, 255, 112, 0.15);
       }
     }
 
-    &.blue .green__ball {
-      // background-color: #1aa1f0; /* Bleu */
-      // background-color: #ffce08; /* Violet */
-      background-color: rgba(255, 206, 8, 0.7); /* Violet */
-    }
-
-    &.orange .green__ball {
-      // background-color: #192a8a; /* Orange */
-      // background-color: #ffce08; /* Violet */
-      background-color: rgba(255, 206, 8, 0.7); /* Violet */
-    }
-
-    &.purple .green__ball {
-      // background-color: #ffce08; /* Violet */
-      background-color: rgba(255, 206, 8, 0.7); /* Violet */
+    .green__ball.animate-light {
+      background-color: rgba(
+        255,
+        206,
+        8,
+        0.7
+      ) !important; /* Couleur finale en jaune */
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12),
+        inset -4px -5px 12px rgba(0, 0, 0, 0.12),
+        2px 1px 8px rgba(255, 206, 8, 0.5),
+        3px 2px 12px rgba(152, 255, 112, 0.15); /* Ombre lors de l'animation */
     }
 
     .key-desc {
@@ -77,20 +74,97 @@
       font-size: 18px;
       flex-grow: 1;
       text-align: left;
+
+      @media (min-width: 390px) {
+        font-size: 22px;
+      }
+    }
+
+    @media (min-width: 390px) {
+      width: 300px;
     }
   }
 
   @media (min-width: 750px) {
     flex-direction: row;
     justify-content: center;
+    margin-left: 10px;
     gap: 20px;
 
     .key-card {
-      width: 320px;
+      width: 240px;
+      height: 100px;
+      // margin: 0 auto;
+      gap: 20px;
+
+      &:nth-child(2) {
+        width: 220px;
+      }
+
+      .key-desc {
+        width: 150px;
+        font-size: 21px;
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    margin-left: 15px;
+    gap: 10px;
+
+    .key-card {
+      width: 250px;
+      height: 100px;
+      gap: 20px;
+
+      &:nth-child(2) {
+        width: 230px;
+      }
+
+      .key-desc {
+        width: 170px;
+        font-size: 22px;
+      }
+    }
+  }
+  @media (min-width: 1020px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 0;
+
+    .key-card {
+      width: 300px;
       height: 80px;
       gap: 20px;
+
+      &:nth-child(2) {
+        margin-left: 10px;
+        width: 280px;
+      }
+
       .key-desc {
-        font-size: 20px;
+        font-size: 22px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 0;
+
+    .key-card {
+      width: 300px;
+      height: 80px;
+      gap: 20px;
+
+      &:nth-child(2) {
+        margin-left: 30px;
+        width: 280px;
+      }
+
+      .key-desc {
+        font-size: 22px;
       }
     }
   }
