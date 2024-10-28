@@ -1,12 +1,14 @@
-<div class="title-container">
-  <h2 class="pack-title">Pack Motion Design</h2>
+<div class="img-bgc">
+  <div class="title-container">
+    <h2 class="pack-title">Pack Motion Design</h2>
+  </div>
+  <p class="offer-desc">
+    Idéal pour une vidéo de présentation d’entreprise ou d’une nouvelle offre
+  </p>
 </div>
-<p class="offer-desc">
-  Idéal pour une vidéo de présentation d’entreprise ou d’une nouvelle offre
-</p>
-<div class="videos-offers">
-  <!-- <app-simple-video [videoUrl]="videoUrl"></app-simple-video> -->
-</div>
+<!-- <div class="videos-offers"> -->
+<!-- <app-simple-video [videoUrl]="videoUrl"></app-simple-video> -->
+<!-- </div> -->
 
 <div *ngIf="isMobile; else desktopLayout">
   <swiper [config]="config">
