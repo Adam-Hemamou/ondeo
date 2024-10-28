@@ -71,7 +71,7 @@ import { PromiseComponent } from '../promise/promise.component';
       <app-testimonial [isMobile]="isMobile"></app-testimonial>
       <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
-      <p class="follow-us">Rejoignez - nous</p>
+
       <app-logos></app-logos>
     </main>
   `,

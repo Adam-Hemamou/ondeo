@@ -80,6 +80,8 @@
       width: auto;
       font-size: 14px;
       z-index: 2;
+      background-color: #fff;
+      border: 1px solid black;
       // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
       @media (min-width: 350px) {
@@ -113,20 +115,20 @@
   }
 }
 
-.blue {
-  background-color: #d7ecff;
-  color: #1aa1f0;
-  border: 1px solid #1aa1f0;
-}
+// .blue {
+//   background-color: #d7ecff;
+//   color: #1aa1f0;
+//   border: 1px solid #1aa1f0;
+// }
 
-.orange {
-  background-color: #ffe4c1;
-  color: #d3923c;
-  border: 1px solid #d3923c;
-}
+// .orange {
+//   background-color: #ffe4c1;
+//   color: #d3923c;
+//   border: 1px solid #d3923c;
+// }
 
-.pink {
-  background-color: #fee0fe;
-  color: #a941b0;
-  border: 1px solid #a941b0;
-}
+// .pink {
+//   background-color: #fee0fe;
+//   color: #a941b0;
+//   border: 1px solid #a941b0;
+// }

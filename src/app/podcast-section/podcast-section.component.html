@@ -3,16 +3,18 @@
     La <span class="highlighted">performance</span> des grandes agences, sans le
     coût élevé
   </h2>
-  <div class="title-container">
-    <h2 class="pack-title">Pack Podcast</h2>
+  <div class="img-bgc">
+    <div class="title-container">
+      <h2 class="pack-title">Pack Podcast</h2>
+    </div>
+    <p class="offer-desc">
+      Vous souhaitez parler à votre audience ? Venez réaliser une interview dans
+      nos studios !
+    </p>
   </div>
-  <p class="offer-desc">
-    Vous souhaitez parler à votre audience ? Venez réaliser une interview dans
-    nos studios !
-  </p>
-  <div class="videos-offers">
-    <!-- <app-simple-video [videoUrl]="videoUrl"></app-simple-video> -->
-  </div>
+  <!-- <div class="videos-offers"> -->
+  <!-- <app-simple-video [videoUrl]="videoUrl"></app-simple-video> -->
+  <!-- </div> -->
 
   <div *ngIf="isMobile; else desktopLayout">
     <swiper [config]="config">
