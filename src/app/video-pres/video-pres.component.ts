@@ -10,4 +10,10 @@ import { Component, Input } from '@angular/core';
 })
 export class VideoPresComponent {
   @Input() isMobile!: boolean;
+
+  isLoading = true; // Par défaut, le squelette s'affiche
+
+  onVideoLoad() {
+    this.isLoading = false; // Masquer le squelette une fois la vidéo chargée
+  }
 }

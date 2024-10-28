@@ -30,27 +30,7 @@ export class TestimonialComponent {
 
   testimonials1: Avis[] = [
     {
-      name: 'Marine Adatto',
-      title: 'CEO Wagmi-Trends',
-      feedback:
-        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants !”',
-
-      photo: '/png/profil.png',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Yannick Nambo',
-      title: 'The Bridge Media',
-      feedback:
-        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
-
-      photo: '/png/utilisateur-1.png',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Nathanaël Chourak',
+      name: 'Nathanaël Chouraki',
       title: 'Founder That’s Y Media',
       feedback:
         '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
@@ -58,17 +38,6 @@ export class TestimonialComponent {
       photo: '/png/utilisateur-2.png',
       expanded: false,
       showToggle: false,
-    },
-  ];
-  testimonials2: Avis[] = [
-    {
-      name: 'Marielle Trinquet',
-      title: 'Avocate / Paris',
-      feedback:
-        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l’espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
-
-      photo: '/png/utilisateur.png',
-      expanded: false,
     },
     {
       name: 'Anthony Debrant',
@@ -78,6 +47,106 @@ export class TestimonialComponent {
 
       photo: '/png/policier.png',
       expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Marine Adatto',
+      title: 'CEO Wagmi-Trends',
+      feedback:
+        '“Je travaille depuis un moment avec Robin, très professionnel, pour les formats podcast, il monte le set, gère absolument tout et m’envoie les vidéos en un temps record.”',
+
+      photo: '/png/profil.png',
+      expanded: false,
+      showToggle: false,
+    },
+  ];
+
+  testimonials2: Avis[] = [
+    {
+      name: 'Benjamin Catellier',
+      title: 'CEO Skills Place',
+      feedback:
+        '“La collaboration a eté plus que parfaite ! il est à l’écoute, patient, comprend parfaitement les attentes et fait preuve d’une créativité exceptionnelle. Vous ne trouverez pas meilleur motion designer. Je recommande vraiment !”',
+
+      photo: '/png/utilisateur.png',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Adeline Percept',
+      title: 'Story W',
+      feedback:
+        '“Exceptionnel ! Le montage vidéo est au-delà de mes attentes. Le talent et le professionnalisme de l’équipe a donné vie à mon projet de manière spectaculaire”',
+
+      photo: '/png/utilisateur-1.png',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Marketing et Communication',
+      title: 'Powell Software',
+      feedback:
+        '“Super expérience, c’est du super boulot. Très professionnel, très réactif, je recommande ! Merci”',
+
+      photo: '/png/prisonnier.png',
+      expanded: false,
+      showToggle: false,
+    },
+  ];
+
+  testimonials3: Avis[] = [
+    {
+      name: 'Enzo C.',
+      title: 'Sneakers Media',
+      feedback:
+        '“Cette petite publicité a été remarquable ! Félicitations au monteur pour ses talents exceptionnels ! ”',
+
+      photo: '/png/utilisateur.png',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Chargé de projet',
+      title: 'Carlsberg',
+      feedback:
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l’espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
+
+      photo: '/png/utilisateur.png',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Service Comm',
+      title: 'Mairie d’Arcachon',
+      feedback:
+        '“À l’écoute, réactif et force de proposition, Robin a réalisé des vidéos très grande qualité. Merci !”',
+
+      photo: '/png/prisonnier.png',
+      expanded: false,
+      showToggle: false,
+    },
+  ];
+
+  testimonials4: Avis[] = [
+    {
+      name: 'Chargé de projet',
+      title: 'Carlsberg',
+      feedback:
+        '“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l’espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”',
+
+      photo: '/png/utilisateur.png',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Anthony Debrant',
+      title: 'CEO Sneakmart',
+      feedback:
+        '“Exceptionnelles ces vidéos !! J’avais besoin de vidéos podcast pour alimenter le compte Instagram de Sneakmart... + d’1 million de vues en 6 vidéos !”',
+
+      photo: '/png/policier.png',
+      expanded: false,
+      showToggle: false,
     },
     {
       name: 'Marine Adatto',
@@ -87,6 +156,7 @@ export class TestimonialComponent {
 
       photo: '/png/prisonnier.png',
       expanded: false,
+      showToggle: false,
     },
   ];
 }

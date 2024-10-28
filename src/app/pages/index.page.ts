@@ -12,6 +12,7 @@ import { TestimonialComponent } from '../testimonial/testimonial.component';
 import { FaqComponent } from '../faq/faq.component';
 import { CalandlyComponent } from '../calandly/calandly.component';
 import { LogosComponent } from '../logos/logos.component';
+import { PromiseComponent } from '../promise/promise.component';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +31,7 @@ import { LogosComponent } from '../logos/logos.component';
     FaqComponent,
     CalandlyComponent,
     LogosComponent,
+    PromiseComponent,
   ],
   template: `
     <header>
@@ -58,7 +60,8 @@ import { LogosComponent } from '../logos/logos.component';
           <app-video-pres [isMobile]="isMobile"></app-video-pres>
         </div>
       </div>
-      <app-key-figure [isMobile]="isMobile"></app-key-figure>
+      <!-- <app-key-figure [isMobile]="isMobile"></app-key-figure> -->
+      <app-promise [isMobile]="isMobile"></app-promise>
       <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
       <app-logos></app-logos>
       <app-step-cards></app-step-cards>

@@ -1,0 +1,97 @@
+.keys-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  // padding-bottom: 10px;
+  overflow: hidden;
+
+  .key-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 60px;
+    gap: 20px;
+
+    .checkbox {
+      --size: 40px;
+      display: block;
+      width: var(--size);
+      height: var(--size);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12),
+        2px 2px 6px rgba(0, 0, 0, 0.05), inset -2px -2px 3px rgba(0, 0, 0, 0.05),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.02),
+        inset 3px 2px 3px rgba(255, 255, 255, 0.45),
+        inset 8px 8px 18px rgba(255, 255, 255, 0.1);
+    }
+
+    .checkbox__inner {
+      position: relative;
+      width: calc(var(--size) / 1.75);
+      height: calc(var(--size) / 1.75);
+      border-radius: 50%;
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.12),
+        inset 3px 3px 12px rgba(0, 0, 0, 0.05),
+        inset 0px -1px 2px rgba(255, 255, 255, 0.45);
+
+      .green__ball {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12),
+          inset -4px -5px 12px rgba(0, 0, 0, 0.12),
+          2px 1px 8px rgba(255, 206, 8, 0.5),
+          3px 2px 12px rgba(152, 255, 112, 0.15);
+      }
+    }
+
+    &.blue .green__ball {
+      // background-color: #1aa1f0; /* Bleu */
+      // background-color: #ffce08; /* Violet */
+      background-color: rgba(255, 206, 8, 0.7); /* Violet */
+    }
+
+    &.orange .green__ball {
+      // background-color: #192a8a; /* Orange */
+      // background-color: #ffce08; /* Violet */
+      background-color: rgba(255, 206, 8, 0.7); /* Violet */
+    }
+
+    &.purple .green__ball {
+      // background-color: #ffce08; /* Violet */
+      background-color: rgba(255, 206, 8, 0.7); /* Violet */
+    }
+
+    .key-desc {
+      padding-top: 2px;
+      font-size: 18px;
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    .key-card {
+      width: 320px;
+      height: 80px;
+      gap: 20px;
+      .key-desc {
+        font-size: 20px;
+      }
+    }
+  }
+}
