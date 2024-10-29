@@ -15,14 +15,13 @@ import {
 })
 export class PromiseComponent implements AfterViewInit {
   @Input() isMobile!: boolean;
-  isLightOn = false; // État de la lumière
+  isLightOn = false;
 
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.isLightOn = true;
-      console.log('isLightOn:', this.isLightOn);
       this.cdr.detectChanges();
     }, 2000);
   }

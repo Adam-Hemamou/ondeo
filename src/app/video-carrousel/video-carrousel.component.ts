@@ -101,11 +101,8 @@ export class VideoCarrouselComponent {
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 50,
-    loop: true, // Pour un défilement en boucle
-    autoplay: {
-      delay: 5000, // Délai de 5 secondes entre chaque slide
-      disableOnInteraction: true,
-    },
+    loop: false, // Pour un défilement en boucle
+
     pagination: { clickable: true },
     navigation: true,
   };
