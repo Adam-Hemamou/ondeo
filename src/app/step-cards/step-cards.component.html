@@ -20,7 +20,7 @@
             <h3>{{ card.title }}</h3>
           </div>
           <div class="img-card" [ngClass]="{ rotate: i < 3 }">
-            <img [src]="card.svg" alt="{{ card.title }}" />
+            <img [src]="card.svg" alt="{{ card.title }}" loading="lazy" />
           </div>
         </div>
         <p>{{ card.description }}</p>

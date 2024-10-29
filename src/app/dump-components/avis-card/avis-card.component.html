@@ -1,7 +1,12 @@
 <div class="avis-container" *ngFor="let avis of avisList; let i = index">
   <div class="testimonial-card">
     <div class="testimonial-header">
-      <img [src]="avis.photo" alt="{{ avis.name }}" class="testimonial-photo" />
+      <img
+        [src]="avis.photo"
+        alt="{{ avis.name }}"
+        class="testimonial-photo"
+        loading="lazy"
+      />
       <div class="testimonial-content">
         <h3>{{ avis.name }}</h3>
         <p>{{ avis.title }}</p>

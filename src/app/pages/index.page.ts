@@ -13,6 +13,7 @@ import { FaqComponent } from '../faq/faq.component';
 import { CalandlyComponent } from '../calandly/calandly.component';
 import { LogosComponent } from '../logos/logos.component';
 import { PromiseComponent } from '../promise/promise.component';
+import { DeferRenderDirective } from './defer-render.directive';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +33,7 @@ import { PromiseComponent } from '../promise/promise.component';
     CalandlyComponent,
     LogosComponent,
     PromiseComponent,
+    DeferRenderDirective,
   ],
   template: `
     <header>
@@ -62,25 +64,47 @@ import { PromiseComponent } from '../promise/promise.component';
       </div>
       <!-- <app-key-figure [isMobile]="isMobile"></app-key-figure> -->
       <app-promise [isMobile]="isMobile"></app-promise>
-      <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
-      <app-logos></app-logos>
-      <app-step-cards></app-step-cards>
-      <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
-      <app-motion-section [isMobile]="isMobile"></app-motion-section>
-      <app-form-call></app-form-call>
-      <app-testimonial [isMobile]="isMobile"></app-testimonial>
-      <app-faq [isMobile]="isMobile"></app-faq>
-      <app-calandly></app-calandly>
 
-      <app-logos></app-logos>
+      <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
+      <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true">
+        <app-logos></app-logos>
+      </div>
+      <app-step-cards *ngIf="isAfterVideoCarrouselVisible"></app-step-cards>
+      <div appDeferRender (isVisible)="afterMotionSection = true">
+        <app-podcast-section
+          [isMobile]="isMobile"
+          *ngIf="isAfterVideoCarrouselVisible"
+        ></app-podcast-section>
+      </div>
+      <app-motion-section
+        [isMobile]="isMobile"
+        *ngIf="afterMotionSection"
+      ></app-motion-section>
+      <app-form-call *ngIf="afterMotionSection"></app-form-call>
+      <app-testimonial
+        [isMobile]="isMobile"
+        *ngIf="afterMotionSection"
+      ></app-testimonial>
+      <app-faq [isMobile]="isMobile" *ngIf="afterMotionSection"></app-faq>
+      <app-calandly *ngIf="afterMotionSection"></app-calandly>
+
+      <app-logos *ngIf="afterMotionSection"></app-logos>
     </main>
   `,
 })
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
 
+  isAfterVideoCarrouselVisible: boolean = false;
+  afterMotionSection: boolean = false;
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.isMobile = window.innerWidth < 750;
+  }
+
+  loadContent() {
+    // Logique pour charger le contenu ou activer la section
+    console.log('Le contenu est maintenant visible.');
   }
 }
