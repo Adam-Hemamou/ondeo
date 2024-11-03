@@ -16,7 +16,7 @@ export class StepCardsComponent {
       description:
         'Nous élaborons ensemble le script de votre vidéo via un document partagé.',
       number: '01',
-      svg: '/png/idee.png', // Remplace par le chemin de ton fichier SVG
+      svg: '/png/idee.png',
     },
     {
       title: 'Storyboard',

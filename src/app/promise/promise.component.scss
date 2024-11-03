@@ -57,16 +57,11 @@
     }
 
     .green__ball.animate-light {
-      background-color: rgba(
-        255,
-        206,
-        8,
-        0.7
-      ) !important; /* Couleur finale en jaune */
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12),
-        inset -4px -5px 12px rgba(0, 0, 0, 0.12),
-        2px 1px 8px rgba(255, 206, 8, 0.5),
-        3px 2px 12px rgba(152, 255, 112, 0.15); /* Ombre lors de l'animation */
+      background-color: #feef1e !important; /* Couleur finale en jaune */
+      box-shadow: inset 0 0 6px rgba(202, 228, 225, 0.92),
+        0 0 30px rgba(228, 224, 202, 0.34), 0 0 12px rgba(231, 242, 30, 0.52),
+        0 0 21px rgba(235, 242, 30, 0.92), 0 0 34px rgba(221, 242, 30, 0.78),
+        0 0 54px rgba(238, 242, 30, 0.92);
     }
 
     .key-desc {

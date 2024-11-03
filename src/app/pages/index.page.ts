@@ -66,45 +66,32 @@ import { DeferRenderDirective } from './defer-render.directive';
       <app-promise [isMobile]="isMobile"></app-promise>
 
       <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
-      <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true">
-        <app-logos></app-logos>
-      </div>
-      <app-step-cards *ngIf="isAfterVideoCarrouselVisible"></app-step-cards>
-      <div appDeferRender (isVisible)="afterMotionSection = true">
-        <app-podcast-section
-          [isMobile]="isMobile"
-          *ngIf="isAfterVideoCarrouselVisible"
-        ></app-podcast-section>
-      </div>
-      <app-motion-section
-        [isMobile]="isMobile"
-        *ngIf="afterMotionSection"
-      ></app-motion-section>
-      <app-form-call *ngIf="afterMotionSection"></app-form-call>
-      <app-testimonial
-        [isMobile]="isMobile"
-        *ngIf="afterMotionSection"
-      ></app-testimonial>
-      <app-faq [isMobile]="isMobile" *ngIf="afterMotionSection"></app-faq>
-      <app-calandly *ngIf="afterMotionSection"></app-calandly>
+      <!-- <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true"> -->
+      <app-logos></app-logos>
+      <!-- </div> -->
+      <app-step-cards></app-step-cards>
+      <!-- <div appDeferRender (isVisible)="afterMotionSection = true"> -->
+      <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
+      <!-- </div> -->
+      <app-motion-section [isMobile]="isMobile"></app-motion-section>
+      <app-form-call></app-form-call>
+      <app-testimonial [isMobile]="isMobile"></app-testimonial>
+      <app-faq [isMobile]="isMobile"></app-faq>
+      <app-calandly></app-calandly>
 
-      <app-logos *ngIf="afterMotionSection"></app-logos>
+      <app-logos></app-logos>
+      <p class="footer-text">2024 - Ondeo. Tous droits réservés.</p>
     </main>
   `,
 })
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
 
-  isAfterVideoCarrouselVisible: boolean = false;
-  afterMotionSection: boolean = false;
+  isAfterVideoCarrouselVisible: boolean = true;
+  afterMotionSection: boolean = true;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.isMobile = window.innerWidth < 750;
-  }
-
-  loadContent() {
-    // Logique pour charger le contenu ou activer la section
-    console.log('Le contenu est maintenant visible.');
   }
 }

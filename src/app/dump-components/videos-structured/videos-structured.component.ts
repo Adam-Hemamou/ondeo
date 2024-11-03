@@ -8,15 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './videos-structured.component.html',
   styleUrls: ['./videos-structured.component.scss'],
 })
-export class VideosStructuredComponent implements OnInit {
+export class VideosStructuredComponent {
   @Input() videoList: any[] = [];
-  isLoading: boolean[] = [];
-
-  ngOnInit() {
-    this.isLoading = Array(this.videoList.length).fill(true);
-  }
-
-  onVideoLoad(index: number) {
-    this.isLoading[index] = false;
-  }
 }

@@ -54,10 +54,16 @@
     <div class="line"></div>
 
     <ul class="offer-features">
-      <li *ngFor="let feature of offer.features">
+      <li *ngFor="let feature of offer.features; let i = index">
         <img
+          *ngIf="!offer.popular && i === offer.features.length - 1"
+          src="/svg/invalid.svg"
+          alt="svg rond vide"
+        />
+        <img
+          *ngIf="offer.popular || i !== offer.features.length - 1"
           [src]="offer.popular ? '/svg/valid-white.svg' : '/svg/valid.svg'"
-          alt=""
+          alt="coche svg"
         />
         {{ feature }}
       </li>

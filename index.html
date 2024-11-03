@@ -37,7 +37,17 @@
       name="twitter:image"
       content="https://www.exemple.com/path/to/image.jpg"
     />
-
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+      default-src 'self';
+      script-src 'self' https://assets.calendly.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;
+      font-src 'self' data: https://fonts.gstatic.com;
+      frame-src 'self' https://player.vimeo.com https://calendly.com;
+      img-src 'self' data:;
+    "
+    />
     <base href="/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/src/styles.scss" />
@@ -46,20 +56,6 @@
 
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
       rel="stylesheet"
     />
 

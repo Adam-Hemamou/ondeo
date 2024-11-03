@@ -39,7 +39,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023687640?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023687640?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'Med News',
       categoryColor: 'orange',
@@ -47,7 +47,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694926?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023694926?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'Sneakmart ',
       categoryColor: 'blue',
@@ -55,7 +55,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694912?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023694912?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'Carlsberg',
       categoryColor: 'pink',
@@ -66,7 +66,7 @@ export class VideoCarrouselComponent {
   videoList2 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694931?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023694931?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'La Menace',
       categoryColor: 'blue',
@@ -74,7 +74,7 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023725255?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023725255?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'Docaposte',
       categoryColor: 'pink',
@@ -82,15 +82,15 @@ export class VideoCarrouselComponent {
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023725597?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023725597?background=1&autoplay=1&loop=1&muted=1'
       ),
-      category: "L'agence personL",
+      category: 'Agence personnelle',
       categoryColor: 'orange',
       ratio: '4-3',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694936?background=1&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1023694936?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'Groupama',
       categoryColor: 'orange',
@@ -105,6 +105,8 @@ export class VideoCarrouselComponent {
 
     pagination: { clickable: true },
     navigation: true,
+    simulateTouch: true, // Active les gestes tactiles
+    allowTouchMove: true,
   };
 
   constructor(private sanitizer: DomSanitizer) {}

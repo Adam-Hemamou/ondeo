@@ -76,23 +76,13 @@ h1 {
   margin-top: 12px;
   display: inline-block;
   position: relative;
-}
-
-.pack-title::before {
-  content: "";
-  position: absolute;
-  bottom: 0.1em;
-  left: 0;
-  width: 102%;
-  height: 0.35em;
-  background-color: #ffce08;
-  z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  z-index: 3;
 }
 
 .offer-desc {
+  z-index: 3;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   padding: 5px 10px;
 }
 
@@ -105,6 +95,11 @@ h1 {
   padding-top: 30px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.footer-text {
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .btn-rdv-container {
@@ -137,17 +132,47 @@ h1 {
   align-items: center;
 }
 
-.skeleton-loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+iframe {
   background: linear-gradient(90deg, #f8f8f8 25%, #eaeaea 50%, #f8f8f8 75%);
   background-size: 200% 100%;
-  animation: skeleton-loading 2.5s infinite linear;
-  border-radius: 15px;
-  z-index: 1;
+  animation: skeleton-loading 3.5s infinite linear;
+}
+
+// .skeleton-loader {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(90deg, #f8f8f8 25%, #eaeaea 50%, #f8f8f8 75%);
+//   background-size: 200% 100%;
+//   animation: skeleton-loading 3.5s infinite linear;
+//   border-radius: 15px;
+//   z-index: 1;
+// }
+
+.img-bgc {
+  margin-top: 40px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+  color: white;
+  // background-color: red;
+
+  .overlay-bgc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
 }
 
 @keyframes skeleton-loading {
@@ -201,6 +226,10 @@ h1 {
   .offer-desc {
     font-size: 18px;
   }
+
+  .img-bgc {
+    height: 250px;
+  }
 }
 
 @media (min-width: 410px) {
@@ -223,6 +252,10 @@ h1 {
 @media (min-width: 420px) {
   h1 {
     font-size: 32px;
+  }
+
+  .img-bgc {
+    height: 270px;
   }
 }
 
@@ -275,6 +308,7 @@ h1 {
   .pack-title {
     font-size: 34px;
     letter-spacing: 3px;
+    font-weight: bold;
   }
 
   .offer-desc {
@@ -292,6 +326,18 @@ h1 {
 
   .follow-us {
     font-size: 22px;
+  }
+  .footer-text {
+    font-size: 22px;
+  }
+
+  .img-bgc {
+    height: 300px;
+    margin-bottom: 60px;
+
+    &:nth-child(1) {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -332,9 +378,20 @@ h1 {
     justify-content: flex-start;
     /* padding-left: 60px; */
     /* margin-bottom: 50px; */
+
+    .rdv-btn {
+      width: 400px;
+      height: 60px;
+      font-size: 23px;
+    }
   }
 
   .follow-us {
+    font-size: 24px;
+  }
+
+  .footer-text {
+    padding-bottom: 10px;
     font-size: 24px;
   }
 }
@@ -384,8 +441,12 @@ h1 {
   }
 
   .pack-title {
-    font-size: 38px;
+    font-size: 54px;
     letter-spacing: 3px;
+  }
+
+  .img-bgc {
+    height: 320px;
   }
 }
 

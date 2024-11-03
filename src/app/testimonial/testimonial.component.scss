@@ -28,6 +28,11 @@
     display: flex;
     z-index: 1;
     margin: 60px 20px 0px;
+
+    app-avis-card {
+      width: 50%;
+      box-sizing: border-box;
+    }
   }
 }
 

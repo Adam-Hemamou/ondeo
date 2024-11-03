@@ -9,7 +9,6 @@
 </p>
 <div class="video-container">
   <div class="embed embed--16-9">
-    <div *ngIf="isLoading" class="skeleton-loader"></div>
     <iframe
       src="https://player.vimeo.com/video/1006127429?autoplay=1&muted=1"
       autoplay
@@ -17,7 +16,6 @@
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
-      (load)="onVideoLoad()"
     ></iframe>
     <div class="yellow-trait"></div>
   </div>

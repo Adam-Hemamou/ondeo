@@ -1,14 +1,8 @@
 .img-bgc {
-  margin-top: 20px;
-  width: 100%;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  background-color: red;
-  // background-image: url();
+  background-image: url("png/bgc-podcast.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 1000px) {
