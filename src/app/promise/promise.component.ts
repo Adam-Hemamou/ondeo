@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-promise',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgIf],
   templateUrl: './promise.component.html',
   styleUrls: ['./promise.component.scss'],
 })
@@ -23,6 +23,6 @@ export class PromiseComponent implements AfterViewInit {
     setTimeout(() => {
       this.isLightOn = true;
       this.cdr.detectChanges();
-    }, 2000);
+    }, 4000);
   }
 }

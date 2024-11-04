@@ -60,6 +60,15 @@
         }
       }
     }
+
+    .offer-features {
+      li {
+        &:last-child {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   .circle-left,
@@ -196,6 +205,11 @@
       margin-bottom: 8px;
       gap: 10px;
       font-size: 13px;
+
+      &:last-child {
+        color: rgb(124, 122, 122);
+        text-decoration: line-through;
+      }
 
       img {
         width: 12px;

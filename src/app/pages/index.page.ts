@@ -2,7 +2,6 @@ import { Component, HostListener } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { VideoPresComponent } from '../video-pres/video-pres.component';
 import { NgIf } from '@angular/common';
-import { KeyFigureComponent } from '../key-figure/key-figure.component';
 import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.component';
 import { StepCardsComponent } from '../step-cards/step-cards.component';
 import { PodcastSectionComponent } from '../podcast-section/podcast-section.component';
@@ -22,7 +21,6 @@ import { DeferRenderDirective } from './defer-render.directive';
     NavComponent,
     VideoPresComponent,
     NgIf,
-    KeyFigureComponent,
     VideoCarrouselComponent,
     StepCardsComponent,
     PodcastSectionComponent,
@@ -65,46 +63,39 @@ import { DeferRenderDirective } from './defer-render.directive';
       <!-- <app-key-figure [isMobile]="isMobile"></app-key-figure> -->
       <app-promise [isMobile]="isMobile"></app-promise>
 
-      <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
-      <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true">
-        <app-logos></app-logos>
-      </div>
-      <app-step-cards *ngIf="isAfterVideoCarrouselVisible"></app-step-cards>
-      <div appDeferRender (isVisible)="afterMotionSection = true">
-        <app-podcast-section
-          [isMobile]="isMobile"
-          *ngIf="isAfterVideoCarrouselVisible"
-        ></app-podcast-section>
-      </div>
-      <app-motion-section
+      <app-video-carrousel
+        id="videos-section"
         [isMobile]="isMobile"
-        *ngIf="afterMotionSection"
-      ></app-motion-section>
-      <app-form-call *ngIf="afterMotionSection"></app-form-call>
+      ></app-video-carrousel>
+      <!-- <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true"> -->
+      <app-logos></app-logos>
+      <!-- </div> -->
+      <app-step-cards></app-step-cards>
+      <!-- <div appDeferRender (isVisible)="afterMotionSection = true"> -->
+      <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
+      <!-- </div> -->
+      <app-motion-section [isMobile]="isMobile"></app-motion-section>
+      <app-form-call></app-form-call>
       <app-testimonial
+        id="testimonial-section"
         [isMobile]="isMobile"
-        *ngIf="afterMotionSection"
       ></app-testimonial>
-      <app-faq [isMobile]="isMobile" *ngIf="afterMotionSection"></app-faq>
-      <app-calandly *ngIf="afterMotionSection"></app-calandly>
+      <app-faq [isMobile]="isMobile"></app-faq>
+      <app-calandly></app-calandly>
 
-      <app-logos *ngIf="afterMotionSection"></app-logos>
+      <app-logos></app-logos>
+      <p class="footer-text">2024 - Ondeo. Tous droits réservés.</p>
     </main>
   `,
 })
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
 
-  isAfterVideoCarrouselVisible: boolean = false;
-  afterMotionSection: boolean = false;
+  isAfterVideoCarrouselVisible: boolean = true;
+  afterMotionSection: boolean = true;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.isMobile = window.innerWidth < 750;
-  }
-
-  loadContent() {
-    // Logique pour charger le contenu ou activer la section
-    console.log('Le contenu est maintenant visible.');
   }
 }

@@ -26,7 +26,6 @@ export class PodcastSectionComponent {
 
   videoUrl: string =
     'https://player.vimeo.com/video/68414507?title=0&byline=0&portrait=0&dnt=1';
-  // 'https://player.vimeo.com/video/368733793'
 
   config: SwiperOptions = {
     slidesPerView: 1,
@@ -51,10 +50,10 @@ export class PodcastSectionComponent {
         'Rédaction en collaboration des sujets abordés',
         'Aménagement du studio selon vos goûts',
         'Production intégrale des 10 vidéos',
-        'Création des miniatures',
         'Modifications illimitées',
-        'Partage d’un planning de publications',
+        'Optimisation à 100% pour performer',
         'Analyse des résultats',
+        '5 vidéos motion design',
       ],
       background: 'white',
       popular: false,
@@ -71,10 +70,10 @@ export class PodcastSectionComponent {
         'Rédaction en collaboration des sujets abordés',
         'Aménagement du studio selon vos goûts',
         'Production complète de 20 vidéos',
-        'Montage complet',
         'Modifications illimitées',
         'Optimisation à 100% pour performer',
         'Analyse des résultats',
+        '5 vidéos motion design',
       ],
       background: 'black',
       popular: true,

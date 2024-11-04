@@ -7,11 +7,13 @@
   <div class="carrousel-container">
     <swiper *ngIf="isMobile; else desktopLayout" #swiper [config]="config">
       <ng-template swiperSlide>
-        <app-videos-structured [videoList]="videoList1"></app-videos-structured
-      ></ng-template>
+        <div class="top-swiper"></div>
+        <app-videos-structured [videoList]="videoList1"></app-videos-structured>
+      </ng-template>
       <ng-template swiperSlide>
-        <app-videos-structured [videoList]="videoList2"></app-videos-structured
-      ></ng-template>
+        <div class="top-swiper"></div>
+        <app-videos-structured [videoList]="videoList2"></app-videos-structured>
+      </ng-template>
     </swiper>
 
     <ng-template #desktopLayout>
