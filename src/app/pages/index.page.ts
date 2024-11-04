@@ -13,6 +13,7 @@ import { CalandlyComponent } from '../calandly/calandly.component';
 import { LogosComponent } from '../logos/logos.component';
 import { PromiseComponent } from '../promise/promise.component';
 import { DeferRenderDirective } from './defer-render.directive';
+import { scrollToSectionCal } from '../../utils/scrolls';
 
 @Component({
   selector: 'app-home',
@@ -52,7 +53,9 @@ import { DeferRenderDirective } from './defer-render.directive';
             <span class="bolded">100% satisfait.</span>
           </p>
           <div class="btn-rdv-container" *ngIf="!isMobile">
-            <button class="rdv-btn">Prendre rendez-vous</button>
+            <button class="rdv-btn" (click)="scrollToCalendly()">
+              Prendre rendez-vous
+            </button>
           </div>
         </div>
 
@@ -82,7 +85,6 @@ import { DeferRenderDirective } from './defer-render.directive';
       ></app-testimonial>
       <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
-
       <app-logos></app-logos>
       <p class="footer-text">2024 - Ondeo. Tous droits réservés.</p>
     </main>
@@ -93,6 +95,10 @@ export default class HomeComponent {
 
   isAfterVideoCarrouselVisible: boolean = true;
   afterMotionSection: boolean = true;
+
+  scrollToCalendly() {
+    scrollToSectionCal();
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

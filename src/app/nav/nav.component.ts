@@ -1,6 +1,7 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { sharedAnimation } from '../core/animations/animation';
 import { NgIf } from '@angular/common';
+import { scrollToSectionCal } from '../../utils/scrolls';
 
 @Component({
   selector: 'app-nav',
@@ -14,6 +15,10 @@ export class NavComponent {
   isMenuOpen: boolean = false; // État du menu
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Inverser l'état du menu
+  }
+
+  scrollToCalendly() {
+    scrollToSectionCal();
   }
 
   scrollToSection(sectionId: string) {

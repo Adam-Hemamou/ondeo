@@ -35,5 +35,7 @@
   </div>
 </div>
 <div *ngIf="isMobile" class="btn-rdv-container">
-  <button class="rdv-btn">Prendre rendez-vous</button>
+  <button class="rdv-btn" (click)="scrollToCalendly()">
+    Prendre rendez-vous
+  </button>
 </div>

@@ -1,6 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Offer } from 'src/app/core/types/offer';
+import { scrollToSectionCal } from '../../../utils/scrolls';
 
 @Component({
   selector: 'app-offer-card',
@@ -13,4 +14,8 @@ export class OfferCardComponent {
   @Input() isMobile!: boolean;
 
   @Input() offer!: Offer;
+
+  scrollToCalendly() {
+    scrollToSectionCal();
+  }
 }
