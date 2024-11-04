@@ -9,9 +9,9 @@
 
     <div class="desktop-nav">
       <ul class="desktop-nav">
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#videos-section">Nos vidéos</a></li>
+        <li><a href="#offers-section">Nos offres</a></li>
+        <li><a href="#testimonial-section">Vos avis</a></li>
       </ul>
     </div>
 
@@ -22,10 +22,9 @@
 
   <div [@sharedAnimation]="isMenuOpen ? 'open' : 'closed'" class="burger-menu">
     <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">À propos</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li (click)="scrollToSection('videos-section')"><a>Nos vidéos</a></li>
+      <li (click)="scrollToSection('offers-section')"><a>Nos offres</a></li>
+      <li (click)="scrollToSection('testimonial-section')"><a>Vos avis</a></li>
     </ul>
   </div>
 </div>

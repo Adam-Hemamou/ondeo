@@ -84,7 +84,7 @@ export class VideoCarrouselComponent {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
         'https://player.vimeo.com/video/1023725597?background=1&autoplay=1&loop=1&muted=1'
       ),
-      category: 'Agence personnelle',
+      category: 'Agence P.',
       categoryColor: 'orange',
       ratio: '4-3',
     },

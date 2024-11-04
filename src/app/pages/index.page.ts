@@ -2,7 +2,6 @@ import { Component, HostListener } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { VideoPresComponent } from '../video-pres/video-pres.component';
 import { NgIf } from '@angular/common';
-import { KeyFigureComponent } from '../key-figure/key-figure.component';
 import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.component';
 import { StepCardsComponent } from '../step-cards/step-cards.component';
 import { PodcastSectionComponent } from '../podcast-section/podcast-section.component';
@@ -22,7 +21,6 @@ import { DeferRenderDirective } from './defer-render.directive';
     NavComponent,
     VideoPresComponent,
     NgIf,
-    KeyFigureComponent,
     VideoCarrouselComponent,
     StepCardsComponent,
     PodcastSectionComponent,
@@ -65,7 +63,10 @@ import { DeferRenderDirective } from './defer-render.directive';
       <!-- <app-key-figure [isMobile]="isMobile"></app-key-figure> -->
       <app-promise [isMobile]="isMobile"></app-promise>
 
-      <app-video-carrousel [isMobile]="isMobile"></app-video-carrousel>
+      <app-video-carrousel
+        id="videos-section"
+        [isMobile]="isMobile"
+      ></app-video-carrousel>
       <!-- <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true"> -->
       <app-logos></app-logos>
       <!-- </div> -->
@@ -75,7 +76,10 @@ import { DeferRenderDirective } from './defer-render.directive';
       <!-- </div> -->
       <app-motion-section [isMobile]="isMobile"></app-motion-section>
       <app-form-call></app-form-call>
-      <app-testimonial [isMobile]="isMobile"></app-testimonial>
+      <app-testimonial
+        id="testimonial-section"
+        [isMobile]="isMobile"
+      ></app-testimonial>
       <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
 
