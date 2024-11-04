@@ -5,6 +5,7 @@ import {
   Component,
   Input,
 } from '@angular/core';
+import { scrollToSectionCal } from '../../utils/scrolls';
 
 @Component({
   selector: 'app-promise',
@@ -18,6 +19,10 @@ export class PromiseComponent implements AfterViewInit {
   isLightOn = false;
 
   constructor(private cdr: ChangeDetectorRef) {}
+
+  scrollToCalendly() {
+    scrollToSectionCal();
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {
