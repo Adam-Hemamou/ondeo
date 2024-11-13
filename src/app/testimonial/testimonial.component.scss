@@ -10,16 +10,12 @@
     height: 700px;
     width: 150%;
     border-radius: 9% 91% 100% 0% / 3% 57% 43% 97%;
-    // border-radius: 78% 22% 0% 100% / 54% 50% 50% 46%;
     z-index: 0;
   }
 
   .testimonials-container {
-    // padding: 40px 20px 10px;
-    // margin-top: 40px;
     width: 100%;
     margin: 80px auto 20px;
-    // position: relative;
     z-index: 1;
   }
 
@@ -27,7 +23,7 @@
     position: relative;
     display: flex;
     z-index: 1;
-    margin: 60px 20px 0px;
+    margin: 60px 0px 0px;
 
     app-avis-card {
       width: 50%;
@@ -37,5 +33,5 @@
 }
 
 ::ng-deep .swiper-pagination-bullet-active {
-  background-color: black; // Couleur du point actif (jaune dans ce cas)
+  background-color: black;
 }
