@@ -14,15 +14,17 @@
       Venez réaliser une interview dans nos studios !
     </p>
   </div>
-  <!-- <div class="videos-offers"> -->
-  <!-- <app-simple-video [videoUrl]="videoUrl"></app-simple-video> -->
-  <!-- </div> -->
 
   <div *ngIf="isMobile; else desktopLayout">
     <swiper [config]="config">
-      <ng-template *ngFor="let offer of offerCards" swiperSlide>
-        <app-offer-card [offer]="offer"></app-offer-card>
-      </ng-template>
+      <ng-container *ngFor="let offer of offerCards">
+        <ng-template swiperSlide>
+          <app-offer-card
+            [offer]="offer"
+            [isMobile]="isMobile"
+          ></app-offer-card>
+        </ng-template>
+      </ng-container>
     </swiper>
   </div>
   <ng-template #desktopLayout>

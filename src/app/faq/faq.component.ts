@@ -31,12 +31,12 @@ export class FaqComponent {
         'Aucune obligation d’engagement. En revanche pour une stratégie sur les réseaux sociaux, nous recommandons d’avoir une présence quotidienne pendant plusieurs mois.',
     },
     {
-      question: 'Quelles sont vos conditionsde paiement ?',
+      question: 'Quelles sont vos conditions de paiement ?',
       answer:
         'Lien Stripe pour un paiement sécurisé. Nous offrons des réductions en cas de commandes répétées.',
     },
     {
-      question: 'Quels sont vos délaisde livraison  ?',
+      question: 'Quels sont vos délais de livraison  ?',
       answer:
         'Ça dépend de la durée et de la complexité du projet. Nous sommes en moyenne sur un délai de 30 jours. Dans certaines conditions, nous proposons aussi des livraisons express. ',
     },
