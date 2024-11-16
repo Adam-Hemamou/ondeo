@@ -12,6 +12,9 @@
   width: 280px;
   border: 3px solid #d1cdcd;
   isolation: isolate;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  contain: layout paint;
 
   .circle-left,
   .circle-right,
@@ -48,7 +51,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    // overflow: hidden;  /* Limite uniquement le flou */
+    // overflow: hidden;
     z-index: 0; /* S'assure que le flou reste derrière */
   }
 

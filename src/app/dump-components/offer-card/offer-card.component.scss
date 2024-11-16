@@ -11,6 +11,9 @@
   max-height: 450px;
   width: 280px;
   border: 3px solid #d1cdcd;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  contain: layout paint;
 
   h2 {
     color: #303030;
