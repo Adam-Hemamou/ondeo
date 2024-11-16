@@ -13,7 +13,7 @@
   border: 3px solid #d1cdcd;
   will-change: transform, opacity;
   transform: translateZ(0);
-  contain: layout paint;
+  contain: unset;
 
   h2 {
     color: #303030;
@@ -117,7 +117,7 @@
     -webkit-backdrop-filter: blur(50px);
     border-radius: 15px;
     z-index: 0;
-    overflow: hidden;
+    clip-path: inset(0);
 
     &.black-blur {
       background: rgba(52, 52, 52, 0.7);
