@@ -4,10 +4,12 @@
     <span>Populaire</span>
   </div>
 
-  <div
-    class="blur-effect"
-    [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
-  ></div>
+  <div class="blur-wrapper">
+    <div
+      class="blur-effect"
+      [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
+    ></div>
+  </div>
 
   <!-- Élément de flou -->
   <div
