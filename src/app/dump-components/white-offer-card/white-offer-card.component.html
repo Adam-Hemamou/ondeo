@@ -1,0 +1,59 @@
+<div class="white-offer-card">
+  <div class="blur-effect"></div>
+
+  <!-- Élément de flou -->
+  <div class="circle-left"></div>
+  <div class="circle-right"></div>
+  <div class="circle-bottom"></div>
+
+  <div class="content">
+    <!-- Nouvelle div pour le contenu -->
+
+    <div class="header-offer">
+      <img
+        [src]="whiteOffer.icon"
+        alt="{{ whiteOffer.title }} icon"
+        loading="lazy"
+      />
+
+      <div>
+        <h2>{{ whiteOffer.title }}</h2>
+
+        <p *ngIf="whiteOffer.oldPrice" class="old-price">
+          <span class="strikethrough">{{ whiteOffer.oldPrice }}</span>
+          <span class="price">
+            {{ whiteOffer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p *ngIf="!whiteOffer.oldPrice">
+          <span class="price">
+            {{ whiteOffer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p class="nb-video">{{ whiteOffer.videos }}</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <ul class="offer-features">
+      <li *ngFor="let feature of whiteOffer.features; let i = index">
+        <img
+          *ngIf="i === whiteOffer.features.length - 1"
+          src="/svg/invalid.svg"
+          alt="svg rond vide"
+        />
+        <img
+          src="/svg/valid.svg"
+          *ngIf="i !== whiteOffer.features.length - 1"
+          alt="coche svg"
+        />
+        {{ feature }}
+      </li>
+    </ul>
+
+    <div class="offer-btn">
+      <button (click)="scrollToCalendly()">Commander ma vidéo</button>
+    </div>
+  </div>
+</div>

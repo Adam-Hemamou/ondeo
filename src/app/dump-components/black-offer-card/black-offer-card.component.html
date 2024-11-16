@@ -1,0 +1,55 @@
+<div class="black-offer-card">
+  <!-- Rectangle orange en haut à droite avec le texte "Populaire" -->
+  <div class="orange-rectangle">
+    <span>Populaire</span>
+  </div>
+
+  <div class="blur-effect"></div>
+
+  <!-- Élément de flou -->
+  <div class="circle-left"></div>
+  <div class="circle-right"></div>
+  <div class="circle-bottom"></div>
+
+  <div class="content">
+    <!-- Nouvelle div pour le contenu -->
+
+    <div class="header-offer">
+      <img
+        [src]="blackOffer.icon"
+        alt="{{ blackOffer.title }} icon"
+        loading="lazy"
+      />
+
+      <div>
+        <h2>{{ blackOffer.title }}</h2>
+
+        <p *ngIf="blackOffer.oldPrice" class="old-price">
+          <span class="strikethrough">{{ blackOffer.oldPrice }}</span>
+          <span class="price">
+            {{ blackOffer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p *ngIf="!blackOffer.oldPrice">
+          <span class="price">
+            {{ blackOffer.price }} <span class="ttc">TTC</span></span
+          >
+        </p>
+        <p class="nb-video">{{ blackOffer.videos }}</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <ul class="offer-features">
+      <li *ngFor="let feature of blackOffer.features; let i = index">
+        <img src="/svg/valid-white.svg" alt="coche svg" />
+        {{ feature }}
+      </li>
+    </ul>
+
+    <div class="offer-btn">
+      <button (click)="scrollToCalendly()">Commander ma vidéo</button>
+    </div>
+  </div>
+</div>
