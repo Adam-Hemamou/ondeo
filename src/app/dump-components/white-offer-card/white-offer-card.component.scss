@@ -5,8 +5,8 @@
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
-  overflow: hidden;
-  z-index: 0;
+  // overflow: hidden;
+  z-index: 1;
   min-height: 300px;
   max-height: 450px;
   width: 280px;
@@ -49,10 +49,10 @@
     right: 0;
     bottom: 0;
     backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    // -webkit-backdrop-filter: blur(50px);
     border-radius: 15px;
-    z-index: 1;
-    overflow: hidden;
+    z-index: 0;
+    // overflow: hidden;
     background: rgba(255, 0, 0, 0.5);
     // background: rgba(255, 255, 255, 0.3);
     will-change: transform, backdrop-filter;
