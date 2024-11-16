@@ -5,7 +5,7 @@
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
-  // overflow: hidden;
+  overflow: hidden;
   z-index: 1;
   min-height: 300px;
   max-height: 450px;
@@ -42,20 +42,26 @@
     height: 100px;
   }
 
+  .blur-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // overflow: hidden;  /* Limite uniquement le flou */
+    z-index: 0; /* S'assure que le flou reste derrière */
+  }
+
   .blur-effect {
     position: absolute;
+    border-radius: 15px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    border-radius: 15px;
-    z-index: 0;
-    overflow: hidden;
-    background: rgba(255, 0, 0, 0.5);
-    // background: rgba(255, 255, 255, 0.3);
-    will-change: transform, backdrop-filter;
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .content {
