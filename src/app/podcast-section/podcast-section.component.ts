@@ -4,13 +4,21 @@ import { Offer } from '../core/types/offer';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { NgIf } from '@angular/common';
+import { BlackOfferCardComponent } from '../dump-components/black-offer-card/black-offer-card.component';
+import { WhiteOfferCardComponent } from '../dump-components/white-offer-card/white-offer-card.component';
 
 SwiperCore.use([Pagination]);
 
 @Component({
   selector: 'app-podcast-section',
   standalone: true,
-  imports: [OfferCardComponent, SwiperModule, NgIf],
+  imports: [
+    OfferCardComponent,
+    BlackOfferCardComponent,
+    WhiteOfferCardComponent,
+    SwiperModule,
+    NgIf,
+  ],
   templateUrl: './podcast-section.component.html',
   styleUrls: ['./podcast-section.component.scss'],
 })
