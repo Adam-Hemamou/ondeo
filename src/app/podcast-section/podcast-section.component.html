@@ -17,22 +17,32 @@
 
   <div *ngIf="isMobile; else desktopLayout">
     <swiper [config]="config">
-      <ng-container *ngFor="let offer of offerCards">
+      <ng-container>
         <ng-template swiperSlide>
-          <app-offer-card
-            [offer]="offer"
+          <app-white-offer-card
+            [whiteOffer]="whiteOfferCards"
             [isMobile]="isMobile"
-          ></app-offer-card>
+          ></app-white-offer-card>
+        </ng-template>
+        <ng-template swiperSlide>
+          <app-black-offer-card
+            [blackOffer]="blackOffercard"
+            [isMobile]="isMobile"
+          ></app-black-offer-card>
         </ng-template>
       </ng-container>
     </swiper>
   </div>
   <ng-template #desktopLayout>
     <div class="offer-cards">
-      <app-offer-card
-        *ngFor="let offer of offerCards"
-        [offer]="offer"
-      ></app-offer-card>
+      <app-white-offer-card
+        [whiteOffer]="whiteOfferCards"
+        [isMobile]="isMobile"
+      ></app-white-offer-card>
+      <app-black-offer-card
+        [blackOffer]="blackOffercard"
+        [isMobile]="isMobile"
+      ></app-black-offer-card>
     </div>
   </ng-template>
 </div>

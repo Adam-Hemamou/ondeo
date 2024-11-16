@@ -12,13 +12,7 @@ SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-motion-section',
   standalone: true,
-  imports: [
-    OfferCardComponent,
-    SimpleVideoComponent,
-    SwiperModule,
-    NgFor,
-    NgIf,
-  ],
+  imports: [OfferCardComponent, SwiperModule, NgFor, NgIf],
   templateUrl: './motion-section.component.html',
   styleUrls: ['./motion-section.component.scss'],
 })

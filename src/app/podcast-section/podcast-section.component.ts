@@ -5,6 +5,8 @@ import { SimpleVideoComponent } from '../dump-components/simple-video/simple-vid
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { NgFor, NgIf } from '@angular/common';
+import { WhiteOfferCardComponent } from '../dump-components/white-offer-card/white-offer-card.component';
+import { BlackOfferCardComponent } from '../dump-components/black-offer-card/black-offer-card.component';
 
 SwiperCore.use([Pagination]);
 
@@ -13,10 +15,10 @@ SwiperCore.use([Pagination]);
   standalone: true,
   imports: [
     OfferCardComponent,
-    SimpleVideoComponent,
     SwiperModule,
-    NgFor,
     NgIf,
+    WhiteOfferCardComponent,
+    BlackOfferCardComponent,
   ],
   templateUrl: './podcast-section.component.html',
   styleUrls: ['./podcast-section.component.scss'],
@@ -38,46 +40,45 @@ export class PodcastSectionComponent {
     pagination: { clickable: true },
   };
 
-  offerCards: Offer[] = [
-    {
-      title: 'Starter',
-      price: '1100 €',
-      oldPrice: null,
-      videos: '10 vidéos',
-      description: 'Analyse des thématiques virales pour votre secteur...',
-      features: [
-        'Analyse des thématiques virales pour votre secteur',
-        'Rédaction en collaboration des sujets abordés',
-        'Aménagement du studio selon vos goûts',
-        'Production intégrale des 10 vidéos',
-        'Modifications illimitées',
-        'Optimisation à 100% pour performer',
-        'Analyse des résultats',
-        '5 vidéos motion design',
-      ],
-      background: 'white',
-      popular: false,
-      icon: '/png/discount.png',
-    },
-    {
-      title: 'Pro',
-      price: '1900 €',
-      oldPrice: '2200 €',
-      videos: '20 vidéos',
-      description: 'Production complète de 20 vidéos...',
-      features: [
-        'Analyse des thématiques virales pour votre secteur',
-        'Rédaction en collaboration des sujets abordés',
-        'Aménagement du studio selon vos goûts',
-        'Production complète de 20 vidéos',
-        'Modifications illimitées',
-        'Optimisation à 100% pour performer',
-        'Analyse des résultats',
-        '5 vidéos motion design',
-      ],
-      background: 'black',
-      popular: true,
-      icon: '/png/space-ship.png',
-    },
-  ];
+  whiteOfferCards: Offer = {
+    title: 'Starter',
+    price: '1100 €',
+    oldPrice: null,
+    videos: '10 vidéos',
+    description: 'Analyse des thématiques virales pour votre secteur...',
+    features: [
+      'Analyse des thématiques virales pour votre secteur',
+      'Rédaction en collaboration des sujets abordés',
+      'Aménagement du studio selon vos goûts',
+      'Production intégrale des 10 vidéos',
+      'Modifications illimitées',
+      'Optimisation à 100% pour performer',
+      'Analyse des résultats',
+      '5 vidéos motion design',
+    ],
+    background: 'white',
+    popular: false,
+    icon: '/png/discount.png',
+  };
+
+  blackOffercard: Offer = {
+    title: 'Pro',
+    price: '1900 €',
+    oldPrice: '2200 €',
+    videos: '20 vidéos',
+    description: 'Production complète de 20 vidéos...',
+    features: [
+      'Analyse des thématiques virales pour votre secteur',
+      'Rédaction en collaboration des sujets abordés',
+      'Aménagement du studio selon vos goûts',
+      'Production complète de 20 vidéos',
+      'Modifications illimitées',
+      'Optimisation à 100% pour performer',
+      'Analyse des résultats',
+      '5 vidéos motion design',
+    ],
+    background: 'black',
+    popular: true,
+    icon: '/png/space-ship.png',
+  };
 }
