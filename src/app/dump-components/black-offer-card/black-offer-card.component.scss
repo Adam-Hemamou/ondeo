@@ -12,6 +12,7 @@
   min-height: 300px;
   max-height: 450px;
   width: 280px;
+  isolation: isolate;
 
   .circle-left,
   .circle-right,
@@ -55,7 +56,9 @@
     border-radius: 15px;
     z-index: 0;
     overflow: hidden;
-    background: rgba(52, 52, 52, 0.7);
+    // background: rgba(52, 52, 52, 0.7);
+    background: rgba(255, 0, 0, 0.5); /* Rouge translucide */
+    will-change: transform, backdrop-filter;
   }
 
   .orange-rectangle {
@@ -93,7 +96,7 @@
       .old-price {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
 
         .strikethrough {
           font-size: 16px;
@@ -111,6 +114,21 @@
             transform: translateY(-50%);
           }
         }
+      }
+
+      .price {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .ttc {
+        font-weight: normal;
+        font-size: 14px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
       }
     }
 
@@ -236,7 +254,7 @@
   .black-offer-card {
     min-height: 500px;
     max-height: 700px;
-    width: 350px;
+    width: 370px;
     padding: 15px 20px;
 
     .orange-rectangle {
