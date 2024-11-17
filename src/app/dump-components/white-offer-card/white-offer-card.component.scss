@@ -65,6 +65,7 @@
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     background: rgba(255, 255, 255, 0.3);
+    will-change: transform, opacity;
   }
 
   .content {
