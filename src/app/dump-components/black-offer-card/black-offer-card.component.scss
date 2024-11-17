@@ -69,6 +69,7 @@
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     background: rgba(52, 52, 52, 0.7);
+    will-change: transform, opacity;
   }
 
   .orange-rectangle {

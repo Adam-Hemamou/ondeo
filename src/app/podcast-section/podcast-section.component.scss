@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
 }
 
+.swiper-slide {
+  position: relative;
+}
+
 @media (min-width: 1000px) {
   .podcast-section {
     margin-bottom: 60px;
