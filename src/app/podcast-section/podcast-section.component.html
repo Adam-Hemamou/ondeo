@@ -19,16 +19,16 @@
     <swiper [config]="config">
       <ng-container>
         <ng-template swiperSlide>
-          <app-white-offer-card
-            [whiteOffer]="whiteOfferCards"
+          <app-offer-card
+            [offer]="whiteOfferCards"
             [isMobile]="isMobile"
-          ></app-white-offer-card>
+          ></app-offer-card>
         </ng-template>
         <ng-template swiperSlide>
-          <app-black-offer-card
-            [blackOffer]="blackOffercard"
+          <app-offer-card
+            [offer]="blackOffercard"
             [isMobile]="isMobile"
-          ></app-black-offer-card>
+          ></app-offer-card>
         </ng-template>
       </ng-container>
     </swiper>
