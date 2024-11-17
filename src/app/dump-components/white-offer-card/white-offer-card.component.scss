@@ -52,7 +52,7 @@
     right: 0;
     bottom: 0;
     // overflow: hidden;
-    z-index: 0; /* S'assure que le flou reste derrière */
+    z-index: 0 !important; /* S'assure que le flou reste derrière */
   }
 
   .blur-effect {
