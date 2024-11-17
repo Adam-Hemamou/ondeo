@@ -26,7 +26,7 @@ export class VideoCarrouselComponent {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
         'https://player.vimeo.com/video/1028819394?background=1&title=0&byline=0&portrait=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
       ),
-      category: 'Charles & Melanie',
+      category: 'Skills Place',
       categoryColor: 'blue',
       ratio: '16-9',
     },
@@ -61,7 +61,7 @@ export class VideoCarrouselComponent {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
         'https://player.vimeo.com/video/1023686694?background=1&autoplay=1&loop=1&muted=1'
       ),
-      category: 'La Menace',
+      category: 'Charles & Melanie',
       categoryColor: 'blue',
       ratio: '16-9',
     },
