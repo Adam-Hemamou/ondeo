@@ -12,12 +12,12 @@
     [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
   ></div>
 
-  <!-- <div class="blur-wrapper">
+  <div class="blur-wrapper">
     <div
       class="blur-effect"
       [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
     ></div>
-  </div> -->
+  </div>
 
   <div class="orange-rectangle" *ngIf="offer.popular">
     <span>Populaire</span>

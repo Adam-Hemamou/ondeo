@@ -12,13 +12,7 @@ SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-podcast-section',
   standalone: true,
-  imports: [
-    OfferCardComponent,
-    BlackOfferCardComponent,
-    WhiteOfferCardComponent,
-    SwiperModule,
-    NgIf,
-  ],
+  imports: [OfferCardComponent, SwiperModule, NgIf],
   templateUrl: './podcast-section.component.html',
   styleUrls: ['./podcast-section.component.scss'],
 })
@@ -50,7 +44,7 @@ export class PodcastSectionComponent {
       'Analyse des thématiques virales pour votre secteur',
       'Rédaction en collaboration des sujets abordés',
       'Aménagement du studio selon vos goûts',
-      'Production intégrale des 10 vidéos',
+      'Production complète de 10 vidéos',
       'Modifications illimitées',
       'Optimisation à 100% pour performer',
       'Analyse des résultats',

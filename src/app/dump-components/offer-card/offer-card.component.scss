@@ -125,6 +125,8 @@
     bottom: 0;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
     border-radius: 15px;
     z-index: 1;
 
@@ -139,6 +141,8 @@
 
   .content {
     position: relative;
+    -webkit-transform: translate3d(0, 0, 0); // Active le contexte de rendu
+    transform: translate3d(0, 0, 0);
     z-index: 3;
     height: 100%;
 
