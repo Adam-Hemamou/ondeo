@@ -15,7 +15,8 @@
   isolation: isolate;
   will-change: transform, opacity;
   transform: translateZ(0);
-  contain: layout paint;
+  -webkit-transform: translate3d(0, 0, 0);
+  // contain: layout paint;
 
   .circle-left,
   .circle-right,
@@ -57,6 +58,7 @@
     z-index: 1;
     pointer-events: none; // Empêche les interactions
     isolation: isolate;
+    overflow: visible !important;
 
     &::before {
       content: "";
@@ -68,8 +70,10 @@
       border-radius: 15px;
       backdrop-filter: blur(50px);
       -webkit-backdrop-filter: blur(50px);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
       background: rgba(52, 52, 52, 0.7);
-      z-index: 1;
+      z-index: 0 !important;
     }
   }
 
@@ -112,9 +116,22 @@
 
   .content {
     position: relative;
+    -webkit-transform: translate3d(0, 0, 0); // Active le contexte de rendu
+    transform: translate3d(0, 0, 0);
     z-index: 2 !important;
     height: 100%;
     background-color: red;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; // S'assure que le pseudo-élément est en dessous
+      background: red;
+    }
 
     .header-offer {
       padding-top: 20px;
