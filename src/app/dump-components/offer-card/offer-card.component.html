@@ -1,17 +1,4 @@
 <div class="offer-card" [ngClass]="{ popular: offer.popular }">
-  <!-- Rectangle orange en haut à droite avec le texte "Populaire" -->
-  <div class="orange-rectangle" *ngIf="offer.popular">
-    <span>Populaire</span>
-  </div>
-
-  <div class="blur-wrapper">
-    <div
-      class="blur-effect"
-      [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
-    ></div>
-  </div>
-
-  <!-- Élément de flou -->
   <div
     class="circle-left"
     [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
@@ -25,9 +12,18 @@
     [ngClass]="{ 'light-circle': !offer.popular, 'dark-circle': offer.popular }"
   ></div>
 
-  <div class="content">
-    <!-- Nouvelle div pour le contenu -->
+  <div class="blur-wrapper">
+    <div
+      class="blur-effect"
+      [ngClass]="{ 'black-blur': offer.popular, 'white-blur': !offer.popular }"
+    ></div>
+  </div>
 
+  <div class="orange-rectangle" *ngIf="offer.popular">
+    <span>Populaire</span>
+  </div>
+
+  <div class="content">
     <div class="header-offer">
       <img [src]="offer.icon" alt="{{ offer.title }} icon" loading="lazy" />
 
