@@ -14,6 +14,7 @@ import { LogosComponent } from '../logos/logos.component';
 import { PromiseComponent } from '../promise/promise.component';
 import { DeferRenderDirective } from './defer-render.directive';
 import { scrollToSectionCal } from '../../utils/scrolls';
+import { LogoBandComponent } from '../logo-band/logo-band.component';
 
 @Component({
   selector: 'app-home',
@@ -30,9 +31,8 @@ import { scrollToSectionCal } from '../../utils/scrolls';
     TestimonialComponent,
     FaqComponent,
     CalandlyComponent,
-    LogosComponent,
     PromiseComponent,
-    DeferRenderDirective,
+    LogoBandComponent,
   ],
   template: `
     <header>
@@ -63,20 +63,15 @@ import { scrollToSectionCal } from '../../utils/scrolls';
           <app-video-pres [isMobile]="isMobile"></app-video-pres>
         </div>
       </div>
-      <!-- <app-key-figure [isMobile]="isMobile"></app-key-figure> -->
       <app-promise [isMobile]="isMobile"></app-promise>
 
       <app-video-carrousel
         id="videos-section"
         [isMobile]="isMobile"
       ></app-video-carrousel>
-      <!-- <div appDeferRender (isVisible)="isAfterVideoCarrouselVisible = true"> -->
-      <app-logos></app-logos>
-      <!-- </div> -->
+      <app-logo-band></app-logo-band>
       <app-step-cards></app-step-cards>
-      <!-- <div appDeferRender (isVisible)="afterMotionSection = true"> -->
       <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
-      <!-- </div> -->
       <app-motion-section [isMobile]="isMobile"></app-motion-section>
       <app-form-call></app-form-call>
       <app-testimonial
@@ -85,7 +80,7 @@ import { scrollToSectionCal } from '../../utils/scrolls';
       ></app-testimonial>
       <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
-      <app-logos></app-logos>
+      <app-logo-band></app-logo-band>
       <p class="footer-text">2024 - Ondeo. Tous droits réservés.</p>
     </main>
   `,
