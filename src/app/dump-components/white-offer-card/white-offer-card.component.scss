@@ -14,7 +14,7 @@
   isolation: isolate;
   will-change: transform, opacity;
   transform: translateZ(0);
-  contain: layout paint;
+  -webkit-transform: translate3d(0, 0, 0);
 
   .circle-left,
   .circle-right,
@@ -95,6 +95,8 @@
 
   .content {
     position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     z-index: 2 !important;
     height: 100%;
     background-color: red;
