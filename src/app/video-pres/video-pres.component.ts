@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-video-pres',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './video-pres.component.html',
   styleUrls: ['./video-pres.component.scss'],
 })

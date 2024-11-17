@@ -10,7 +10,7 @@ SwiperCore.use([Pagination, Autoplay]);
 @Component({
   selector: 'app-testimonial',
   standalone: true,
-  imports: [NgFor, NgIf, SwiperModule, AvisCardComponent],
+  imports: [NgIf, SwiperModule, AvisCardComponent],
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss'],
 })
@@ -29,71 +29,6 @@ export class TestimonialComponent {
   };
 
   testimonials1: Avis[] = [
-    {
-      name: 'Nathanaël Chouraki',
-      title: 'Founder That’s Y Media',
-      feedback:
-        "“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l'espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”",
-
-      photo: '/photo-avis/nathanael-chouraqui.jpg',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Chargé de projet',
-      title: 'Carlsberg',
-      feedback: '“Félicitations au monteur pour ses talents exceptionnels ! ”',
-
-      photo: '/photo-avis/carlsberg.jpg',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Marine Adatto',
-      title: 'CEO Wagmi-Trends',
-      feedback:
-        '“Je travaille depuis un moment avec Robin, très professionnel, pour les formats podcast, il monte le set, gère absolument tout et m’envoie les vidéos en un temps record.”',
-
-      photo: '/photo-avis/marine-adatto.jpeg',
-      expanded: false,
-      showToggle: false,
-    },
-  ];
-
-  testimonials2: Avis[] = [
-    {
-      name: 'Benjamin Catellier',
-      title: 'CEO Skills Place',
-      feedback:
-        '“La collaboration a eté plus que parfaite ! Il est à l’écoute, patient, comprend parfaitement les attentes et fait preuve d’une créativité exceptionnelle. Vous ne trouverez pas meilleur motion designer. Je recommande vraiment !”',
-
-      photo: '/photo-avis/skills_p.jpeg',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Adeline Percept',
-      title: 'Story W',
-      feedback:
-        '“Exceptionnel ! Le montage vidéo est au-delà de mes attentes. Le talent et le professionnalisme de l’équipe a donné vie à mon projet de manière spectaculaire”',
-
-      photo: '/photo-avis/adeline-percept.jpeg',
-      expanded: false,
-      showToggle: false,
-    },
-    {
-      name: 'Marketing et Communication',
-      title: 'Powell Software',
-      feedback:
-        '“Super expérience, c’est du super boulot. Très professionnel, très réactif, je recommande ! Merci”',
-
-      photo: '/photo-avis/powell-software.jpeg',
-      expanded: false,
-      showToggle: false,
-    },
-  ];
-
-  testimonials3: Avis[] = [
     {
       name: 'Chargé de projet',
       title: 'Caisse d’Épargne',
@@ -126,7 +61,7 @@ export class TestimonialComponent {
     },
   ];
 
-  testimonials4: Avis[] = [
+  testimonials2: Avis[] = [
     {
       name: 'Chargée de production',
       title: 'Danone',
@@ -154,6 +89,71 @@ export class TestimonialComponent {
         '“Nous avons adoré travailler avec Ondeo et nous avons actuellement économisé en passant avec eux.”',
 
       photo: '/photo-avis/french-med.jpeg',
+      expanded: false,
+      showToggle: false,
+    },
+  ];
+
+  testimonials3: Avis[] = [
+    {
+      name: 'Nathanaël Chouraki',
+      title: 'Founder That’s Y Media',
+      feedback:
+        "“Robin et son équipe ont réalisé un travail exceptionnel dans des délais impressionnants ! En l'espace de trois semaines, nous avons collaboré étroitement pour produire près de 40 vidéos qui ont marqué nos partenaires !”",
+
+      photo: '/photo-avis/nathanael-chouraqui.jpg',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Chargé de projet',
+      title: 'Carlsberg',
+      feedback: '“Félicitations au monteur pour ses talents exceptionnels ! ”',
+
+      photo: '/photo-avis/carlsberg.jpg',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Marine Adatto',
+      title: 'CEO Wagmi-Trends',
+      feedback:
+        '“Je travaille depuis un moment avec Robin, très professionnel, pour les formats podcast, il monte le set, gère absolument tout et m’envoie les vidéos en un temps record.”',
+
+      photo: '/photo-avis/marine-adatto.jpeg',
+      expanded: false,
+      showToggle: false,
+    },
+  ];
+
+  testimonials4: Avis[] = [
+    {
+      name: 'Benjamin Catellier',
+      title: 'CEO Skills Place',
+      feedback:
+        '“La collaboration a eté plus que parfaite ! Il est à l’écoute, patient, comprend parfaitement les attentes et fait preuve d’une créativité exceptionnelle. Vous ne trouverez pas meilleur motion designer. Je recommande vraiment !”',
+
+      photo: '/photo-avis/skills_p.jpeg',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Adeline Percept',
+      title: 'Story W',
+      feedback:
+        '“Exceptionnel ! Le montage vidéo est au-delà de mes attentes. Le talent et le professionnalisme de l’équipe a donné vie à mon projet de manière spectaculaire”',
+
+      photo: '/photo-avis/adeline-percept.jpeg',
+      expanded: false,
+      showToggle: false,
+    },
+    {
+      name: 'Marketing et Communication',
+      title: 'Powell Software',
+      feedback:
+        '“Super expérience, c’est du super boulot. Très professionnel, très réactif, je recommande ! Merci”',
+
+      photo: '/photo-avis/powell-software.jpeg',
       expanded: false,
       showToggle: false,
     },

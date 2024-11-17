@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-videos-structured',
   standalone: true,
-  imports: [NgClass, NgIf, NgFor],
+  imports: [NgClass],
   templateUrl: './videos-structured.component.html',
   styleUrls: ['./videos-structured.component.scss'],
 })
