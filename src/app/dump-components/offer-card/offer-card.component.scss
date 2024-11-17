@@ -11,9 +11,10 @@
   max-height: 450px;
   width: 280px;
   border: 3px solid #d1cdcd;
-  will-change: transform, opacity;
+  // will-change: transform, opacity;
   transform: translateZ(0);
-  contain: unset;
+  // contain: unset;
+  -webkit-transform: translate3d(0, 0, 0);
 
   h2 {
     color: #303030;
@@ -114,7 +115,10 @@
     right: 0;
     bottom: 0;
     // clip-path: inset(0);
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none; // Empêche les interactions
+    isolation: isolate;
+    overflow: visible !important;
   }
 
   .blur-effect {
@@ -127,6 +131,20 @@
     -webkit-backdrop-filter: blur(50px);
     border-radius: 15px;
     z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
+      z-index: 0 !important;
+    }
 
     &.black-blur {
       background: rgba(52, 52, 52, 0.7);
@@ -140,6 +158,8 @@
   .content {
     position: relative;
     z-index: 3;
+    -webkit-transform: translate3d(0, 0, 0); // Active le contexte de rendu
+    transform: translate3d(0, 0, 0);
     height: 100%;
 
     .header-offer {
