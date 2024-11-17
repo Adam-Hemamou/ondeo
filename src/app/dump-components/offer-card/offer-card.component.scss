@@ -141,7 +141,7 @@
 
   .content {
     position: relative;
-    -webkit-transform: translate3d(0, 0, 0); // Active le contexte de rendu
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     z-index: 3;
     height: 100%;

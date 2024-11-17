@@ -10,14 +10,7 @@ SwiperCore.use([Pagination, Navigation]);
 @Component({
   selector: 'app-video-carrousel',
   standalone: true,
-  imports: [
-    NgFor,
-    NgClass,
-    NgIf,
-    NgStyle,
-    VideosStructuredComponent,
-    SwiperModule,
-  ],
+  imports: [NgIf, VideosStructuredComponent, SwiperModule],
   templateUrl: './video-carrousel.component.html',
   styleUrls: ['./video-carrousel.component.scss'],
 })
@@ -31,7 +24,7 @@ export class VideoCarrouselComponent {
   videoList1 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023686694?background=1&title=0&byline=0&portrait=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1028819394?background=1&title=0&byline=0&portrait=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Charles & Melanie',
       categoryColor: 'blue',
@@ -66,7 +59,7 @@ export class VideoCarrouselComponent {
   videoList2 = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694931?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023686694?background=1&autoplay=1&loop=1&muted=1'
       ),
       category: 'La Menace',
       categoryColor: 'blue',
