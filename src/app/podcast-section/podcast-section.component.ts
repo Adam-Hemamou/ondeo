@@ -37,6 +37,7 @@ export class PodcastSectionComponent {
       disableOnInteraction: true,
     },
     pagination: { clickable: true },
+    speed: 800,
   };
 
   whiteOfferCards: Offer = {
