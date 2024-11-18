@@ -5,6 +5,7 @@ import {
   Component,
   ElementRef,
   Input,
+  OnInit,
   QueryList,
   ViewChildren,
 } from '@angular/core';
@@ -59,6 +60,8 @@ export class AvisCardComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.cdr.detectChanges();
-    this.checkOverflow();
+    setTimeout(() => {
+      this.checkOverflow();
+    }, 0);
   }
 }
