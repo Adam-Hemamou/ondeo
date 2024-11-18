@@ -58,6 +58,7 @@ export class AvisCardComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.cdr.detectChanges();
     this.checkOverflow();
   }
 }
