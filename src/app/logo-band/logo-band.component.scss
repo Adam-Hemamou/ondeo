@@ -9,18 +9,12 @@
     #fff 80%,
     transparent
   );
-
-  &:hover {
-    .logos-slide {
-      animation-play-state: paused;
-    }
-  }
   .logos-slide {
     display: inline-block;
     animation: slide 30s infinite linear;
     img {
-      width: 80px; /* Fixe une largeur uniforme */
-      height: 80px; /* Fixe une hauteur uniforme */
+      width: 80px;
+      height: 80px;
       object-fit: contain;
       margin: 0 30px;
     }

@@ -1,10 +1,10 @@
 <div class="keys-container">
   <div class="key-card" [attr.data-aos]="isMobile ? 'fade-right' : 'fade-left'">
-    <label class="checkbox">
-      <div class="checkbox__inner">
-        <div class="green__ball" [class.animate-light]="isLightOn"></div>
-      </div>
-    </label>
+    <img
+      src="/png/modifs.png"
+      alt="Icone Modifications illimitées"
+      class="modifs"
+    />
     <div class="key-desc">Modifications illimitées</div>
   </div>
 
@@ -13,11 +13,7 @@
     data-aos="fade-left"
     [attr.data-aos-delay]="isMobile ? '100' : '200'"
   >
-    <label class="checkbox">
-      <div class="checkbox__inner">
-        <div class="green__ball" [class.animate-light]="isLightOn"></div>
-      </div>
-    </label>
+    <img src="/png/sans-engagement.png" alt="Icone Sans Engagement" />
     <div class="key-desc">Sans engagement</div>
   </div>
 
@@ -26,11 +22,7 @@
     [attr.data-aos]="isMobile ? 'fade-up' : 'fade-left'"
     [attr.data-aos-delay]="isMobile ? '200' : '400'"
   >
-    <label class="checkbox">
-      <div class="checkbox__inner">
-        <div class="green__ball" [class.animate-light]="isLightOn"></div>
-      </div>
-    </label>
+    <img src="/png/on-s-occupe.png" alt="Icone On s'occupe de tout" />
     <div class="key-desc">On s’occupe de tout</div>
   </div>
 </div>

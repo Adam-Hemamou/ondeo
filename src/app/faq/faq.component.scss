@@ -18,16 +18,26 @@
       margin: 4px 0;
 
       h3 {
-        cursor: pointer; // Change le curseur lors du survol
+        cursor: pointer;
         width: 86%;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+
+        @media (min-width: 410px) {
+          width: 84%;
+        }
+
+        @media (min-width: 420px) {
+          width: 86%;
+        }
       }
 
       img {
-        transition: transform 0.3s ease-in-out; // Ajout d'une transition pour la rotation
+        transition: transform 0.3s ease-in-out;
       }
 
       img.rotate {
-        transform: rotate(-90deg); // Appliquer la rotation
+        transform: rotate(-90deg);
       }
     }
 
@@ -36,14 +46,14 @@
     }
 
     .answer {
-      overflow: hidden; // Gardez cela pour cacher le contenu débordant
-      transition: opacity 0.3s ease-in-out, padding 0.3s ease-in-out; // Ajouter une transition pour le padding
-      opacity: 0; // Initialiser l'opacité à 0 pour les éléments fermés
-      margin-bottom: 0; // Pas de padding par défaut
+      overflow: hidden;
+      transition: opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+      opacity: 0;
+      margin-bottom: 0;
 
       &.open {
-        opacity: 1; // Lorsque l'élément est ouvert, définir l'opacité à 1
-        margin-bottom: 5px; // Ajoutez le padding ici lorsque l'élément est ouvert
+        opacity: 1;
+        margin-bottom: 5px;
       }
     }
   }
@@ -113,6 +123,15 @@
           font-size: 20px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1190px) {
+  .faq-container {
+    padding: 20px 50px;
+    .faq-bloc {
+      padding: 0 10px;
     }
   }
 }

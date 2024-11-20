@@ -10,7 +10,7 @@ import { scrollToSectionCal } from '../../utils/scrolls';
 @Component({
   selector: 'app-promise',
   standalone: true,
-  imports: [NgClass, NgIf],
+  imports: [NgIf],
   templateUrl: './promise.component.html',
   styleUrls: ['./promise.component.scss'],
 })

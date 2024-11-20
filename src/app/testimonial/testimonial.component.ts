@@ -108,7 +108,7 @@ export class TestimonialComponent {
     {
       name: 'Chargé de projet',
       title: 'Carlsberg',
-      feedback: '“Félicitations au monteur pour ses talents exceptionnels ! ”',
+      feedback: '“Félicitations au monteur pour ses talents exceptionnels !”',
 
       photo: '/photo-avis/carlsberg.jpg',
       expanded: false,
