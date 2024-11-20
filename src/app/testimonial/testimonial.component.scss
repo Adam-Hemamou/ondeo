@@ -35,3 +35,19 @@
 ::ng-deep .swiper-pagination-bullet-active {
   background-color: black;
 }
+
+@media (min-width: 1000px) {
+  .testimonial-section {
+    .testimonials-layout {
+      padding: 20px 40px 30px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .testimonial-section {
+    .testimonials-layout {
+      padding: 20px 40px 40px;
+    }
+  }
+}

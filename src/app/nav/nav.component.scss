@@ -11,12 +11,14 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  justify-self: center;
 
   .nav-bar {
     background-color: #fff;
     margin-top: 5px;
     border: solid 1px lightgrey;
     width: 90%;
+    max-width: 1450px;
     height: 70%;
     padding: 10px;
     border-radius: 100px;

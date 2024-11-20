@@ -156,7 +156,7 @@
     .card-container {
       .card {
         width: 360px;
-        height: 280px;
+        height: 270px;
 
         .card-content {
           justify-content: center;
@@ -268,11 +268,12 @@
 @media (min-width: 1200px) {
   .card-section {
     .card-container {
-      grid-row-gap: 70px;
+      grid-row-gap: 50px;
+      grid-column-gap: 0px;
 
       .card {
-        width: 420px;
-        height: 320px;
+        width: 450px;
+        height: 300px;
 
         .card-content {
           justify-content: center;
