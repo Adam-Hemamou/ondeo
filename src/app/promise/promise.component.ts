@@ -14,20 +14,12 @@ import { scrollToSectionCal } from '../../utils/scrolls';
   templateUrl: './promise.component.html',
   styleUrls: ['./promise.component.scss'],
 })
-export class PromiseComponent implements AfterViewInit {
+export class PromiseComponent {
   @Input() isMobile!: boolean;
-  isLightOn = false;
 
   constructor(private cdr: ChangeDetectorRef) {}
 
   scrollToCalendly() {
     scrollToSectionCal();
-  }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.isLightOn = true;
-      this.cdr.detectChanges();
-    }, 4000);
   }
 }
