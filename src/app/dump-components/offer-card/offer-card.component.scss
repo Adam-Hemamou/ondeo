@@ -37,6 +37,8 @@
       border-top-right-radius: 10px;
       border-bottom-left-radius: 10px;
       z-index: 2;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
 
     .header-offer {
