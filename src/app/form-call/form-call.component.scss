@@ -14,7 +14,7 @@
     background-color: #ffc973;
     color: #333;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 18px;
@@ -23,7 +23,7 @@
 
   .contact-form {
     width: 100%;
-    overflow: hidden; // Assurez-vous que le formulaire ne déborde pas
+    overflow: hidden;
     transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 
     .input-container {

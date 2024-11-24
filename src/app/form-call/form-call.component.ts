@@ -36,7 +36,17 @@ export class FormCallComponent {
       const buttonPosition =
         this.formButton.nativeElement.getBoundingClientRect().top +
         window.scrollY;
-      const offset = 80; // Décalage de 80px au-dessus du bouton
+      let offset = 80;
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1400) {
+        offset = 170;
+      } else if (screenWidth >= 1000) {
+        offset = 150;
+      } else if (screenWidth >= 750) {
+        offset = 110;
+      } else if (screenWidth >= 390) {
+        offset = 100;
+      }
       window.scrollTo({
         top: buttonPosition - offset,
         behavior: 'smooth',
@@ -47,7 +57,6 @@ export class FormCallComponent {
   async onSubmit() {
     if (this.isFormValid()) {
       try {
-        // Remplacez 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' et 'YOUR_USER_ID' par vos propres valeurs
         const response = await emailjs.send(
           'service_hsn8gsn',
           'template_psxmz93',
