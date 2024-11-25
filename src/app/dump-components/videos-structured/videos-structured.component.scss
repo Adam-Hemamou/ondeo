@@ -8,8 +8,6 @@
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-  position: relative; /* Crée un contexte d'empilement pour les enfants */
-  z-index: 0;
 
   @media (min-width: 375px) {
     padding: 0 40px;
@@ -30,8 +28,6 @@
 
   .embed {
     box-sizing: border-box;
-    position: relative; /* Assurez-vous que le conteneur global est correctement positionné */
-    z-index: 1;
     flex-grow: 1;
     width: 100%;
     height: auto;
@@ -41,7 +37,6 @@
 
     &--16-9 {
       padding-top: 56.25%;
-      // border: red 1px solid;
       iframe {
         position: absolute;
         top: 0;
@@ -56,9 +51,6 @@
 
     &--4-3 {
       padding-top: 82.28%;
-      // border: red 1px solid;
-      // padding-top: calc(100% * 9 / 16);
-      // padding-top: 78.5%; /* 4:3 ratio */
 
       iframe {
         position: absolute;
@@ -75,7 +67,8 @@
       position: absolute;
       top: -10px;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
+      transform: translateX(-50%) translate3d(0, 0, 0);
       padding: 5px 10px;
       border-radius: 5px;
       font-weight: bold;
@@ -85,6 +78,7 @@
       z-index: 2;
       background-color: #fff;
       border: 1px solid black;
+      will-change: transform;
 
       @media (min-width: 350px) {
         font-size: 16px;
@@ -99,12 +93,6 @@
         font-size: 22px;
         padding: 8px 16px;
       }
-    }
-  }
-
-  .swiper-slide-active {
-    .chip {
-      z-index: 20;
     }
   }
 
