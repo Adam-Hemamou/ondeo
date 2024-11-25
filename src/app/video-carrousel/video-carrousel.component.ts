@@ -16,7 +16,6 @@ SwiperCore.use([Pagination, Navigation]);
 })
 export class VideoCarrouselComponent {
   @Input() isMobile!: boolean;
-  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   @ViewChild('swiper') swiper?: SwiperComponent;
 
   direction: boolean = true;
@@ -94,11 +93,11 @@ export class VideoCarrouselComponent {
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 50,
-    loop: false, // Pour un défilement en boucle
+    loop: false,
 
     pagination: { clickable: true },
     navigation: true,
-    simulateTouch: true, // Active les gestes tactiles
+    simulateTouch: true,
     allowTouchMove: true,
   };
 
