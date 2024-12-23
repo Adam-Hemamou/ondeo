@@ -15,8 +15,8 @@
 
   .card {
     position: relative;
-    width: 280px; /* Largeur fixe */
-    height: 200px; /* Hauteur fixe */
+    width: 280px;
+    height: 200px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -88,7 +88,7 @@
             transform: scale(1);
           }
           100% {
-            transform: scale(1.08); // Scale up to 105%
+            transform: scale(1.08);
           }
         }
       }

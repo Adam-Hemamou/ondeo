@@ -91,7 +91,7 @@ export class FormCallComponent {
   }
 
   isFirstNameValid() {
-    return this.contactForm.firstName && this.contactForm.firstName.length >= 2; // Vérifie que le prénom a au moins 2 lettres
+    return this.contactForm.firstName && this.contactForm.firstName.length >= 2;
   }
 
   isFormValid() {

@@ -10,9 +10,7 @@ import { FormCallComponent } from '../form-call/form-call.component';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
 import { FaqComponent } from '../faq/faq.component';
 import { CalandlyComponent } from '../calandly/calandly.component';
-import { LogosComponent } from '../logos/logos.component';
 import { PromiseComponent } from '../promise/promise.component';
-import { DeferRenderDirective } from './defer-render.directive';
 import { scrollToSectionCal } from '../../utils/scrolls';
 import { LogoBandComponent } from '../logo-band/logo-band.component';
 

@@ -108,7 +108,8 @@ export class TestimonialComponent {
     {
       name: 'Chargé de projet',
       title: 'Carlsberg',
-      feedback: '“Félicitations au monteur pour ses talents exceptionnels !”',
+      feedback:
+        '“Process de production très bien organisé et livraison rapide, je recommande et nous travaillerons sûrement de nouveau ensemble”',
 
       photo: '/photo-avis/carlsberg.jpg',
       expanded: false,

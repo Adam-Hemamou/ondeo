@@ -8,7 +8,7 @@
 
   .blue-background {
     position: absolute;
-    background-color: #192a8a; /* Blue background */
+    background-color: #192a8a;
     height: 100%;
     width: 150%;
     z-index: 0;
@@ -76,7 +76,6 @@
     position: relative;
     z-index: 1;
     margin-bottom: 20px;
-    // bottom: 20px;
     width: 100%;
     text-align: center;
 
@@ -156,7 +155,6 @@
 @media (min-width: 1000px) {
   .discussion-section {
     padding: 0px;
-    // height: 600px;
 
     .footer-title {
       font-size: 46px;
