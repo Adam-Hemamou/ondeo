@@ -1,5 +1,4 @@
 <div class="contact-container">
-  <!-- Bouton pour afficher/masquer le formulaire -->
   <button
     #formButton
     (click)="toggleForm()"
@@ -9,7 +8,6 @@
     {{ formVisible ? "On vous rappelle !" : "Appel Gratuit" }}
   </button>
 
-  <!-- Formulaire Angular -->
   <div
     class="contact-form"
     [@sharedAnimation]="formVisible ? 'open' : 'closed'"

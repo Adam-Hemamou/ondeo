@@ -1,20 +1,19 @@
 import { Component, HostListener } from '@angular/core';
 import { sharedAnimation } from '../core/animations/animation';
-import { NgIf } from '@angular/common';
 import { scrollToSectionCal } from '../../utils/scrolls';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   animations: [sharedAnimation],
 })
 export class NavComponent {
-  isMenuOpen: boolean = false; // État du menu
+  isMenuOpen: boolean = false;
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen; // Inverser l'état du menu
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   scrollToCalendly() {
@@ -33,7 +32,6 @@ export class NavComponent {
   closeMenuOnClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
 
-    // Vérifie si le clic est en dehors de la nav-bar et du burger-menu
     const navBar = document.querySelector('.nav-bar');
     const burgerMenu = document.querySelector('.burger-menu');
 
@@ -42,7 +40,7 @@ export class NavComponent {
       !navBar?.contains(target) &&
       !burgerMenu?.contains(target)
     ) {
-      this.isMenuOpen = false; // Fermer le menu
+      this.isMenuOpen = false;
     }
   }
 }

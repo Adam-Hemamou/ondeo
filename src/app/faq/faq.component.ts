@@ -1,6 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { sharedAnimation } from '../core/animations/animation';
+import { Faq } from '../core/types/faq';
 
 @Component({
   selector: 'app-faq',
@@ -14,7 +15,7 @@ export class FaqComponent {
   @Input() isMobile!: boolean;
   isOpen: boolean[] = [];
 
-  FAQList = [
+  FAQList: Faq[] = [
     {
       question: 'Pourquoi nous et pas une autre agence ?',
       answer:
@@ -43,7 +44,6 @@ export class FaqComponent {
   ];
 
   toggleAnswer(index: number) {
-    // Fermer l'élément s'il est déjà ouvert, sinon ouvrir
     this.isOpen[index] = !this.isOpen[index];
   }
 }

@@ -1,16 +1,16 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { SimpleVideoComponent } from '../dump-components/simple-video/simple-video.component';
+import { StepCard } from '../core/types/stepcard';
 
 @Component({
   selector: 'app-step-cards',
   standalone: true,
-  imports: [NgFor, NgClass, SimpleVideoComponent],
+  imports: [NgFor, NgClass],
   templateUrl: './step-cards.component.html',
   styleUrls: ['./step-cards.component.scss'],
 })
 export class StepCardsComponent {
-  cards = [
+  cards: StepCard[] = [
     {
       title: 'Stratégie',
       description:

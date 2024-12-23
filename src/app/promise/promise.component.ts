@@ -17,8 +17,6 @@ import { scrollToSectionCal } from '../../utils/scrolls';
 export class PromiseComponent {
   @Input() isMobile!: boolean;
 
-  constructor(private cdr: ChangeDetectorRef) {}
-
   scrollToCalendly() {
     scrollToSectionCal();
   }

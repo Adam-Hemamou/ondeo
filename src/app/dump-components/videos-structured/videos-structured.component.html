@@ -1,5 +1,4 @@
 <div class="video-container">
-  <!-- Vidéo en haut -->
   <div class="embed embed--16-9">
     <iframe
       [src]="videoList[0].src"
@@ -8,13 +7,12 @@
       mozallowfullscreen
       allowfullscreen
     ></iframe>
-    <div class="chip" [ngClass]="videoList[0].categoryColor">
+    <div class="chip">
       {{ videoList[0].category }}
     </div>
   </div>
 
   <div class="mid">
-    <!-- Deux vidéos au milieu -->
     <div class="embed embed--4-3">
       <iframe
         [src]="videoList[1].src"
@@ -23,7 +21,7 @@
         mozallowfullscreen
         allowfullscreen
       ></iframe>
-      <div class="chip" [ngClass]="videoList[1].categoryColor">
+      <div class="chip">
         {{ videoList[1].category }}
       </div>
     </div>
@@ -35,13 +33,12 @@
         mozallowfullscreen
         allowfullscreen
       ></iframe>
-      <div class="chip" [ngClass]="videoList[2].categoryColor">
+      <div class="chip">
         {{ videoList[2].category }}
       </div>
     </div>
   </div>
 
-  <!-- Vidéo en bas -->
   <div class="embed embed--16-9">
     <iframe
       [src]="videoList[3].src"
@@ -50,7 +47,7 @@
       mozallowfullscreen
       allowfullscreen
     ></iframe>
-    <div class="chip" [ngClass]="videoList[3].categoryColor">
+    <div class="chip">
       {{ videoList[3].category }}
     </div>
   </div>

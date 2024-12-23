@@ -9,7 +9,6 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class CalandlyComponent implements AfterViewInit {
   ngAfterViewInit() {
-    // Charger le script Calendly après que le composant soit rendu
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
