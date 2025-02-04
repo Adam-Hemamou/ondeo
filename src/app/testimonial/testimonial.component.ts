@@ -86,7 +86,7 @@ export class TestimonialComponent {
       name: 'Community Manager',
       title: 'French-Med',
       feedback:
-        '“Nous avons adoré travailler avec Ondeo et nous avons actuellement économisé en passant avec eux.”',
+        '“Nous avons adoré travailler avec Adam et nous avons actuellement économisé en passant avec eux.”',
 
       photo: '/photo-avis/french-med.jpeg',
       expanded: false,
@@ -132,7 +132,7 @@ export class TestimonialComponent {
       name: 'Benjamin Catellier',
       title: 'CEO Skills Place',
       feedback:
-        '“La collaboration a eté plus que parfaite ! Il est à l’écoute, patient, comprend parfaitement les attentes et fait preuve d’une créativité exceptionnelle. Vous ne trouverez pas meilleur motion designer. Je recommande vraiment !”',
+        '“La collaboration avec Adam a eté plus que parfaite, vous ne trouverez pas meilleur motion designer !”',
 
       photo: '/photo-avis/skills_p.jpeg',
       expanded: false,
@@ -152,7 +152,7 @@ export class TestimonialComponent {
       name: 'Marketing et Communication',
       title: 'Powell Software',
       feedback:
-        '“Super expérience, c’est du super boulot. Très professionnel, très réactif, je recommande ! Merci”',
+        '“Super expérience avec Adam, il a été très professionnel, très réactif, je recommande ! Merci”',
 
       photo: '/photo-avis/powell-software.jpeg',
       expanded: false,
