@@ -24,25 +24,25 @@ export class VideoCarrouselComponent {
   videoList1: Videos[] = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1028819394?background=1&title=0&byline=0&portrait=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
+        'https://player.vimeo.com/video/1028819394?background=1&title=0&byline=0&portrait=0&autopause=0&color=3498db;badge=0&amp;player_id=0&amp;app_id=58479'
       ),
       category: 'Skills Place',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023687640?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023687640?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Med News',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694926?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023694926?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Sneakmart ',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694912?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023694912?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Carlsberg',
     },
@@ -51,25 +51,25 @@ export class VideoCarrouselComponent {
   videoList2: Videos[] = [
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1039976337?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1039976337?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Gasparg G',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023725255?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023725255?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Docaposte',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023725597?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023725597?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Agence P.',
     },
     {
       src: this.sanitizer.bypassSecurityTrustResourceUrl(
-        'https://player.vimeo.com/video/1023694936?background=1&autoplay=1&loop=1&muted=1'
+        'https://player.vimeo.com/video/1023694936?background=1&autopause=0&loop=1&muted=1'
       ),
       category: 'Groupama',
     },
