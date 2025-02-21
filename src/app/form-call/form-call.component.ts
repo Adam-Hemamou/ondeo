@@ -58,10 +58,10 @@ export class FormCallComponent {
     if (this.isFormValid()) {
       try {
         const response = await emailjs.send(
-          'service_hsn8gsn',
-          'template_psxmz93',
+          import.meta.env['VITE_EMAILJS_SERVICE_ID'],
+          import.meta.env['VITE_EMAILJS_TEMPLATE_ID'],
           this.contactForm,
-          '6N5X4_iC3Rs8YPoAy'
+          import.meta.env['VITE_EMAILJS_PUBLIC_KEY']
         );
         this.toast.message = 'Vos informations nous ont été transmises';
         this.toast.type = 'success';
