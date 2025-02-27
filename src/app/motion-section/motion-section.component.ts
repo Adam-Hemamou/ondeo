@@ -61,7 +61,7 @@ export class MotionSectionComponent {
       videos: 'video 60 secondes',
       description: 'carte populaire de nos offres',
       features: [
-        '45 secondes de vidéo motion design',
+        '60 secondes de vidéo motion design',
         'Écriture du script',
         'Storyboard / Illustrations',
         'Voix off / Sound Design',
