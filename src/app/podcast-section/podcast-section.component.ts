@@ -36,7 +36,7 @@ export class PodcastSectionComponent {
 
   whiteOfferCards: Offer = {
     title: 'Starter',
-    price: '990 €',
+    price: '1290 €',
     oldPrice: null,
     videos: '10 vidéos',
     description: 'Analyse des thématiques virales pour votre secteur...',
@@ -57,8 +57,8 @@ export class PodcastSectionComponent {
 
   blackOffercard: Offer = {
     title: 'Premium',
-    price: '1790 €',
-    oldPrice: '2200 €',
+    price: '2090 €',
+    oldPrice: '2500 €',
     videos: '20 vidéos',
     description: 'Production complète de 20 vidéos...',
     features: [

@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { OfferCardComponent } from '../dump-components/offer-card/offer-card.component';
 import { Offer } from '../core/types/offer';
-import { SimpleVideoComponent } from '../dump-components/simple-video/simple-video.component';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 
@@ -36,7 +35,7 @@ export class MotionSectionComponent {
   offerCards: Offer[] = [
     {
       title: 'Starter',
-      price: '1290 €',
+      price: '1590 €',
       oldPrice: null,
       videos: 'video 45 secondes',
       description: 'carte de nos offres',
@@ -56,7 +55,7 @@ export class MotionSectionComponent {
     },
     {
       title: 'Premium',
-      price: '1690 €',
+      price: '1990 €',
       oldPrice: null,
       videos: 'video 60 secondes',
       description: 'carte populaire de nos offres',
