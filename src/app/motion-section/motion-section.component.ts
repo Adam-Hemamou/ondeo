@@ -35,7 +35,7 @@ export class MotionSectionComponent {
   offerCards: Offer[] = [
     {
       title: 'Starter',
-      price: '1590 €',
+      price: '1790 €',
       oldPrice: null,
       videos: 'video 45 secondes',
       description: 'carte de nos offres',
@@ -55,7 +55,7 @@ export class MotionSectionComponent {
     },
     {
       title: 'Premium',
-      price: '1990 €',
+      price: '2190 €',
       oldPrice: null,
       videos: 'video 60 secondes',
       description: 'carte populaire de nos offres',
