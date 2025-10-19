@@ -68,18 +68,18 @@
   }
 
   .swiper-button-next {
-    right: -42px;
+    right: -46px !important;
 
     @media (min-width: 420px) {
-      right: -43px;
+      right: -48px !important;
     }
   }
 
   .swiper-button-prev {
-    left: -42px;
+    // left: -42px m !important;
 
     @media (min-width: 420px) {
-      left: -43px;
+      // left: -43px !important;
     }
   }
 }
