@@ -27,20 +27,9 @@
     <div class="header-offer">
       <img [src]="offer.icon" alt="{{ offer.title }} icon" loading="lazy" />
 
-      <div>
+      <div class="header-text">
         <h2>{{ offer.title }}</h2>
 
-        <p *ngIf="offer.oldPrice" class="old-price">
-          <span class="strikethrough">{{ offer.oldPrice }}</span>
-          <span class="price">
-            {{ offer.price }} <span class="ttc">TTC</span></span
-          >
-        </p>
-        <p *ngIf="!offer.oldPrice">
-          <span class="price">
-            {{ offer.price }} <span class="ttc">TTC</span></span
-          >
-        </p>
         <p class="nb-video">{{ offer.videos }}</p>
       </div>
     </div>
@@ -64,7 +53,7 @@
     </ul>
 
     <div class="offer-btn">
-      <button (click)="scrollToCalendly()">Commander ma vidéo</button>
+      <button (click)="scrollToCalendly()">En savoir plus</button>
     </div>
   </div>
 </div>
