@@ -71,7 +71,6 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
       <app-step-cards></app-step-cards>
       <app-podcast-section [isMobile]="isMobile"></app-podcast-section>
       <app-motion-section [isMobile]="isMobile"></app-motion-section>
-      <app-form-call></app-form-call>
       <app-testimonial
         id="testimonial-section"
         [isMobile]="isMobile"

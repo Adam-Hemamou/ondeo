@@ -38,7 +38,7 @@ export class PodcastSectionComponent {
     title: 'Starter',
     price: '1590 €',
     oldPrice: null,
-    videos: '10 vidéos',
+    videos: 'pack 10 vidéos',
     description: 'Analyse des thématiques virales pour votre secteur...',
     features: [
       'Analyse des thématiques virales pour votre secteur',
@@ -59,7 +59,7 @@ export class PodcastSectionComponent {
     title: 'Premium',
     price: '2390 €',
     oldPrice: '2700 €',
-    videos: '20 vidéos',
+    videos: 'pack 20 vidéos',
     description: 'Production complète de 20 vidéos...',
     features: [
       'Analyse des thématiques virales pour votre secteur',

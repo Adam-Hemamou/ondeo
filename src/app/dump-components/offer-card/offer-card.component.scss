@@ -148,13 +148,20 @@
     height: 100%;
 
     .header-offer {
-      padding-top: 20px;
+      padding-top: 10px;
       padding-left: 0px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       height: 20%;
+
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
 
       .old-price {
         display: flex;
@@ -190,13 +197,13 @@
       }
 
       img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
       }
     }
 
     .line {
-      padding: 8px;
+      padding: 5px;
       margin-bottom: 10px;
       border-bottom: 2px solid #c6c2c2;
     }
@@ -369,6 +376,30 @@
 @media (min-width: 410px) {
   .offer-card {
     width: 370px;
+
+    .content {
+      .header-offer {
+        gap: 30px;
+        padding-bottom: 15px;
+
+        .header-text {
+          gap: 5px;
+          h2 {
+            font-size: 26px;
+          }
+          .nb-video {
+            font-size: 18px;
+          }
+        }
+        img {
+          width: 75px;
+          height: 75px;
+        }
+        .line {
+          margin-bottom: 15px;
+        }
+      }
+    }
   }
 }
 
@@ -399,6 +430,19 @@
   .offer-card {
     width: 390px;
 
+    .content {
+      .header-offer {
+        .header-text {
+          h2 {
+            font-size: 28px;
+          }
+          .nb-video {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
     .offer-features {
       padding: 10px 10px 0px;
       li {
@@ -424,8 +468,13 @@
     width: 420px;
 
     .header-offer {
-      .nb-video {
-        font-size: 18px;
+      .header-text {
+        h2 {
+          font-size: 28px;
+        }
+        .nb-video {
+          font-size: 20px;
+        }
       }
     }
 
@@ -464,8 +513,14 @@
     .content {
       .header-offer {
         gap: 40px;
-        .nb-video {
-          font-size: 18px;
+
+        .header-text {
+          h2 {
+            font-size: 30px;
+          }
+          .nb-video {
+            font-size: 22px;
+          }
         }
 
         img {
