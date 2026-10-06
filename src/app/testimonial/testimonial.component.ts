@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Autoplay, Pagination, SwiperOptions } from 'swiper';

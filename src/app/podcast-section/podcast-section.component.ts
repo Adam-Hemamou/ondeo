@@ -4,8 +4,6 @@ import { Offer } from '../core/types/offer';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { NgIf } from '@angular/common';
-import { BlackOfferCardComponent } from '../dump-components/black-offer-card/black-offer-card.component';
-import { WhiteOfferCardComponent } from '../dump-components/white-offer-card/white-offer-card.component';
 
 SwiperCore.use([Pagination]);
 
@@ -18,9 +16,6 @@ SwiperCore.use([Pagination]);
 })
 export class PodcastSectionComponent {
   @Input() isMobile!: boolean;
-
-  videoUrl: string =
-    'https://player.vimeo.com/video/68414507?title=0&byline=0&portrait=0&dnt=1';
 
   config: SwiperOptions = {
     slidesPerView: 1,

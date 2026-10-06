@@ -1,10 +1,5 @@
-import { NgClass, NgIf } from '@angular/common';
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  Input,
-} from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { scrollToSectionCal } from '../../utils/scrolls';
 
 @Component({
