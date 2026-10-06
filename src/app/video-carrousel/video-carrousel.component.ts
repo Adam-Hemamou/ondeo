@@ -1,8 +1,8 @@
 import { NgIf } from '@angular/common';
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideosStructuredComponent } from '../dump-components/videos-structured/videos-structured.component';
-import { SwiperComponent, SwiperModule } from 'swiper/angular';
+import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
 import { Videos } from '../core/types/videos';
 
@@ -17,9 +17,6 @@ SwiperCore.use([Pagination, Navigation]);
 })
 export class VideoCarrouselComponent {
   @Input() isMobile!: boolean;
-  @ViewChild('swiper') swiper?: SwiperComponent;
-
-  direction: boolean = true;
 
   videoList1: Videos[] = [
     {

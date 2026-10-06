@@ -18,9 +18,6 @@ SwiperCore.use([Pagination]);
 export class MotionSectionComponent {
   @Input() isMobile!: boolean;
 
-  videoUrl: string =
-    'https://player.vimeo.com/video/246185769?title=0&byline=0&portrait=0&dnt=1';
-
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,

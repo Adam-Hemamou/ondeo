@@ -6,7 +6,6 @@ import { VideoCarrouselComponent } from '../video-carrousel/video-carrousel.comp
 import { StepCardsComponent } from '../step-cards/step-cards.component';
 import { PodcastSectionComponent } from '../podcast-section/podcast-section.component';
 import { MotionSectionComponent } from '../motion-section/motion-section.component';
-import { FormCallComponent } from '../form-call/form-call.component';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
 import { FaqComponent } from '../faq/faq.component';
 import { CalandlyComponent } from '../calandly/calandly.component';
@@ -25,7 +24,6 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
     StepCardsComponent,
     PodcastSectionComponent,
     MotionSectionComponent,
-    FormCallComponent,
     TestimonialComponent,
     FaqComponent,
     CalandlyComponent,
@@ -84,9 +82,6 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
 })
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
-
-  isAfterVideoCarrouselVisible: boolean = true;
-  afterMotionSection: boolean = true;
 
   scrollToCalendly() {
     scrollToSectionCal();

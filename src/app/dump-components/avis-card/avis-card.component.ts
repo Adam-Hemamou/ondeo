@@ -5,7 +5,6 @@ import {
   Component,
   ElementRef,
   Input,
-  OnInit,
   QueryList,
   ViewChildren,
 } from '@angular/core';
