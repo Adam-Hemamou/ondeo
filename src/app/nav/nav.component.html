@@ -1,11 +1,21 @@
 <div class="nav-back">
   <div class="nav-bar">
     <div class="logo">
-      <h2>ONDEO</h2>
+      <span class="logo-name">ONDEO</span>
       <p>Agence créative</p>
     </div>
 
-    <img src="/svg/menu.png" alt="menu" (click)="toggleMenu()" loading="lazy" />
+    <img
+      src="/svg/menu.png"
+      alt="Menu"
+      role="button"
+      tabindex="0"
+      [attr.aria-expanded]="isMenuOpen"
+      (click)="toggleMenu()"
+      (keydown.enter)="toggleMenu()"
+      (keydown.space)="toggleMenu(); $event.preventDefault()"
+      loading="lazy"
+    />
 
     <div class="desktop-nav">
       <ul class="desktop-nav">
@@ -22,11 +32,21 @@
     </div>
   </div>
 
-  <div [@sharedAnimation]="isMenuOpen ? 'open' : 'closed'" class="burger-menu">
+  <div
+    [@sharedAnimation]="isMenuOpen ? 'open' : 'closed'"
+    [attr.inert]="isMenuOpen ? null : ''"
+    class="burger-menu"
+  >
     <ul>
-      <li (click)="scrollToSection('videos-section')"><a>Nos vidéos</a></li>
-      <li (click)="scrollToSection('offers-section')"><a>Nos offres</a></li>
-      <li (click)="scrollToSection('testimonial-section')"><a>Vos avis</a></li>
+      <li (click)="scrollToSection('videos-section')">
+        <a href="#videos-section" (click)="$event.preventDefault()">Nos vidéos</a>
+      </li>
+      <li (click)="scrollToSection('offers-section')">
+        <a href="#offers-section" (click)="$event.preventDefault()">Nos offres</a>
+      </li>
+      <li (click)="scrollToSection('testimonial-section')">
+        <a href="#testimonial-section" (click)="$event.preventDefault()">Vos avis</a>
+      </li>
     </ul>
   </div>
 </div>

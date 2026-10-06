@@ -25,10 +25,10 @@
 
   <div class="content">
     <div class="header-offer">
-      <img [src]="offer.icon" alt="{{ offer.title }} icon" loading="lazy" />
+      <img [src]="offer.icon" alt="" loading="lazy" />
 
       <div class="header-text">
-        <h2>{{ offer.title }}</h2>
+        <h3>{{ offer.title }}</h3>
 
         <p class="nb-video">{{ offer.videos }}</p>
       </div>
@@ -41,12 +41,12 @@
         <img
           *ngIf="!offer.popular && i === offer.features.length - 1"
           src="/svg/invalid.svg"
-          alt="svg rond vide"
+          alt="Non inclus :"
         />
         <img
           *ngIf="offer.popular || i !== offer.features.length - 1"
           [src]="offer.popular ? '/svg/valid-white.svg' : '/svg/valid.svg'"
-          alt="coche svg"
+          alt=""
         />
         {{ feature }}
       </li>

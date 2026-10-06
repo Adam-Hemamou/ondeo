@@ -34,9 +34,10 @@
       justify-content: center;
       align-items: center;
       line-height: 1;
-      h2 {
+      .logo-name {
         font-family: "Rubik Glitch", system-ui;
         letter-spacing: 2px;
+        font-weight: bold;
         font-size: 22px;
       }
       p {
@@ -186,7 +187,7 @@
 
     .nav-bar {
       .logo {
-        h2 {
+        .logo-name {
           font-size: 26px;
         }
         p {
@@ -225,7 +226,7 @@
 
     .nav-bar {
       .logo {
-        h2 {
+        .logo-name {
           font-size: 30px;
         }
         p {
@@ -264,7 +265,7 @@
     .nav-bar {
       .logo {
         width: 30%;
-        h2 {
+        .logo-name {
           font-size: 34px;
         }
         p {

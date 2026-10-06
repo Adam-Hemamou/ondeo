@@ -11,11 +11,19 @@
 
   <div class="faq-container">
     <div class="faq-bloc" *ngFor="let faq of FAQList; let i = index">
-      <div class="question-faq" (click)="toggleAnswer(i)">
+      <div
+        class="question-faq"
+        role="button"
+        tabindex="0"
+        [attr.aria-expanded]="!!isOpen[i]"
+        (click)="toggleAnswer(i)"
+        (keydown.enter)="toggleAnswer(i)"
+        (keydown.space)="toggleAnswer(i); $event.preventDefault()"
+      >
         <h3>{{ faq.question }}</h3>
         <img
           src="/svg/faq-arrow.svg"
-          alt="arrow"
+          alt=""
           [ngClass]="{ rotate: isOpen[i] }"
           loading="lazy"
         />
