@@ -17,6 +17,7 @@ SwiperCore.use([Pagination, Navigation]);
 })
 export class VideoCarrouselComponent {
   @Input() isMobile!: boolean;
+  currentYear: number = new Date().getFullYear();
 
   videoList1: Videos[] = [
     {

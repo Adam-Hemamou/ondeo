@@ -24,7 +24,7 @@ export class FaqComponent {
     {
       question: 'Ça va vraiment m’être utile ?',
       answer:
-        'Aujourd’hui, impossible de vouloir se développer sans vidéo. C’est le levier n°1 en 2024 pour gagner en visibilité et ainsi en CA. ',
+        'Aujourd’hui, impossible de vouloir se développer sans vidéo. C’est un levier essentiel pour gagner en visibilité et ainsi en CA. ',
     },
     {
       question: 'Faut-il s’engager sur plusieurs mois ?',
