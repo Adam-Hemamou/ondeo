@@ -76,12 +76,15 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
       <app-faq [isMobile]="isMobile"></app-faq>
       <app-calandly></app-calandly>
       <app-logo-band></app-logo-band>
-      <p class="footer-text">2024 - Ondeo. Tous droits réservés.</p>
+      <p class="footer-text">
+        {{ currentYear }} - Ondeo. Tous droits réservés.
+      </p>
     </main>
   `,
 })
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
+  currentYear: number = new Date().getFullYear();
 
   scrollToCalendly() {
     scrollToSectionCal();
