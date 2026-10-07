@@ -37,7 +37,17 @@
       class="calendly-inline-widget"
       data-url="https://calendly.com/robin-ondeo-agency/30min?hide_event_type_details=1&hide_gdpr_banner=1"
       style="width: 100%; max-width: 600px; height: 600px; margin: 0 auto"
-    ></div>
+    >
+      <div *ngIf="!widgetLoaded && !consentGiven" class="calendly-placeholder">
+        <p>
+          Le calendrier de prise de rendez-vous est fourni par Calendly, qui
+          dépose ses propres cookies. Il s’affiche à votre demande.
+        </p>
+        <button type="button" class="rdv-btn" (click)="loadWidget()">
+          Afficher le calendrier
+        </button>
+      </div>
+    </div>
   </div>
   <footer class="footer">
     <p class="follow-us">Rejoignez - nous</p>

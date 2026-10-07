@@ -1,0 +1,110 @@
+<section
+  *ngIf="consent.bannerVisible && !panelOpen"
+  class="cookie-banner"
+  aria-label="Cookies"
+>
+  <p>
+    Nous utilisons des cookies et traceurs pour mesurer l’audience du site et
+    suivre nos campagnes publicitaires. Vous pouvez les accepter, les refuser
+    ou personnaliser votre choix, et le modifier à tout moment via « Gestion
+    des cookies » en bas de page.
+    <a routerLink="/politique-confidentialite">En savoir plus</a>
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-btn" (click)="consent.refuseAll()">
+      Refuser
+    </button>
+    <button type="button" class="cookie-btn" (click)="consent.acceptAll()">
+      Accepter
+    </button>
+    <button
+      type="button"
+      class="cookie-btn cookie-btn--secondary"
+      (click)="openPanel()"
+    >
+      Personnaliser
+    </button>
+  </div>
+</section>
+
+<dialog
+  #panel
+  class="cookie-panel"
+  aria-labelledby="cookie-panel-title"
+  (close)="panelOpen = false"
+>
+  <h2 id="cookie-panel-title">
+    Gestion des <span class="highlighted">cookies</span>
+  </h2>
+  <p>
+    Choisissez les catégories de cookies et traceurs que vous autorisez. Votre
+    choix est conservé 6 mois.
+  </p>
+
+  <div class="cookie-category">
+    <label>
+      <input type="checkbox" checked disabled />
+      Nécessaires (toujours actifs)
+    </label>
+    <p>
+      Fonctionnement du site, mémorisation de votre choix et lecture des vidéos
+      Vimeo, intégrées avec l’option « Do Not Track ».
+    </p>
+  </div>
+
+  <div class="cookie-category">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="draft.statistics"
+        (change)="setDraft('statistics', $event)"
+      />
+      Statistiques
+    </label>
+    <p>
+      Mesure d’audience lorsqu’elle est utilisée (via Google Tag Manager) et
+      affichage automatique du calendrier de rendez-vous Calendly, qui dépose
+      ses propres cookies de performance.
+    </p>
+  </div>
+
+  <div class="cookie-category">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="draft.marketing"
+        (change)="setDraft('marketing', $event)"
+      />
+      Marketing
+    </label>
+    <p>
+      Suivi de nos campagnes publicitaires : Meta Pixel, LinkedIn Insight et
+      balises publicitaires chargées via Google Tag Manager.
+    </p>
+  </div>
+
+  <div class="cookie-actions">
+    <button type="button" class="cookie-btn" (click)="refuseAll()">
+      Tout refuser
+    </button>
+    <button type="button" class="cookie-btn" (click)="acceptAll()">
+      Tout accepter
+    </button>
+    <button
+      type="button"
+      class="cookie-btn cookie-btn--secondary"
+      (click)="saveDraft()"
+    >
+      Enregistrer mes choix
+    </button>
+  </div>
+
+  <button
+    type="button"
+    class="cookie-close"
+    aria-label="Fermer"
+    (click)="closePanel()"
+  >
+    ×
+  </button>
+</dialog>

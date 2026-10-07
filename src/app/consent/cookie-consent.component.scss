@@ -1,0 +1,216 @@
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 960px;
+  padding: 14px 16px 16px;
+  background-color: #fff;
+  border: solid 1px lightgrey;
+  border-top: 5px solid #ffce08;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  font-size: 13px;
+  line-height: 1.4;
+
+  a {
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #ffce08;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+  }
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+// Mêmes codes que les boutons du site : pilule noire, inversion au survol
+.cookie-btn {
+  flex: 1 1 130px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid #212121;
+  border-radius: 100px;
+  background-color: #212121;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #fff;
+    color: black;
+  }
+
+  &--secondary {
+    background-color: #fff;
+    color: black;
+    font-weight: 600;
+
+    &:hover {
+      background-color: black;
+      color: #fff;
+    }
+  }
+}
+
+.cookie-panel {
+  // Le reset global annule le centrage natif des <dialog>
+  margin: auto;
+  width: calc(100% - 24px);
+  max-width: 580px;
+  max-height: calc(100% - 24px);
+  padding: 24px 18px 18px;
+  border: none;
+  border-top: 6px solid #ffce08;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 1.45;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    padding-right: 44px;
+    font-size: 24px;
+    font-weight: 350;
+  }
+
+  .cookie-actions {
+    margin-top: 18px;
+  }
+}
+
+.cookie-category {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e3e3e3;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+
+  label {
+    display: flex;
+    // La case à cocher précède le texte dans le HTML : on l'affiche à droite
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  // Case à cocher présentée comme un interrupteur
+  input {
+    appearance: none;
+    flex: none;
+    position: relative;
+    width: 46px;
+    height: 26px;
+    border-radius: 100px;
+    background-color: #c9c9c9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:checked {
+      background-color: #212121;
+
+      &::after {
+        transform: translateX(20px);
+        background-color: #ffce08;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.55;
+      cursor: default;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #212121;
+      outline-offset: 3px;
+    }
+  }
+
+  p {
+    margin-top: 8px;
+    color: #303030;
+  }
+}
+
+.cookie-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: black;
+    color: #fff;
+  }
+}
+
+@media (min-width: 720px) {
+  .cookie-banner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    bottom: 20px;
+    padding: 16px 20px 18px 24px;
+    font-size: 14px;
+
+    p {
+      flex: 1;
+    }
+
+    .cookie-actions {
+      flex: none;
+      flex-wrap: nowrap;
+      margin-top: 0;
+    }
+
+    .cookie-btn {
+      flex: none;
+    }
+  }
+
+  .cookie-panel {
+    padding: 30px 28px 26px;
+    font-size: 15px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+}

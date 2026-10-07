@@ -444,3 +444,231 @@ iframe {
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1), -5px 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* Pages légales (mentions légales, politique de confidentialité) */
+.legal-page {
+  .legal-header {
+    // Reste visible en haut de l'écran pendant le défilement
+    position: sticky;
+    top: 14px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 900px;
+    margin: 14px auto 0;
+    padding: 10px 12px 10px 24px;
+    background-color: #fff;
+    border: solid 1px lightgrey;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    // Masque le texte qui défile dans l'espace au-dessus du header
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(100% + 1px);
+      height: 14px;
+      background-color: #fff;
+    }
+
+    .legal-logo {
+      font-family: "Rubik Glitch", system-ui;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 1;
+      color: black;
+      text-decoration: none;
+    }
+
+    .legal-back {
+      display: flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 18px;
+      border: 2px solid black;
+      border-radius: 26px;
+      background-color: #fff;
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0 50px;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 350;
+    line-height: 1.2;
+  }
+
+  section {
+    margin-top: 40px;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    &::before {
+      content: "";
+      flex: none;
+      width: 8px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: #ffce08;
+    }
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin-bottom: 12px;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.55em;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ffce08;
+    }
+  }
+
+  // Bloc d'informations : une carte, une ligne par élément
+  .legal-card {
+    margin: 16px 0;
+    padding: 6px 22px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    li {
+      margin: 0;
+      padding: 12px 0;
+      border-bottom: 1px solid #ececec;
+
+      &::before {
+        content: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  a {
+    color: black;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: #ffce08;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-button {
+    min-height: 44px;
+    margin-top: 6px;
+    padding: 0 24px;
+    border: 1px solid #212121;
+    border-radius: 100px;
+    background-color: #212121;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .legal-header {
+      top: 22px;
+      margin-top: 22px;
+      padding: 12px 14px 12px 34px;
+
+      &::before {
+        height: 22px;
+      }
+
+      .legal-logo {
+        font-size: 30px;
+      }
+
+      .legal-back {
+        min-height: 40px;
+        font-size: 15px;
+      }
+    }
+
+    main {
+      padding: 60px 0 70px;
+      font-size: 17px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 52px;
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 26px;
+
+      &::before {
+        height: 28px;
+      }
+    }
+
+    .legal-card {
+      padding: 10px 30px;
+    }
+  }
+}
