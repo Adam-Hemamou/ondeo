@@ -12,6 +12,20 @@ import { CalandlyComponent } from '../calandly/calandly.component';
 import { PromiseComponent } from '../promise/promise.component';
 import { scrollToSectionCal } from '../../utils/scrolls';
 import { LogoBandComponent } from '../logo-band/logo-band.component';
+import { LegalLinksComponent } from '../legal-links/legal-links.component';
+import { RouteMeta } from '@analogjs/router';
+
+// Reprend le titre et la description d'index.html, pour les rétablir au retour d'une autre page
+export const routeMeta: RouteMeta = {
+  title: 'Ondeo : Votre Agence Vidéo au meilleur prix',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'ONDEO, agence vidéo spécialisée en tournage, montage vidéo et motion design. Des vidéos captivantes pour séduire votre audience et booster votre communication.',
+    },
+  ],
+};
 
 @Component({
   selector: 'app-home',
@@ -29,6 +43,7 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
     CalandlyComponent,
     PromiseComponent,
     LogoBandComponent,
+    LegalLinksComponent,
   ],
   template: `
     <header>
@@ -79,6 +94,7 @@ import { LogoBandComponent } from '../logo-band/logo-band.component';
       <p class="footer-text">
         {{ currentYear }} - Ondeo. Tous droits réservés.
       </p>
+      <app-legal-links></app-legal-links>
     </main>
   `,
 })

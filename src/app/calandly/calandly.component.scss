@@ -211,3 +211,27 @@
     }
   }
 }
+
+.calendly-placeholder {
+  // Passe au-dessus du fond bleu, positionné en absolu
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  color: #212121;
+  font-size: 16px;
+  line-height: 1.4;
+
+  .rdv-btn {
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid #212121;
+  }
+}
