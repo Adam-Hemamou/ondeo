@@ -20,7 +20,7 @@
   </div>
 
   <div class="orange-rectangle" *ngIf="offer.popular">
-    <span>Populaire</span>
+    <span>{{ i18n.t.offers.popular }}</span>
   </div>
 
   <div class="content">
@@ -41,7 +41,7 @@
         <img
           *ngIf="!offer.popular && i === offer.features.length - 1"
           src="/svg/invalid.svg"
-          alt="Non inclus :"
+          [alt]="i18n.t.offers.notIncluded"
         />
         <img
           *ngIf="offer.popular || i !== offer.features.length - 1"
@@ -53,7 +53,7 @@
     </ul>
 
     <div class="offer-btn">
-      <button (click)="scrollToCalendly()">En savoir plus</button>
+      <button (click)="scrollToCalendly()">{{ i18n.t.offers.cta }}</button>
     </div>
   </div>
 </div>

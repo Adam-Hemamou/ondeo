@@ -4,25 +4,22 @@
   aria-label="Cookies"
 >
   <p>
-    Nous utilisons des cookies et traceurs pour mesurer l’audience du site et
-    suivre nos campagnes publicitaires. Vous pouvez les accepter, les refuser
-    ou personnaliser votre choix, et le modifier à tout moment via « Gestion
-    des cookies » en bas de page.
-    <a routerLink="/politique-confidentialite">En savoir plus</a>
+    {{ i18n.t.cookies.banner }}
+    <a [routerLink]="i18n.t.routes.privacy">{{ i18n.t.cookies.learnMore }}</a>
   </p>
   <div class="cookie-actions">
     <button type="button" class="cookie-btn" (click)="consent.refuseAll()">
-      Refuser
+      {{ i18n.t.cookies.refuse }}
     </button>
     <button type="button" class="cookie-btn" (click)="consent.acceptAll()">
-      Accepter
+      {{ i18n.t.cookies.accept }}
     </button>
     <button
       type="button"
       class="cookie-btn cookie-btn--secondary"
       (click)="openPanel()"
     >
-      Personnaliser
+      {{ i18n.t.cookies.customize }}
     </button>
   </div>
 </section>
@@ -33,23 +30,15 @@
   aria-labelledby="cookie-panel-title"
   (close)="panelOpen = false"
 >
-  <h2 id="cookie-panel-title">
-    Gestion des <span class="highlighted">cookies</span>
-  </h2>
-  <p>
-    Choisissez les catégories de cookies et traceurs que vous autorisez. Votre
-    choix est conservé 6 mois.
-  </p>
+  <h2 id="cookie-panel-title" [innerHTML]="i18n.t.cookies.panelTitle"></h2>
+  <p>{{ i18n.t.cookies.panelIntro }}</p>
 
   <div class="cookie-category">
     <label>
       <input type="checkbox" checked disabled />
-      Nécessaires (toujours actifs)
+      {{ i18n.t.cookies.necessary }}
     </label>
-    <p>
-      Fonctionnement du site, mémorisation de votre choix et lecture des vidéos
-      Vimeo, intégrées avec l’option « Do Not Track ».
-    </p>
+    <p>{{ i18n.t.cookies.necessaryDescription }}</p>
   </div>
 
   <div class="cookie-category">
@@ -59,13 +48,9 @@
         [checked]="draft.statistics"
         (change)="setDraft('statistics', $event)"
       />
-      Statistiques
+      {{ i18n.t.cookies.statistics }}
     </label>
-    <p>
-      Mesure d’audience lorsqu’elle est utilisée (via Google Tag Manager) et
-      affichage automatique du calendrier de rendez-vous Calendly, qui dépose
-      ses propres cookies de performance.
-    </p>
+    <p>{{ i18n.t.cookies.statisticsDescription }}</p>
   </div>
 
   <div class="cookie-category">
@@ -75,34 +60,31 @@
         [checked]="draft.marketing"
         (change)="setDraft('marketing', $event)"
       />
-      Marketing
+      {{ i18n.t.cookies.marketing }}
     </label>
-    <p>
-      Suivi de nos campagnes publicitaires : Meta Pixel, LinkedIn Insight et
-      balises publicitaires chargées via Google Tag Manager.
-    </p>
+    <p>{{ i18n.t.cookies.marketingDescription }}</p>
   </div>
 
   <div class="cookie-actions">
     <button type="button" class="cookie-btn" (click)="refuseAll()">
-      Tout refuser
+      {{ i18n.t.cookies.refuseAll }}
     </button>
     <button type="button" class="cookie-btn" (click)="acceptAll()">
-      Tout accepter
+      {{ i18n.t.cookies.acceptAll }}
     </button>
     <button
       type="button"
       class="cookie-btn cookie-btn--secondary"
       (click)="saveDraft()"
     >
-      Enregistrer mes choix
+      {{ i18n.t.cookies.save }}
     </button>
   </div>
 
   <button
     type="button"
     class="cookie-close"
-    aria-label="Fermer"
+    [attr.aria-label]="i18n.t.cookies.close"
     (click)="closePanel()"
   >
     ×

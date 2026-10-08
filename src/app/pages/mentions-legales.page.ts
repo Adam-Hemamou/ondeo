@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RouteMeta } from '@analogjs/router';
 import { LegalLinksComponent } from '../legal-links/legal-links.component';
+import { LanguageSwitcherComponent } from '../i18n/language-switcher.component';
 
 export const routeMeta: RouteMeta = {
   title: 'Mentions légales | ONDEO',
@@ -17,7 +18,7 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-mentions-legales',
   standalone: true,
-  imports: [RouterLink, LegalLinksComponent],
+  imports: [RouterLink, LegalLinksComponent, LanguageSwitcherComponent],
   templateUrl: './mentions-legales.page.html',
 })
 export default class MentionsLegalesComponent implements OnInit {

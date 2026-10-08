@@ -516,6 +516,13 @@ iframe {
     line-height: 1.6;
   }
 
+  .legal-language {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
   h1 {
     padding: 0;
     margin-bottom: 30px;

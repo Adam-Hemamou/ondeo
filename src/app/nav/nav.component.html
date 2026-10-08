@@ -2,12 +2,12 @@
   <div class="nav-bar">
     <div class="logo">
       <span class="logo-name">ONDEO</span>
-      <p>Agence créative</p>
+      <p>{{ i18n.t.nav.tagline }}</p>
     </div>
 
     <img
       src="/svg/menu.png"
-      alt="Menu"
+      [alt]="i18n.t.nav.menu"
       role="button"
       tabindex="0"
       [attr.aria-expanded]="isMenuOpen"
@@ -19,15 +19,22 @@
 
     <div class="desktop-nav">
       <ul class="desktop-nav">
-        <li><a href="#videos-section">Nos vidéos</a></li>
-        <li><a href="#offers-section">Nos offres</a></li>
-        <li><a href="#testimonial-section">Vos avis</a></li>
+        <li>
+          <a [attr.href]="sectionHref('videos-section')" (click)="scrollToSection('videos-section', $event)">{{ i18n.t.nav.videos }}</a>
+        </li>
+        <li>
+          <a [attr.href]="sectionHref('offers-section')" (click)="scrollToSection('offers-section', $event)">{{ i18n.t.nav.offers }}</a>
+        </li>
+        <li>
+          <a [attr.href]="sectionHref('testimonial-section')" (click)="scrollToSection('testimonial-section', $event)">{{ i18n.t.nav.reviews }}</a>
+        </li>
       </ul>
     </div>
 
     <div class="btn-container">
+      <app-language-switcher class="bar-language"></app-language-switcher>
       <button class="notification-button" (click)="scrollToCalendly()">
-        Prendre RDV
+        {{ i18n.t.nav.book }}
       </button>
     </div>
   </div>
@@ -38,15 +45,16 @@
     class="burger-menu"
   >
     <ul>
-      <li (click)="scrollToSection('videos-section')">
-        <a href="#videos-section" (click)="$event.preventDefault()">Nos vidéos</a>
+      <li (click)="scrollToSection('videos-section', $event)">
+        <a [attr.href]="sectionHref('videos-section')">{{ i18n.t.nav.videos }}</a>
       </li>
-      <li (click)="scrollToSection('offers-section')">
-        <a href="#offers-section" (click)="$event.preventDefault()">Nos offres</a>
+      <li (click)="scrollToSection('offers-section', $event)">
+        <a [attr.href]="sectionHref('offers-section')">{{ i18n.t.nav.offers }}</a>
       </li>
-      <li (click)="scrollToSection('testimonial-section')">
-        <a href="#testimonial-section" (click)="$event.preventDefault()">Vos avis</a>
+      <li (click)="scrollToSection('testimonial-section', $event)">
+        <a [attr.href]="sectionHref('testimonial-section')">{{ i18n.t.nav.reviews }}</a>
       </li>
     </ul>
+    <app-language-switcher class="burger-language"></app-language-switcher>
   </div>
 </div>

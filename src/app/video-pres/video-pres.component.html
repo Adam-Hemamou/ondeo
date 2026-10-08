@@ -1,5 +1,5 @@
 <p class="finger desktop">
-  Découvrez notre agence en vidéo
+  {{ i18n.t.hero.videoCaption }}
   <img
     src="/png/finger-b.png"
     alt=""
@@ -19,13 +19,13 @@
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
-      title="Vidéo de présentation de nos services"
+      [title]="i18n.t.hero.videoTitle"
     ></iframe>
     <div class="yellow-trait"></div>
   </div>
 </div>
 <p class="finger mobile">
-  Découvrez notre agence en vidéo
+  {{ i18n.t.hero.videoCaption }}
   <img
     src="/png/finger.png"
     alt=""

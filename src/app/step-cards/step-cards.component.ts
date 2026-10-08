@@ -1,6 +1,7 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { StepCard } from '../core/types/stepcard';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-step-cards',
@@ -12,31 +13,26 @@ import { StepCard } from '../core/types/stepcard';
 export class StepCardsComponent {
   cards: StepCard[] = [
     {
-      title: 'Stratégie',
-      description:
-        'Nous élaborons ensemble le script de votre vidéo via un document partagé.',
+      ...this.i18n.t.steps.strategy,
       number: '01',
       svg: '/png/idee.png',
     },
     {
-      title: 'Storyboard',
-      description:
-        'Nous vous proposons un storyboard avant de lancer la production.',
+      ...this.i18n.t.steps.storyboard,
       number: '02',
       svg: '/png/story-book.png',
     },
     {
-      title: 'Production',
-      description:
-        'Nous réalisons la vidéo et vous proposons une première version.',
+      ...this.i18n.t.steps.production,
       number: '03',
       svg: '/png/clap.png',
     },
     {
-      title: 'Feedback',
-      description: "Retours illimités jusqu'à satisfaction.",
+      ...this.i18n.t.steps.feedback,
       number: '04',
       svg: '/png/loupe.png',
     },
   ];
+
+  constructor(public i18n: LanguageService) {}
 }

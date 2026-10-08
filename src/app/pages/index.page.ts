@@ -14,6 +14,7 @@ import { scrollToSectionCal } from '../../utils/scrolls';
 import { LogoBandComponent } from '../logo-band/logo-band.component';
 import { LegalLinksComponent } from '../legal-links/legal-links.component';
 import { RouteMeta } from '@analogjs/router';
+import { LanguageService } from '../i18n/language.service';
 
 // Reprend le titre et la description d'index.html, pour les rétablir au retour d'une autre page
 export const routeMeta: RouteMeta = {
@@ -53,19 +54,11 @@ export const routeMeta: RouteMeta = {
     <main>
       <div class="reverse">
         <div class="web-title">
-          <h1>
-            Des <span class="highlighted">vidéos</span> ultracaptivantes pour
-            séduire votre <span class="highlighted">audience.</span>
-          </h1>
-          <p class="desc">
-            Podcasts, <span class="bolded">vidéos promotionnelles</span> ou
-            motion design, nous sommes à vos côtés à chaque étape de votre
-            projet, jusqu'à ce que vous soyez
-            <span class="bolded">100% satisfait.</span>
-          </p>
+          <h1 [innerHTML]="i18n.t.hero.title"></h1>
+          <p class="desc" [innerHTML]="i18n.t.hero.description"></p>
           <div class="btn-rdv-container" *ngIf="!isMobile">
             <button class="rdv-btn" (click)="scrollToCalendly()">
-              Prendre rendez-vous
+              {{ i18n.t.hero.cta }}
             </button>
           </div>
         </div>
@@ -92,7 +85,7 @@ export const routeMeta: RouteMeta = {
       <app-calandly></app-calandly>
       <app-logo-band></app-logo-band>
       <p class="footer-text">
-        {{ currentYear }} - Ondeo. Tous droits réservés.
+        {{ i18n.t.footer.rights(currentYear) }}
       </p>
       <app-legal-links></app-legal-links>
     </main>
@@ -101,6 +94,8 @@ export const routeMeta: RouteMeta = {
 export default class HomeComponent {
   isMobile: boolean = window.innerWidth < 750;
   currentYear: number = new Date().getFullYear();
+
+  constructor(public i18n: LanguageService) {}
 
   scrollToCalendly() {
     scrollToSectionCal();

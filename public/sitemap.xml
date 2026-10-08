@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
   <url>
     <loc>https://www.ondeo-agency.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/" />
+  </url>
+  <url>
+    <loc>https://www.ondeo-agency.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/" />
   </url>
   <url>
     <loc>https://www.ondeo-agency.com/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/mentions-legales" />
+  </url>
+  <url>
+    <loc>https://www.ondeo-agency.com/en/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/mentions-legales" />
   </url>
   <url>
     <loc>https://www.ondeo-agency.com/politique-confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/politique-confidentialite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/politique-confidentialite" />
+  </url>
+  <url>
+    <loc>https://www.ondeo-agency.com/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ondeo-agency.com/politique-confidentialite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ondeo-agency.com/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ondeo-agency.com/politique-confidentialite" />
   </url>
 </urlset>

@@ -3,30 +3,23 @@
 
   <div class="footer-container">
     <div class="need-talk">
-      <h2 class="footer-title mb-20">Vous voulez en discuter ?</h2>
+      <h2 class="footer-title mb-20">{{ i18n.t.contact.title }}</h2>
 
-      <p class="description">
-        Rien de plus simple : remplissez simplement quelques informations sur
-        vous et nous vous recontacterons selon vos disponibilités pour définir
-        ensemble le message, la durée et la deadline du projet vidéo.
-        <br />
-        <br />
-        Alors, prêt à donner vie à votre projet ?
-      </p>
+      <p class="description" [innerHTML]="i18n.t.contact.description"></p>
 
       <div class="steps-container">
         <ul class="steps">
           <li>
             <img src="/png/correction-white.png" alt="" loading="lazy" />
-            <p>Choisissez un créneau</p>
+            <p>{{ i18n.t.contact.stepSlot }}</p>
           </li>
           <li id="calendly-section">
             <img src="/png/correction-white.png" alt="" loading="lazy" />
-            <p>On discute de votre projet</p>
+            <p>{{ i18n.t.contact.stepTalk }}</p>
           </li>
           <li>
             <img src="/png/correction-white.png" alt="" loading="lazy" />
-            <p>On lance la production</p>
+            <p>{{ i18n.t.contact.stepProduction }}</p>
           </li>
         </ul>
       </div>
@@ -39,17 +32,14 @@
       style="width: 100%; max-width: 600px; height: 600px; margin: 0 auto"
     >
       <div *ngIf="!widgetLoaded && !consentGiven" class="calendly-placeholder">
-        <p>
-          Le calendrier de prise de rendez-vous est fourni par Calendly, qui
-          dépose ses propres cookies. Il s’affiche à votre demande.
-        </p>
+        <p>{{ i18n.t.contact.calendarNotice }}</p>
         <button type="button" class="rdv-btn" (click)="loadWidget()">
-          Afficher le calendrier
+          {{ i18n.t.contact.showCalendar }}
         </button>
       </div>
     </div>
   </div>
   <footer class="footer">
-    <p class="follow-us">Rejoignez - nous</p>
+    <p class="follow-us">{{ i18n.t.contact.followUs }}</p>
   </footer>
 </section>

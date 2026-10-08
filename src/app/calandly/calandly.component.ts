@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ConsentService } from '../consent/consent.service';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-calandly',
@@ -25,7 +26,10 @@ export class CalandlyComponent implements AfterViewInit, OnDestroy {
   private observer?: IntersectionObserver;
   private subscription?: Subscription;
 
-  constructor(private consent: ConsentService) {}
+  constructor(
+    private consent: ConsentService,
+    public i18n: LanguageService
+  ) {}
 
   // Calendly dépose ses propres cookies : sans consentement, il n'est chargé
   // que si le visiteur demande à afficher le calendrier.

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-video-pres',
@@ -9,4 +10,6 @@ import { Component, Input } from '@angular/core';
 })
 export class VideoPresComponent {
   @Input() isMobile!: boolean;
+
+  constructor(public i18n: LanguageService) {}
 }

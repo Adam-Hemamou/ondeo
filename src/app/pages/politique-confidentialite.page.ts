@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { RouteMeta } from '@analogjs/router';
 import { ConsentService } from '../consent/consent.service';
 import { LegalLinksComponent } from '../legal-links/legal-links.component';
+import { LanguageSwitcherComponent } from '../i18n/language-switcher.component';
 
 export const routeMeta: RouteMeta = {
   title: 'Politique de confidentialité | ONDEO',
@@ -18,7 +19,7 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-politique-confidentialite',
   standalone: true,
-  imports: [RouterLink, LegalLinksComponent],
+  imports: [RouterLink, LegalLinksComponent, LanguageSwitcherComponent],
   templateUrl: './politique-confidentialite.page.html',
 })
 export default class PolitiqueConfidentialiteComponent implements OnInit {
