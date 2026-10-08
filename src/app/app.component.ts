@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import AOS from 'aos';
 import { CookieConsentComponent } from './consent/cookie-consent.component';
+import { LanguageService } from './i18n/language.service';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,11 @@ import { CookieConsentComponent } from './consent/cookie-consent.component';
   `,
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private i18n: LanguageService) {}
 
   ngOnInit() {
+    this.i18n.restoreChoice();
+
     AOS.init({
       duration: 1200,
       once: true,

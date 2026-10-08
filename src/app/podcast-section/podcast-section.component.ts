@@ -4,6 +4,7 @@ import { Offer } from '../core/types/offer';
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { NgIf } from '@angular/common';
+import { LanguageService } from '../i18n/language.service';
 
 SwiperCore.use([Pagination]);
 
@@ -33,18 +34,9 @@ export class PodcastSectionComponent {
     title: 'Starter',
     price: '1590 €',
     oldPrice: null,
-    videos: 'pack 10 vidéos',
+    videos: this.i18n.t.offers.podcast.videos(10),
     description: 'Analyse des thématiques virales pour votre secteur...',
-    features: [
-      'Analyse des thématiques virales pour votre secteur',
-      'Rédaction en collaboration des sujets abordés',
-      'Aménagement du studio selon vos goûts',
-      'Production complète de 10 vidéos',
-      'Modifications illimitées',
-      'Optimisation à 100% pour performer',
-      'Analyse des résultats',
-      '5 vidéos motion design',
-    ],
+    features: this.i18n.t.offers.podcast.features(10),
     background: 'white',
     popular: false,
     icon: '/png/discount.png',
@@ -54,20 +46,13 @@ export class PodcastSectionComponent {
     title: 'Premium',
     price: '2390 €',
     oldPrice: '2700 €',
-    videos: 'pack 20 vidéos',
+    videos: this.i18n.t.offers.podcast.videos(20),
     description: 'Production complète de 20 vidéos...',
-    features: [
-      'Analyse des thématiques virales pour votre secteur',
-      'Rédaction en collaboration des sujets abordés',
-      'Aménagement du studio selon vos goûts',
-      'Production complète de 20 vidéos',
-      'Modifications illimitées',
-      'Optimisation à 100% pour performer',
-      'Analyse des résultats',
-      '5 vidéos motion design',
-    ],
+    features: this.i18n.t.offers.podcast.features(20),
     background: 'black',
     popular: true,
     icon: '/png/space-ship.png',
   };
+
+  constructor(public i18n: LanguageService) {}
 }

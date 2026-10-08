@@ -5,7 +5,7 @@
       alt=""
       class="modifs"
     />
-    <div class="key-desc">Modifications illimitées</div>
+    <div class="key-desc">{{ i18n.t.promise.revisions }}</div>
   </div>
 
   <div
@@ -14,7 +14,7 @@
     [attr.data-aos-delay]="isMobile ? '100' : '200'"
   >
     <img src="/png/sans-engagement.png" alt="" />
-    <div class="key-desc">Sans engagement</div>
+    <div class="key-desc">{{ i18n.t.promise.noCommitment }}</div>
   </div>
 
   <div
@@ -23,11 +23,11 @@
     [attr.data-aos-delay]="isMobile ? '200' : '400'"
   >
     <img src="/png/on-s-occupe.png" alt="" />
-    <div class="key-desc">On s’occupe de tout</div>
+    <div class="key-desc">{{ i18n.t.promise.allInclusive }}</div>
   </div>
 </div>
 <div *ngIf="isMobile" class="btn-rdv-container">
   <button class="rdv-btn" (click)="scrollToCalendly()">
-    Prendre rendez-vous
+    {{ i18n.t.hero.cta }}
   </button>
 </div>

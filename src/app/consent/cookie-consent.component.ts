@@ -3,6 +3,7 @@ import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ConsentChoice, ConsentService } from './consent.service';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-cookie-consent',
@@ -19,7 +20,10 @@ export class CookieConsentComponent implements OnDestroy {
 
   private subscription: Subscription;
 
-  constructor(public consent: ConsentService) {
+  constructor(
+    public consent: ConsentService,
+    public i18n: LanguageService
+  ) {
     this.subscription = this.consent.openPanel$.subscribe(() =>
       this.openPanel()
     );

@@ -1,18 +1,15 @@
 <div class="podcast-section">
-  <h2 class="section-title">
-    La <span class="highlighted">performance</span> des grandes agences, à des
-    prix abordables
-  </h2>
+  <h2 class="section-title" [innerHTML]="i18n.t.offers.title"></h2>
   <div id="offers-section"></div>
   <div class="img-bgc">
     <div class="overlay-bgc"></div>
     <div class="title-container">
-      <h2 class="pack-title">Pack Podcast</h2>
+      <h2 class="pack-title">{{ i18n.t.offers.podcast.title }}</h2>
     </div>
-    <p class="offer-desc">
-      Vous souhaitez parler à votre audience ? <br />
-      Venez réaliser une interview dans nos studios !
-    </p>
+    <p
+      class="offer-desc"
+      [innerHTML]="i18n.t.offers.podcast.description"
+    ></p>
   </div>
 
   <div *ngIf="isMobile; else desktopLayout">

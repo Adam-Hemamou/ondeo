@@ -5,6 +5,7 @@ import { VideosStructuredComponent } from '../dump-components/videos-structured/
 import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
 import { Videos } from '../core/types/videos';
+import { LanguageService } from '../i18n/language.service';
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -83,5 +84,8 @@ export class VideoCarrouselComponent {
     allowTouchMove: true,
   };
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(
+    private sanitizer: DomSanitizer,
+    public i18n: LanguageService
+  ) {}
 }

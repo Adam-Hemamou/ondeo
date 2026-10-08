@@ -9,6 +9,7 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { Avis } from 'src/app/core/types/avis';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-avis-card',
@@ -24,7 +25,10 @@ export class AvisCardComponent implements AfterViewInit {
   expandedAvisIndex: number | null = null;
   isAnimating = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    public i18n: LanguageService
+  ) {}
 
   toggleExpand(avis: Avis, index: number) {
     if (this.isAnimating) return;

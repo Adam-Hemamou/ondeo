@@ -5,6 +5,7 @@ import { SwiperModule } from 'swiper/angular';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 
 import { NgFor, NgIf } from '@angular/common';
+import { LanguageService } from '../i18n/language.service';
 
 SwiperCore.use([Pagination]);
 
@@ -34,18 +35,9 @@ export class MotionSectionComponent {
       title: 'Starter',
       price: '1790 €',
       oldPrice: null,
-      videos: 'video 45 secondes',
+      videos: this.i18n.t.offers.motion.videos(45),
       description: 'carte de nos offres',
-      features: [
-        '45 secondes de vidéo motion design',
-        'Écriture du script',
-        'Storyboard / Illustrations',
-        'Voix off / Sound Design',
-        'Modifications illimitées',
-        '3 formats déclinés',
-        'Sous-titres',
-        'Plusieurs langues',
-      ],
+      features: this.i18n.t.offers.motion.features(45),
       background: 'white',
       popular: false,
       icon: '/png/discount.png',
@@ -54,21 +46,14 @@ export class MotionSectionComponent {
       title: 'Premium',
       price: '2190 €',
       oldPrice: null,
-      videos: 'video 60 secondes',
+      videos: this.i18n.t.offers.motion.videos(60),
       description: 'carte populaire de nos offres',
-      features: [
-        '60 secondes de vidéo motion design',
-        'Écriture du script',
-        'Storyboard / Illustrations',
-        'Voix off / Sound Design',
-        'Modifications illimitées',
-        '3 formats déclinés',
-        'Sous-titres',
-        'Plusieurs langues',
-      ],
+      features: this.i18n.t.offers.motion.features(60),
       background: 'black',
       popular: true,
       icon: '/png/space-ship.png',
     },
   ];
+
+  constructor(public i18n: LanguageService) {}
 }

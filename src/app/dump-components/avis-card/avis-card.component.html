@@ -28,7 +28,11 @@
       (keydown.enter)="toggleExpand(avis, i)"
       (keydown.space)="toggleExpand(avis, i); $event.preventDefault()"
     >
-      <i>{{ avis.expanded ? "Voir moins" : "Voir plus" }}</i>
+      <i>{{
+        avis.expanded
+          ? i18n.t.testimonials.showLess
+          : i18n.t.testimonials.showMore
+      }}</i>
     </span>
   </div>
 </div>
